@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center" style="background-color: #002e5b;">
+    <a class="navbar-brand pl-md-4" href="#home"><img src="~/img/Logo-p-69-15.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 smooth-scroll">
+            <li class="nav-item">
+                <a class="nav-link ft_col" href="#calc">Экспресс-расчет</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft_col" href="#services">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft_col" href="#tracking">Отслеживание</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ft_col" href="#contacts">Контакты</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 modalform" asp-action="SearchWbl" asp-controller="Home"
+            data-route-search="#search" data-toggle="modal" data-target="#modalform" id="searchwbl">
+            <input class="form-control mr-sm-2" type="search" id="search" placeholder="Поиск по накладной">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Поиск</button>
+        </form>
+    </div>
+</nav>
