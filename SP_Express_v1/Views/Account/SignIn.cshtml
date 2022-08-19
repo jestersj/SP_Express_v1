@@ -38,17 +38,17 @@ await Html.RenderPartialAsync("_Footer");
 
                 <div class="row justify-content-center" id="regChoice">
                     <div class="col-lg-5 col-8 my-4">
-                        <button id="individualBtn" class="btn p-4 card_wrapper_signin">
+                        <a asp-action="SignInInd" asp-controller="Account" id="individualBtn" class="btn p-4 card_wrapper_signin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40%" height="40%" fill="currentColor"
                                 class="bi bi-person" viewBox="0 0 16 16">
                                 <path
                                     d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                             </svg>
                             <h3>Физическое лицо</h3>
-                        </button>
+                        </a>
                     </div>
                     <div class="col-lg-5 col-8 my-4">
-                        <button id="legalBtn" class="btn p-4 card_wrapper_signin">
+                        <a asp-action="SignInLegal" asp-controller="Account" id="legalBtn" class="btn p-4 card_wrapper_signin">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40%" height="40%" fill="currentColor"
                                 class="bi bi-building" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
@@ -57,127 +57,12 @@ await Html.RenderPartialAsync("_Footer");
                                     d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z" />
                             </svg>
                             <h3>Юридическое лицо</h3>
-                        </button>
+                        </a>
                     </div>
                 </div>
 
 
-                <div class="row justify-content-center" id="ind">
-                    <form action="">
-                        <div class="row text-center">
-                            <div class="col-12 my-3">
-                                <h2 class="text-uppercase">Физическое лицо</h2>
-                                <button id="back1" class="btn btn-outline-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                      </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11 mt-3">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="FIOreg" class="text-uppercase form-label">ФИО</label>
-                                    <input type="text" id="FIOreg" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="emailReg" class="text-uppercase form-label">E-mail</label>
-                                    <input type="email" id="emailReg" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11 mb-4">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="passwordReg" class="text-uppercase form-label">Пароль</label>
-                                    <input type="password" minlength="6" maxlength="20" id="passwordReg"
-                                        class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row text-center">
-                            <div class="col-12">
-                                <button type="submit"
-                                    class="btn btn-outline-primary btn-lg m-3">Зарегистрироваться</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
 
-
-                <div class="row justify-content-center" id="legal">
-                    <form action="">
-                        <div class="row text-center">
-                            <div class="col-12 my-3">
-                                <h2 class="text-uppercase">Юридическое лицо</h2>
-                                <button id="back2" class="btn btn-outline-secondary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                      </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11 mt-3">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="emailReg" class="text-uppercase form-label">E-mail</label>
-                                    <input type="email" id="emailReg" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="regComponyName" class="text-uppercase form-label">Название компании</label>
-                                    <input type="text" id="regComponyName" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="regINN" class="text-uppercase form-label">ИНН</label>
-                                    <input type="number" id="regINN" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="regKPP" class="text-uppercase form-label">КПП</label>
-                                    <input type="number" id="regKPP" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="regFactAd" class="text-uppercase form-label">Фактический адрес</label>
-                                    <input type="text" id="regFactAd" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-11 mb-4">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="regJurAd" class="text-uppercase form-label">Юридический адрес</label>
-                                    <input type="text" id="regJurAd" class="field no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row text-center">
-                            <div class="col-12">
-                                <button type="submit"
-                                    class="btn btn-outline-primary btn-lg m-3">Зарегистрироваться</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>

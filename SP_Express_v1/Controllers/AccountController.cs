@@ -21,7 +21,14 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
-
+        public IActionResult SignInInd()
+        {
+            return View();
+        }
+        public IActionResult SignInLegal()
+        {
+            return View();
+        }
         public IActionResult UserLk()
         {
             return View();

@@ -1,0 +1,93 @@
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+@{
+await Html.RenderPartialAsync("_MenuMainLog");
+}
+}
+@section Footer {
+@{
+await Html.RenderPartialAsync("_Footer");
+}
+}
+
+<div class="bg_gard">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase welcome">Регистрация</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-9 col-11 all_border m-5" style="border-radius: 15px;">
+            <div class="row text-center">
+                <div class="col-12 mt-3">
+                    <h2 class="text-uppercase">Зарегистрироваться как</h2>
+                </div>
+            </div>
+
+
+
+
+            <div class="row justify-content-center" id="ind">
+                <form action="">
+                    <div class="row text-center">
+                        <div class="col-12 my-3">
+                            <h2 class="text-uppercase">Физическое лицо</h2>
+                            <button id="back1" class="btn btn-outline-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-11 mt-3">
+                            <div class="form-group vmp_form-group form_box_agm_top">
+                                <label for="FIOreg" class="text-uppercase form-label">ФИО</label>
+                                <input type="text" id="FIOreg" class="field no-border form-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-11">
+                            <div class="form-group vmp_form-group form_box_agm_top">
+                                <label for="emailReg" class="text-uppercase form-label">E-mail</label>
+                                <input type="email" id="emailReg" class="field no-border form-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-11 mb-4">
+                            <div class="form-group vmp_form-group form_box_agm_top">
+                                <label for="passwordReg" class="text-uppercase form-label">Пароль</label>
+                                <input type="password" minlength="6" maxlength="20" id="passwordReg"
+                                    class="field no-border form-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-outline-primary btn-lg m-3">Зарегистрироваться</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
