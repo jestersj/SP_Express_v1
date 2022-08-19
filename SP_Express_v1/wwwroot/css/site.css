@@ -25,10 +25,11 @@ html {
     border-radius: 35px;
     /*border: solid 3px gray;*/
 }
-
+.sec_start {
+  padding-bottom: 100px;
+}
 .sec {
     padding: 100px 0;
-    ;
 }
 
 .ft {
@@ -47,6 +48,11 @@ html {
 .orange1 {
     background-color: #b54a25;
     justify-content: center;
+}
+@media(max-width: 600px) {
+  .img_shown {
+    display: none;
+  }
 }
 /* LK */
 :root {

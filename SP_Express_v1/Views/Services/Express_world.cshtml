@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Экспресс по миру";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-4 col-sm-6 col-6">
+                <h2 class="text-uppercase mb-5">Экспресс</h2>
+                <h4>Быстрая доставка в более чем 200 странах мира</h4>
+
+            </div>
+            <div class="col-lg-4 col-sm-6 col-6">
+                <img class="img-fluid"
+                    src="https://icdn.lenta.ru/images/2020/12/14/15/20201214153333319/pwa_list_rect_1024_b482663c5eb139c66c39134f0f4001e9.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div class="line justify-items-center my-5 mx-auto"></div>
+        <div class="row text-center justify-content-center mt-5">
+            <div class="col-10">
+                <p class="text_black">Доставка на следующий рабочий день практически во все деловые центры Европы.</p>
+                <p class="text_black">Доставка до конца рабочего для большинства городов, расположенных в США.</p>
+                <P class="text_black">Доставка в течение 2-3 рабочих дней в страны Азии.</P>
+            </div>
+        </div>
+    </div>

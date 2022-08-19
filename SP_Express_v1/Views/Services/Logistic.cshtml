@@ -1,0 +1,53 @@
+@{
+    ViewData["Title"] = "Логистические услуги";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-4 col-sm-6 col-6">
+                <h2 class="text-uppercase mb-5">Логистические услуги</h2>
+                <h4>Полный комплекс услуг по обработке заказов</h4>
+
+            </div>
+            <div class="col-lg-4 col-sm-6 col-6">
+                <img class="img-fluid"
+                    src="https://icdn.lenta.ru/images/2020/12/14/15/20201214153333319/pwa_list_rect_1024_b482663c5eb139c66c39134f0f4001e9.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div class="line justify-items-center my-5 mx-auto"></div>
+        <div class="row text-center justify-content-center mt-5">
+            <div class="col-10">
+                <p class="text_black">SPExpress оказывает полный спектр услуг по складской обработке и хранению грузов. К комплексу услуг по логистике входят:</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <ul>
+                    <li class="text_black">Ответственное хранение груза Заказчика на складе Исполнителя</li>
+                    <li class="text_black">Комплектация заказа.</li>
+                    <li class="text_black">Прием и выдача груза.</li>
+                    <li class="text_black">Ведение необходимой складской документации.</li>
+                    <li class="text_black">Сортировка, упаковка и подготовка к отправке заказов по рассылкам.</li>
+                    <li class="text_black">Стеллажное и паллетное хранение имущества.</li>
+                    <li class="text_black">Информирование по телефону, факсу или электронной почте о состоянии склада и готовности рассылок.</li>
+                    <li class="text_black">Подготовка необходимых отчетов (в том числе и ежемесячных отчетов с подборкой накладных по каждой отправке).</li>
+                    <li class="text_black">Предоставление упаковочного материала.</li>
+                    <li class="text_black">Предоставление услуг по дополнительной упаковке.</li>
+                </ul>
+            </div>
+        </div>
+    </div>

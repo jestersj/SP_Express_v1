@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Контакты";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<section class="sec" id="contacts">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 mb-4">
+                <h2 class="text-uppercase">Контакты</h1>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center">
+            <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Aff1efe482602217d233c4d2d890b7c26f18b4d0097b203528eab7b32b5a9b91c&amp;source=constructor"
+                width="100%" height="400" frameborder="0"></iframe>
+            <div class="col-lg-3 col-sm-10 mt-4">
+                <h3>Адрес:</h3>
+                <p>Москва, Загородное шоссе, 1к2</p>
+            </div>
+            <div class="col-lg-3 col-sm-10 mt-4">
+                <h3>Телефон:</h3>
+                <p>+7-499-678-50-00</p>
+            </div>
+            <div class="col-lg-3 col-sm-10 mt-4">
+                <h3>Электронная почта:</h3>
+                <p>info@spexpress.ru</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Отслеживание";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<section class="sec" id="tracking">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase">Отслеживание посылки</h1>
+            </div>
+        </div>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-4 col-md-8 col-sm-12">
+                <p class="">Отследите свою посылку по номеру накладной</p>
+            </div>
+        </div>
+
+        <form action="#">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <div class="form-group vmp_form-group form_box_agm_top">
+                        <label for="invoiceNum" class="text-uppercase form-label">Введите номер накладной</label>
+                        <input type="number" id="invoiceNum" class="field no-border form-input">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 m-3">
+                    <button href="" class="btn btn-outline-primary btn-lg">Расчитать
+                        ></button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+</section>

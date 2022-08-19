@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Экспресс";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+
+<div class="container">
+        <div class="row align-items-center justify-content-around">
+            <div class="col-lg-4 col-sm-6 col-6">
+                <h2 class="text-uppercase mb-5
+                ">Экспресс</h2>
+                <h4>Быстрая доставка документов по Москве и Московской области</h4>
+
+            </div>
+            <div class="col-lg-4 col-sm-6 col-6">
+                <img class="img-fluid"
+                    src="https://icdn.lenta.ru/images/2020/12/14/15/20201214153333319/pwa_list_rect_1024_b482663c5eb139c66c39134f0f4001e9.jpg"
+                    alt="">
+            </div>
+        </div>
+        <div class="line justify-items-center my-5 mx-auto"></div>
+        <div class="row text-center justify-content-center mt-5">
+            <div class="col-10">
+                <p class="text_black"><span class="text_bold">«Экспресс 2»</span> - Для самых срочных и важных отправлений. Доставка в тот же день в течении двух - трех
+                    часов с момента размещения заказа для адресов компаний расположенных внутри границ МКАД. Для
+                    доставки отправлений в тот же день необходимо разместить заказ до 16:00.</p>
+                <p class="text_black"><span class="text_bold">«Экспресс 6»</span> - Доставка срочных и важных отправлений. Доставка в тот же день в течении шести часов с
+                    момента размещения заказа для адресов компаний расположенных внутри границ МКАД. Для доставки
+                    отправлений в тот же день необходимо разместить заказ до 12:00.
+                </p class="text_black">
+                <P class="text_black"><span class="text_bold">«Экспресс»</span> - Доставка важных документов до конца следующего рабочего дня для адресов компаний,
+                    расположенных внутри границ МКАД, 1-2 рабочих дня для большинства адресов в Московской области. Для
+                    приема отправлений в тот же день необходимо разместить заказ до 14:00.
+                </P>
+            </div>
+        </div>
+    </div>

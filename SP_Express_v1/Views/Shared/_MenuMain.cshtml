@@ -1,5 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top justify-content-center" style="background-color: #002e5b;">
-    <a class="navbar-brand pl-md-4" href="#home"><img src="~/img/Logo-p-69-15.png"></a>
+<nav class="navbar navbar-expand-lg navbar-dark justify-content-center mb-5" style="background-color: #002e5b;">
+    <div class="container-fluid">
+        <a class="navbar-brand pl-md-4 pl-lg-4" asp-action="Index" asp-controller="Home"><img
+            src="~/img/Logo-p-69-15.png"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,23 +10,38 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0 smooth-scroll">
             <li class="nav-item">
-                <a class="nav-link ft_col" href="#calc">Экспресс-расчет</a>
+                <a class="nav-link ft_col" asp-action="ExpressCalc" asp-controller="Home">Экспресс-расчет</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ft_col" href="#services">Услуги</a>
+                <a class="nav-link ft_col" asp-action="Services_main" asp-controller="Home">Услуги</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ft_col" href="#tracking">Отслеживание</a>
+                <a class="nav-link ft_col" asp-action="Tracking" asp-controller="Home">Отслеживание</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link ft_col" href="#contacts">Контакты</a>
+                <a class="nav-link ft_col" asp-action="Contacts" asp-controller="Home">Контакты</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 modalform" asp-action="SearchWbl" asp-controller="Home"
+        @* <form class="form-inline my-2 my-lg-0 modalform" asp-action="SearchWbl" asp-controller="Home"
             data-route-search="#search" data-toggle="modal" data-target="#modalform" id="searchwbl">
             <input class="form-control mr-sm-2" type="search" id="search" placeholder="Поиск по накладной">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Поиск</button>
-        </form>
-        <a class="ft_col" asp-action="Login" asp-controller="Account">Личный кабинет</a>
+            </form> *@
+
+        <a class="ft_col text-decoration-none ms-auto" asp-action="Login" asp-controller="Account">
+            <div class="d-flex align-items-center">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                    </svg>
+                </div>
+                <div>
+                    Личный кабинет
+                </div>
+            </div>
+        </a>
+    </div>
     </div>
 </nav>

@@ -17,8 +17,21 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
-        
-        public IActionResult Services_main() {
+        public IActionResult ExpressCalc()
+        {
+            return View();
+        }
+        public IActionResult Tracking()
+        {
+            return View();
+        }
+        public IActionResult Contacts()
+        {
+            return View();
+        }
+
+        public IActionResult Services_main()
+        {
             return View();
         }
 
