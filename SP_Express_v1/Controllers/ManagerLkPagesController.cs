@@ -4,33 +4,24 @@ using System.Diagnostics;
 
 namespace SP_Express_v1.Controllers
 {
-    public class AccountController : Controller
+    public class ManagerLkPages : Controller
     {
-        private readonly ILogger<AccountController> _logger;
+        private readonly ILogger<ManagerLkPages> _logger;
 
-        public AccountController(ILogger<AccountController> logger)
+        public ManagerLkPages(ILogger<ManagerLkPages> logger)
         {
             _logger = logger;
         }
-        public IActionResult Login()
+
+        public IActionResult Assignment()
+        {
+            return View();
+        }
+        public IActionResult Contract()
         {
             return View();
         }
 
-        public IActionResult SignIn()
-        {
-            return View();
-        }
-
-        public IActionResult UserLk()
-        {
-            return View();
-        }
-
-        public IActionResult SignManagerLk()
-        {
-            return View();
-        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

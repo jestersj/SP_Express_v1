@@ -1,0 +1,203 @@
+@{
+    ViewData["Title"] = "АГМ";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuUserLk");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<div class="bg_gard">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="text-uppercase welcome">Аренда грузового автомобиля</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="agmOnly">
+        <form action="" class="justify-content-center col-12 mx-auto">
+            <div class="col-12">
+                <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+                    <div class="col-12">
+                        <div class="row mt-3">
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="nameOfCargo" class="text-uppercase form-label">Наименование
+                                        груза</label>
+                                    <input type="text" id="nameOfCargo" class="field no-border form-input"
+                                        placeholder="Например, медтехника">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="weight" class="text-uppercase form-label">Вес</label>
+                                    <input type="number" id="weight" class="field no-border form-input"
+                                        placeholder="В кг">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="typeOfAuto" class="text-uppercase form-label">Тип автомобиля для
+                                        доставки</label>
+                                        <br><select name="service" id="typeOfAuto" class="mb-1">
+                                            <option selected>Фургон</option>
+                                            <option>Борт</option>
+                                            <option>Рефрижиратор</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="capacity" class="text-uppercase form-label">Грузоподъемность</label>
+                                    <input type="number" id="capacity" class="field no-border form-input"
+                                        placeholder="В тоннах">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center mt-4">
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadDate" class="text-uppercase form-label">Дата загрузки</label>
+                                    <input type="date" id="loadDate" class="field no-border form-input" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadTime" class="text-uppercase form-label">Время загрузки</label>
+                                    <input type="time" id="loadTime" class="field no-border form-input"
+                                        placeholder="В тоннах">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadOrg" class="text-uppercase form-label">Организация на
+                                        загрузке</label>
+                                    <input type="text" id="loadOrg" class="field no-border form-input"
+                                        placeholder="ООО Колобки">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadTime" class="text-uppercase form-label">Контактное лицо</label>
+                                    <input type="text" id="loadTime" class="field no-border form-input"
+                                        placeholder="Иванов И.И.">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadTime" class="text-uppercase form-label">Телефон</label>
+                                    <input type="tel" id="loadTime" class="field no-border form-input tel"
+                                        placeholder="+7 (954) 550 6482">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group vmp_form-group form_box_agm_top">
+                            <label for="loadAdress" class="text-uppercase form-label">Адрес загрузки</label>
+                            <input type="text" id="loadAdress" class="field no-border form-input"
+                                placeholder="Ломоносовский пр-кт, д15">
+                        </div>
+
+                        <div class="row align-items-center mt-4">
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="unloadDate" class="text-uppercase form-label">Дата разгрузки</label>
+                                    <input type="date" id="loadDate" class="field no-border form-input" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="unloadTime" class="text-uppercase form-label">Время разгрузки</label>
+                                    <input type="time" id="loadTime" class="field no-border form-input"
+                                        placeholder="В тоннах">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadOrg" class="text-uppercase form-label">Организация на
+                                        выгрузке</label>
+                                    <input type="text" id="loadOrg" class="field no-border form-input"
+                                        placeholder="ООО Колобки">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadTime" class="text-uppercase form-label">Контактное лицо</label>
+                                    <input type="text" id="loadTime" class="field no-border form-input"
+                                        placeholder="Иванов И.И.">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group vmp_form-group form_box_agm_top">
+                                    <label for="loadTime" class="text-uppercase form-label">Телефон</label>
+                                    <input type="tel" id="loadTime" class="field no-border form-input tel"
+                                        placeholder="+7 (964) 550 6472">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group vmp_form-group form_box_agm_top mb-4">
+                            <label for="unloadAdress" class="text-uppercase form-label">Адрес разгрузки</label>
+                            <input type="text" id="unloadAdress" class="field no-border form-input"
+                                placeholder="Ломоносовский пр-кт, д16">
+                        </div>
+
+                        <div class="form-group vmp_form-group form_box_agm_top">
+                            <label for="instructions" class="text-uppercase form-label">Указания
+                                грузоотправителя</label>
+                            <input type="text" id="instructions" class="field no-border form-input"
+                                placeholder="Например, позвонить за 30 мин до приезда">
+                        </div>
+
+                        <div class="row align-items-center mb-3">
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group form_box_agm_bot">
+                                    <label for="payer" class="text-uppercase form-label">Плательщик</label>
+                                    <br><select name="service" id="payer" class="mb-1">
+                                        <option selected>Отправитель</option>
+                                        <option>Получатель</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group vmp_form-group">
+                                    <label for="wayOfPayment" class="text-uppercase form-label">Условия оплаты</label>
+                                    <br><select name="service" id="wayOfPayment" class="mb-1">
+                                        <option selected>Безналичная</option>
+                                        <option>Наличная</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row text-center">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-primary btn-lg m-5">Отправить</button>
+            </div>
+        </div>
+    </div>
