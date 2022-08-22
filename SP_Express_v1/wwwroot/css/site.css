@@ -338,10 +338,10 @@ td, th {
   display: flex;
 }
 #ind {
-  display: none;
+  display: flex;
 }
 #legal {
-  display: none;
+  display: flex;
 }
 
 
