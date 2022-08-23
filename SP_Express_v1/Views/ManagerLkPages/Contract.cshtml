@@ -187,74 +187,75 @@
                         </div>
                     </div>
                 </div>
+                </div>
 
 
 
                 <div class="col-lg-7 col-12">
-                    <div class="col-12">
-                        <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                            <div class="col-12">
-                                <h3 class="text-center">Cкидки</h3>
+                <div class="col-12">
+                    <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+                        <div class="col-12">
+                            <h3 class="text-center">Cкидки</h3>
+                        </div>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-6">
+                                <h4>Скидки задаются в процентах</h4>
                             </div>
-                            <div class="row justify-content-center align-items-center">
-                                <div class="col-6">
-                                    <h4>Скидки задаются в процентах</h4>
-                                </div>
-                                <div class="col-6 text-end"><button class="btn btn-lg btn-outline-danger">Удалить все
-                                        скидки</button></div>
+                            <div class="col-6 text-end"><button class="btn btn-lg btn-outline-danger">Удалить все
+                                скидки</button></div>
+                        </div>
+                        <div class="form-group vmp_form-group form_box_agm_top">
+                            <label for="sale" class="text-uppercase form-label">Скидка в процентах</label>
+                            <input type="number" id="sale" class="field no-border form-input">
+                        </div>
+                        <div class="row gx-0 m-3 justify-content-center text-center">
+                            <div class="col-3">
+                                <button class="btn btn-lg btn-outline-primary">Москва</button>
                             </div>
-                            <div class="form-group vmp_form-group form_box_agm_top">
-                                <label for="sale" class="text-uppercase form-label">Скидка в процентах</label>
-                                <input type="number" id="sale" class="field no-border form-input">
+                            <div class="col-3">
+                                <button class="btn btn-lg btn-outline-primary">МО</button>
                             </div>
-                            <div class="row gx-0 m-3 justify-content-center text-center">
-                                <div class="col-3">
-                                    <button class="btn btn-lg btn-outline-primary">Москва</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-lg btn-outline-primary">МО</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-lg btn-outline-primary">Россия</button>
-                                </div>
-                                <div class="col-3">
-                                    <button class="btn btn-lg btn-outline-primary">Мир</button>
-                                </div>
+                            <div class="col-3">
+                                <button class="btn btn-lg btn-outline-primary">Россия</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-lg btn-outline-primary">Мир</button>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                            <div class="col-12" style=" height: 600px; overflow-y: scroll;">
+                    <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+                        <div class="col-12" style=" height: 600px; overflow-y: scroll;">
 
 
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+                        <div class="row justify-content-center text-center">
+                            <div class="col-5">
+                                <label class="form-check-label text-uppercase form-label" for="readdressSale">Скидка при
+                                    переадресации</label>
+                                <input type="checkbox" class="form-check-input form-input" id="readdressSale">
+                            </div>
+                            <div class="col-7">
+                                <label class="form-check-label text-uppercase form-label" for="tarif">Тарифный план</label>
+                                <select name="service" id="tarif" class="mb-1">
+                                    <option selected>Стандарт 2016</option>
+                                    <option>...</option>
+                                </select>
                             </div>
                         </div>
-
-                        <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                            <div class="row justify-content-center text-center">
-                                <div class="col-5">
-                                    <label class="form-check-label text-uppercase form-label" for="readdressSale">Скидка при
-                                        переадресации</label>
-                                    <input type="checkbox" class="form-check-input form-input" id="readdressSale">
-                                </div>
-                                <div class="col-7">
-                                    <label class="form-check-label text-uppercase form-label" for="tarif">Тарифный план</label>
-                                        <select name="service" id="tarif" class="mb-1">
-                                            <option selected>Стандарт 2016</option>
-                                            <option>...</option>
-                                        </select>
-                                </div>
+                        <div class="row justify-content-center text-center">
+                            <div class="col-5">
+                                <label class="form-check-label text-uppercase form-label" for="isActual">Действующий договор</label>
+                                <input type="checkbox" class="form-check-input form-input" id="isActual">
                             </div>
-                            <div class="row justify-content-center text-center">
-                                <div class="col-5">
-                                    <label class="form-check-label text-uppercase form-label" for="isActual">Действующий договор</label>
-                                    <input type="checkbox" class="form-check-input form-input" id="isActual">
-                                </div>
-                                <div class="col-7">
-                                    <div class="col-12">
-                                        <label for="unpresentFrom" class="text-uppercase form-label">Если не Действующий, то
-                                            с: </label>
-                                        <input type="date" id="unpresentFrom" class="no-border form-input">
+                            <div class="col-7">
+                                <div class="col-12">
+                                    <label for="unpresentFrom" class="text-uppercase form-label">Если не Действующий, то
+                                        с: </label>
+                                    <input type="date" id="unpresentFrom" class="no-border form-input">
                                 </div>
                             </div>
                             <div class="row justify-content-center text-center">
@@ -266,14 +267,15 @@
                                     <div class="col-12">
                                         <label for="unpresentFrom" class="text-uppercase form-label">Причина звонка</label>
                                         <input type="text" id="unpresentFrom" class="no-border form-input">
+                                    </div>
                                 </div>
                             </div>
+
+
                         </div>
-
-
                     </div>
                 </div>
-            </div>
+                </div>
         </form>
         <div class="row text-center">
             <div class="col-12">

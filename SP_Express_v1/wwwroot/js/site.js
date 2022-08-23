@@ -39,35 +39,3 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 
 });
-
-
-//Страница регистрации
-const regChoice = document.getElementById('regChoice');
-
-const individualBtn = document.getElementById('individualBtn');
-const legalBtn = document.getElementById('legalBtn');
-
-const ind = document.getElementById('ind');
-const legal = document.getElementById('legal');
-
-individualBtn.addEventListener("click", ()=> {
-    regChoice.style.display = 'none';
-    ind.style.display = 'flex';
-})
-legalBtn.addEventListener("click", ()=> {
-    regChoice.style.display = "none";
-    legal.style.display = "flex";
-})
-
-
-const back1 = document.getElementById('back1');
-const back2 = document.getElementById('back2');
-
-back1.addEventListener("click", ()=> {
-    regChoice.style.display = "flex";
-    ind.style.display = "none";
-})
-back2.addEventListener("click", ()=> {
-    regChoice.style.display = "flex";
-    legal.style.display = "none";
-})

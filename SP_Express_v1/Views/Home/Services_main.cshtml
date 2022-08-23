@@ -5,128 +5,133 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @section Menu_Main {
-@{
-await Html.RenderPartialAsync("_MenuMain");
+    @{
+        await Html.RenderPartialAsync("_MenuMain");
+    }
 }
-}
+
 @section Footer {
-@{
-await Html.RenderPartialAsync("_Footer");
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
 }
-}
+
 <div class="container">
-    <div class="row justify-content-center text-center">
-        <div class="col-12">
-            <h1 class="text-uppercase">Услуги</h1>
+<div class="row justify-content-center text-center">
+    <div class="col-12">
+        <h1 class="text-uppercase">Услуги</h1>
+    </div>
+</div>
+<div class="row justify-content-center text-center">
+    <div class="col-12">
+        <h2 class="text-uppercase">По Москве и Московской области</h2>
+    </div>
+</div>
+<!-- Блоки услуг -->
+<div class="justify-content-center">
+    <div class="row justify-content-center gx-5">
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Express" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Экспресс</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Standart" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Стандарт</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Package" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Посылка</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Agm" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>АГМ</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Loaders" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Услуги грузчиков</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Logistic" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Логистические услуги</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Prepost" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Предпочтовая подготовка</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
+
         </div>
     </div>
-    <div class="row justify-content-center text-center">
-        <div class="col-12">
-            <h2 class="text-uppercase">По Москве и Московской области</h2>
+</div>
+<!-- По России -->
+<div class="row justify-content-center text-center mt-5">
+<div class="col-12">
+    <h2 class="text-uppercase">По России</h2>
+</div>
+<div class="row justify-content-center gx-5">
+    <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+        <div class="col-7 m-auto pb-2 mt-5">
+            <img src="../img/expr24.png" alt="" class="img-fluid">
+        </div>
+        <a asp-action="Express_russia" asp-controller="Services" class="btn p-4 card_wrapper_services">
+            <h3>Экспресс</h3>
+            <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+        </a>
+    </div>
+</div>
+</div>
+<div class="row justify-content-center text-center mt-5">
+    <div class="col-12">
+        <h2 class="text-uppercase">По миру</h2>
+    </div>
+    <div class="row justify-content-center gx-5">
+        <div class="col-lg-3 col-md-4 col-sm-8 text-center">
+            <div class="col-7 m-auto pb-2 mt-5">
+                <img src="../img/expr24.png" alt="" class="img-fluid">
+            </div>
+            <a asp-action="Express_world" asp-controller="Services" class="btn p-4 card_wrapper_services">
+                <h3>Экспресс</h3>
+                <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
+            </a>
         </div>
     </div>
-    <!-- Блоки услуг -->
-    <div class="justify-content-center">
-        <div class="row justify-content-center gx-5">
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Express" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Экспресс</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Standart" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Стандарт</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Package" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Посылка</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Agm" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>АГМ</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Loaders" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Услуги грузчиков</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Logistic" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Логистические услуги</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Prepost" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Предпочтовая подготовка</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-
-            </div>
-        </div>
-    </div>
-    <!-- По России -->
-    <div class="row justify-content-center text-center mt-5">
-        <div class="col-12">
-            <h2 class="text-uppercase">По России</h2>
-        </div>
-        <div class="row justify-content-center gx-5">
-            <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                <div class="col-7 m-auto pb-2 mt-5">
-                    <img src="../img/expr24.png" alt="" class="img-fluid">
-                </div>
-                <a asp-action="Express_russia" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                    <h3>Экспресс</h3>
-                    <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-center text-center mt-5">
-            <div class="col-12">
-                <h2 class="text-uppercase">По миру</h2>
-            </div>
-            <div class="row justify-content-center gx-5">
-                <div class="col-lg-3 col-md-4 col-sm-8 text-center">
-                    <div class="col-7 m-auto pb-2 mt-5">
-                        <img src="../img/expr24.png" alt="" class="img-fluid">
-                    </div>
-                    <a asp-action="Express_world" asp-controller="Services" class="btn p-4 card_wrapper_services">
-                        <h3>Экспресс</h3>
-                        <!-- <a href="" class="btn btn-outline-primary">Подробнее ></a href=""> -->
-                    </a>
-                </div>
-            </div>
-        </div>
+</div>
+</div>

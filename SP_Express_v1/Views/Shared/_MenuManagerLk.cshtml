@@ -1,33 +1,40 @@
 <nav class="navbar bg_gard">
     <div class="container-fluid">
-        <a class="navbar-brand pl-md-4 pl-lg-4" asp-action="Index" asp-controller="Home"><img
-                src="~/img/Logo-p-69-15.png"></a>
+        <a class="navbar-brand pl-md-4 pl-lg-4" asp-action="Index" asp-controller="Home">
+            <img
+                src="~/img/Logo-p-69-15.png">
+        </a>
         <button class="navbar-toggler menu_col" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
-                viewBox="0 0 16 16">
+                 viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
-            style="background-color: #002e5b;">
+             style="background-color: #002e5b;">
             <div class="offcanvas-header">
                 <a class="navbar-brand pl-md-4 pl-lg-4" asp-action="ManagerLk" asp-controller="Account">
                     <h5>Рабочее пространство</h5>
                 </a>
                 <button type="button" class="btn-close menu_col" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
+                        aria-label="Close">
+                </button>
             </div>
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link menu_col" asp-action="Invoice" asp-controller="ManagerLkPages">Создать
-                            отправление</a>
+                        <a class="nav-link menu_col" asp-action="Invoice" asp-controller="ManagerLkPages">
+                            Создать
+                            отправление
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu_col" asp-action="AgmLk" asp-controller="ManagerLkPages">Аренда грузового
-                            такси</a>
+                        <a class="nav-link menu_col" asp-action="AgmLk" asp-controller="ManagerLkPages">
+                            Аренда грузового
+                            такси
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link menu_col" asp-action="Tracking" asp-controller="ManagerLkPages">Адресная книга</a>
