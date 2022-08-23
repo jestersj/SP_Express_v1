@@ -25,6 +25,22 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
+        public IActionResult Registries()
+        {
+            return View();
+        }
+        public IActionResult Departures()
+        {
+            return View();
+        }
+        public IActionResult Operations()
+        {
+            return View();
+        }
+        public IActionResult AddressBook()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
