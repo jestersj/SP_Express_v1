@@ -41,9 +41,11 @@ await Html.RenderPartialAsync("_Footer");
 
 
 
-
+    
             <div class="row justify-content-center" id="ind">
-                <form action="">
+                <form asp-action="SignInInd" asp-controller="Account" method="post" asp-antiforgery="true">
+                    <div class="validation" asp-validation-summary="ModelOnly"></div>
+                    
                     <div class="row text-center">
                         <div class="col-12 my-3">
                             <h2 class="text-uppercase">Физическое лицо</h2>
@@ -57,7 +59,7 @@ await Html.RenderPartialAsync("_Footer");
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row justify-content-center">
                         <div class="col-11">
                             <div class="form-group vmp_form-group form_box_agm_top">
@@ -66,7 +68,7 @@ await Html.RenderPartialAsync("_Footer");
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row justify-content-center">
                         <div class="col-11">
                             <div class="form-group vmp_form-group form_box_agm_top">
@@ -79,22 +81,22 @@ await Html.RenderPartialAsync("_Footer");
                         <div class="col-11 mb-4">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg" class="text-uppercase form-label">Пароль</label>
-                                <input asp-for="Password" type="password" minlength="6" maxlength="20" id="passwordReg"
+                                <input asp-for="Password" type="password" id="passwordReg"
                                        class="field no-border form-input">
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row justify-content-center">
                         <div class="col-11 mb-4">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg2" class="text-uppercase form-label">Подтвердить пароль</label>
-                                <input asp-for="PasswordConfirm" type="password" minlength="6" maxlength="20" id="passwordReg2"
+                                <input asp-for="PasswordConfirm" type="password" id="passwordReg2"
                                        class="field no-border form-input">
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row text-center">
                         <div class="col-12">
                             <button type="submit" class="btn btn-outline-primary btn-lg m-3">Зарегистрироваться</button>
