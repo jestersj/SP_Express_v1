@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Адресная книга";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuUserLk");
+    }
+}
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+<div class="bg_gard">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase welcome">Адресная книга</h2>
+            </div>
+        </div>
+    </div>
+</div>
