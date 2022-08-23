@@ -1,3 +1,6 @@
+@model LoginViewModel
+
+
 @{
     ViewData["Title"] = "Вход";
 }
@@ -5,11 +8,10 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section Menu_Main {
-    @{
-        await Html.RenderPartialAsync("_MenuMainLog");
-    }
-}
+
+
+
+
 @section Footer {
 @{
 await Html.RenderPartialAsync("_Footer");
@@ -28,7 +30,7 @@ await Html.RenderPartialAsync("_Footer");
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-9 col-11 all_border m-5" style="border-radius: 15px;">
-                <form action="">
+                <form asp-action="Login" asp-controller="Account" method="post" asp-antiforgery="true">
                     <div class="row text-center">
                         <div class="col-12 mt-3"><h2 class="text-uppercase">Вход</h2></div>
                     </div>
@@ -36,7 +38,7 @@ await Html.RenderPartialAsync("_Footer");
                         <div class="col-11">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="email" class="text-uppercase form-label">E-mail</label>
-                                <input type="email" id="email" class="field no-border form-input">
+                                <input asp-for="Email" type="email" id="email" class="field no-border form-input">
                             </div>
                         </div>
                     </div>
@@ -44,7 +46,7 @@ await Html.RenderPartialAsync("_Footer");
                         <div class="col-11">
                                 <div class="form-group vmp_form-group form_box_agm_top">
                                     <label for="password" class="text-uppercase form-label">Пароль</label>
-                                    <input type="password" minlength="6" maxlength="20" id="password" class="field no-border form-input">
+                                    <input asp-for="Password" type="password" id="password" class="field no-border form-input">
                                 </div>
                         </div>
                     </div>
@@ -58,7 +60,7 @@ await Html.RenderPartialAsync("_Footer");
                     </div>
                     <div class="row">
                         <div class="col-12 text-center mb-3">
-                            <a asp-action="SignIn" asp-controller="Account" class="signIn_link text-uppercase">Регистрация</a>
+                            <a asp-action="Register" asp-controller="Account" class="signIn_link text-uppercase">Регистрация</a>
                         </div>
                     </div>
                 </form>
