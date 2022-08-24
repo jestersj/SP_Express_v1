@@ -55,7 +55,7 @@
                         <div class="col-11 mt-3">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="FIOreg" class="text-uppercase form-label">ФИО</label>
-                                <input asp-for="FIO" type="text" id="FIOreg" class="field no-border form-input" required>
+                                <input asp-for="FIO" type="text" id="FIOreg" class="field no-border form-input" required="required">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div class="col-11">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="telreg" class="text-uppercase form-label">Телефон</label>
-                                <input asp-for="PhoneNumber" type="tel" id="telreg" class="field no-border form-input tel" required>
+                                <input asp-for="PhoneNumber" type="tel" id="telreg" class="field no-border form-input tel" required="required">
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         <div class="col-11">
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="emailReg" class="text-uppercase form-label">E-mail</label>
-                                <input asp-for="Email" type="email" id="emailReg" class="field no-border form-input" required>
+                                <input asp-for="Email" type="email" id="emailReg" class="field no-border form-input" required="required">
                             </div>
                         </div>
                     </div>
@@ -82,14 +82,17 @@
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg" class="text-uppercase form-label">Пароль</label>
                                 <input asp-for="Password" type="password" id="passwordReg"
-                                       class="field no-border form-input" required>
+                                       class="field no-border form-input" required="required">
                             </div>
                         </div>
                     </div>
                     <div class="row text-center">
-                        <div class="col-11" id="passEr2"></div>
-                        <div class="col-11" id="passEr1"></div>
-
+                        <div class="col-12" id="passEr2"></div>
+                        <div class="col-12" id="passEr1"></div>
+                        <div class="col-12" id="passEr6"></div>
+                        <div class="col-12" id="passEr3"></div>
+                        <div class="col-12" id="passEr4"></div>
+                        <div class="col-12" id="passEr5"></div>
                     </div>
 
                     <div class="row justify-content-center">
@@ -97,14 +100,14 @@
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg2" class="text-uppercase form-label">Подтвердить пароль</label>
                                 <input asp-for="PasswordConfirm" type="password" id="passwordReg2"
-                                       class="field no-border form-input" required>
+                                       class="field no-border form-input" required="required">
                             </div>
                         </div>
                     </div>
 
                     <div class="row text-center">
                         <div class="col-12">
-                            <button type="submit" class="btn btn-outline-primary btn-lg m-3"id="regBtn">Зарегистрироваться</button>
+                            <button type="submit" class="btn btn-outline-primary btn-lg m-3" id="regBtn">Зарегистрироваться</button>
                         </div>
                     </div>
                 </form>

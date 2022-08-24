@@ -8,8 +8,11 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuMainLog");
+    }
+}
 
 
 @section Footer {
