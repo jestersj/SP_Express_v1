@@ -39,3 +39,42 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+//Password requirements
+const passwordInput = document.getElementById('passwordReg'); //input for password
+const regBtn = document.getElementById('regBtn'); //Button
+
+const passEr1 = document.getElementById('passEr1');
+const passEr2 = document.getElementById('passEr2');
+
+passwordInput.oninput = ()=> {
+    //Presence of uppercase letter
+    let upp = 0;
+    passwordInput.value.split('').map(el => {
+        if (el === el.toUpperCase()) {
+            upp++
+        }
+    })
+    if (upp > 0) {
+        passEr1.innerHTML = ''
+
+    }
+    else {
+        passEr1.innerHTML = '<li><p class="text-uppercase">Нужна минимум одна заглавная буква</p></li><br>'
+
+    }
+    //lenth
+    if (passwordInput.value.split('').length < 8) {
+        passEr2.innerHTML = '<li><p class="text-uppercase">В пароле должно быть минимум 8 символов</p></li><br>'
+
+    } else {
+        passEr2.innerHTML = ''
+
+    }
+    //Accordance to all requirements
+    regBtn.disabled = !(upp > 0 &&
+        passwordInput.value.split('').length > 8);
+
+
+}
+

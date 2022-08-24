@@ -94,16 +94,18 @@ select {
 .form-label {
   font-size: 16px;
   transition: 0.3s;
+    margin-top: 20px;
 }
 
 .form-label1 {
   font-size: 14px;
   transition: 0.3s;
+    margin-top: 20px;
 }
 
 .form-input:focus~.form-label,
-.form-input:not(.form-input:placeholder-shown)~.form-label {
-  font-size: 10px;
+.form-input:not(:focus):valid~.form-label {
+    color: #0066AA;
 }
 
 .no-border {
