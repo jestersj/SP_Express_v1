@@ -62,6 +62,7 @@ namespace SP_Express_v1.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> SignInInd(RegisterViewModel model)
         {
+            Console.WriteLine('1');
             if (!ModelState.IsValid) return View(model);
 
             var resultUser = await _userManager.FindByEmailAsync(model.Email).ConfigureAwait(false);

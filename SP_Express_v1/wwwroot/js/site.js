@@ -140,7 +140,7 @@ passwordInput.oninput = ()=> {
     }
     
     //Accordance to all requirements
-    regBtn.disabled = !(nonLatin===0);
+    // regBtn.disabled = !(nonLatin===0);
 }
 
 
