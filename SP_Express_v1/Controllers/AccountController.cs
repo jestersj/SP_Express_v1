@@ -29,7 +29,6 @@ namespace SP_Express_v1.Controllers
         }
 
         [HttpPost]
-        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (!ModelState.IsValid) return View(model);
@@ -100,11 +99,6 @@ namespace SP_Express_v1.Controllers
         #endregion
 
         public IActionResult SignInLegal()
-        {
-            return View();
-        }
-
-        public IActionResult UserLk()
         {
             return View();
         }

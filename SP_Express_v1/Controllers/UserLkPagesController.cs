@@ -12,6 +12,11 @@ namespace SP_Express_v1.Controllers
         {
             _logger = logger;
         }
+        
+        public IActionResult UserLk()
+        {
+            return View();
+        }
 
         public IActionResult AgmLk()
         {
