@@ -26,10 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Identity\Pages\Account" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Remove="Areas\Identity\Pages\Account\Login.cshtml.cs" />
   </ItemGroup>
 
@@ -42,10 +38,6 @@
     <Content Remove="Areas\Identity\Pages\Account\Register.cshtml" />
     <Content Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
     <Content Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Areas\Identity\Pages\Account" />
   </ItemGroup>
 
   <ItemGroup>
