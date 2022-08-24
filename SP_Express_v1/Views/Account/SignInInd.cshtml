@@ -82,7 +82,13 @@
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg" class="text-uppercase form-label">Пароль</label>
                                 <input asp-for="Password" type="password" id="passwordReg"
-                                       class="field no-border form-input" required="required">
+                                       class="field_pas no-border form-input" required="required">
+                                <a href="#" class="password-control mb-1" onclick="return show_hide_password(this, 'passwordReg');" style="color: #264d73">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +106,13 @@
                             <div class="form-group vmp_form-group form_box_agm_top">
                                 <label for="passwordReg2" class="text-uppercase form-label">Подтвердить пароль</label>
                                 <input asp-for="PasswordConfirm" type="password" id="passwordReg2"
-                                       class="field no-border form-input" required="required">
+                                       class="field_pas no-border form-input" required="required">
+                                <a href="#" class="password-control mb-1" onclick="return show_hide_password(this, 'passwordReg2');" style="color: #264d73">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg>
+                                </a>
                             </div>
                         </div>
                     </div>

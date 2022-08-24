@@ -40,7 +40,10 @@ window.addEventListener("DOMContentLoaded", function() {
 
 });
 
-//Password requirements
+
+
+
+/////Password requirements
 const passwordInput = document.getElementById('passwordReg'); //input for password
 const passwordCheck = document.getElementById('passwordReg2');//input for checking password
 const regBtn = document.getElementById('regBtn'); //Button
@@ -52,7 +55,6 @@ const passEr4 = document.getElementById('passEr4');
 const passEr5 = document.getElementById('passEr5');
 const passEr6 = document.getElementById('passEr6');
 
-// regBtn.disabled = true;
 
 passwordInput.oninput = ()=> {
     //Presence of uppercase letter
@@ -138,10 +140,18 @@ passwordInput.oninput = ()=> {
     }
     
     //Accordance to all requirements
-    // regBtn.disabled = !(upp > 0 &&
-    //     passwordInput.value.split('').length >= 8 &&
-    //     nums>0 &&
-    //     letters>0 &&
-    //     nonLatin===0);
+    regBtn.disabled = !(nonLatin===0);
 }
 
+
+function show_hide_password(target, id){
+    const input = document.getElementById(id);
+    if (input.getAttribute('type') === 'password') {
+        target.classList.add('view');
+        input.setAttribute('type', 'text');
+    } else {
+        target.classList.remove('view');
+        input.setAttribute('type', 'password');
+    }
+    return false;
+}

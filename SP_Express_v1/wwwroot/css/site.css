@@ -1,16 +1,16 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 /* body {
@@ -25,9 +25,11 @@ html {
     border-radius: 35px;
     /*border: solid 3px gray;*/
 }
+
 .sec_start {
-  padding-bottom: 100px;
+    padding-bottom: 100px;
 }
+
 .sec {
     padding: 100px 0;
 }
@@ -39,12 +41,15 @@ html {
 .ft_col {
     color: #0066AA;
 }
+
 .menu_col {
-  color: #d9d9d9;
+    color: #d9d9d9;
 }
+
 .menu_col:hover {
-  color: #adadad;
+    color: #adadad;
 }
+
 .blue1 {
     background-color: #002e5b;
     justify-content: center;
@@ -54,328 +59,350 @@ html {
     background-color: #b54a25;
     justify-content: center;
 }
-@media(max-width: 600px) {
-  .img_shown {
-    display: none;
-  }
+
+@media (max-width: 600px) {
+    .img_shown {
+        display: none;
+    }
 }
+
 /* LK */
 :root {
-  --color1: #264d73;
-  --color2: #b54a25;
+    --color1: #264d73;
+    --color2: #b54a25;
 }
 
 #allServices {
-  display: block;
+    display: block;
 }
+
 #agmOnly {
-  display: block;
+    display: block;
 }
+
 .field {
-  width: 100%;
+    width: 100%;
+}
+.field_pas {
+    width: 90%;
 }
 
 .hours {
-  width: 45px;
-  margin: 10px;
+    width: 45px;
+    margin: 10px;
 }
 
 input,
 label,
 select {
-  outline: none;
-  padding-left: 10px;
+    outline: none;
+    padding-left: 10px;
 }
 
 .vmp_form-group {
-  position: relative;
+    position: relative;
 }
 
 .form-label {
-  font-size: 16px;
-  transition: 0.3s;
-    margin-top: 20px;
+    font-size: 16px;
+    transition: 0.3s;
+    padding-top: 20px;
 }
 
 .form-label1 {
-  font-size: 14px;
-  transition: 0.3s;
-    margin-top: 20px;
+    font-size: 14px;
+    transition: 0.3s;
+    padding-top: 20px;
 }
 
-.form-input:focus~.form-label,
-.form-input:not(:focus):valid~.form-label {
+.form-input:focus ~ .form-label,
+.form-input:not(:focus):invalid ~ .form-label {
     color: #0066AA;
 }
 
 .no-border {
-  border: transparent;
+    border: transparent;
 }
 
 .text_color {
-  color: var(--color2);
+    color: var(--color2);
 }
 
 .mailer {
-  writing-mode: vertical-rl;
-  transform: scale(-1);
+    writing-mode: vertical-rl;
+    transform: scale(-1);
 }
 
 .mailer_box {
-  border-top: var(--color1) solid 4px;
-  border-right: var(--color1) solid 4px;
-  border-left: var(--color1) solid 4px;
-  border-bottom: var(--color1) solid 2px;
+    border-top: var(--color1) solid 4px;
+    border-right: var(--color1) solid 4px;
+    border-left: var(--color1) solid 4px;
+    border-bottom: var(--color1) solid 2px;
 }
 
 .all_border {
-  /* border: var(--color1) solid 4px; */
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+    /* border: var(--color1) solid 4px; */
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
 .form_box_top {
-  border-bottom: solid var(--color1) 1px;
-  border-left: var(--color1) solid 4px;
+    border-bottom: solid var(--color1) 1px;
+    border-left: var(--color1) solid 4px;
 }
 
 .form_box {
-  border-top: var(--color1) solid 1px;
-  border-bottom: solid var(--color1) 1px;
-  border-left: var(--color1) solid 4px;
+    border-top: var(--color1) solid 1px;
+    border-bottom: solid var(--color1) 1px;
+    border-left: var(--color1) solid 4px;
 }
 
 .form_box_right {
-  border-top: var(--color1) solid 1px;
-  border-bottom: solid var(--color1) 1px;
-  border-left: var(--color1) solid 2px;
+    border-top: var(--color1) solid 1px;
+    border-bottom: solid var(--color1) 1px;
+    border-left: var(--color1) solid 2px;
 }
 
 .form_box_bot {
-  border-left: var(--color1) solid 4px;
-  border-top: var(--color1) solid 1px;
+    border-left: var(--color1) solid 4px;
+    border-top: var(--color1) solid 1px;
 }
 
 .form_box_bot_right {
-  border-left: var(--color1) solid 2px;
-  border-top: var(--color1) solid 1px;
+    border-left: var(--color1) solid 2px;
+    border-top: var(--color1) solid 1px;
 }
 
 .form_box_mid1 {
-  border-bottom: var(--color1) solid 2px;
+    border-bottom: var(--color1) solid 2px;
 }
 
 .form_box_mid {
-  border-top: var(--color1) solid 0x;
-  border-bottom: solid var(--color1) 2px;
+    border-top: var(--color1) solid 0x;
+    border-bottom: solid var(--color1) 2px;
 }
 
 .form_box_last {
-  border-top: var(--color1) solid 0px;
-  border-bottom: solid var(--color1) 2px;
-  border-right: var(--color1) solid 0px;
+    border-top: var(--color1) solid 0px;
+    border-bottom: solid var(--color1) 2px;
+    border-right: var(--color1) solid 0px;
 }
 
 .form_box_last_mid {
-  border-top: var(--color1) solid 0px;
-  border-left: var(--color1) solid 2px;
+    border-top: var(--color1) solid 0px;
+    border-left: var(--color1) solid 2px;
 }
 
 .form_box_last_right {
-  border-top: var(--color1) solid 0px;
-  border-bottom: solid var(--color1) 2px;
-  border-left: var(--color1) solid 2px;
+    border-top: var(--color1) solid 0px;
+    border-bottom: solid var(--color1) 2px;
+    border-left: var(--color1) solid 2px;
 
 }
 
 .form_box_last_right1 {
-  border-top: var(--color1) solid 0px;
-  border-bottom: solid var(--color1) 0px;
-  border-left: var(--color1) solid 2px;
+    border-top: var(--color1) solid 0px;
+    border-bottom: solid var(--color1) 0px;
+    border-left: var(--color1) solid 2px;
 
 }
 
 #timeOfDelivery {
-  display: block;
+    display: block;
 }
 
 @media (max-width: 1000px) {
-  .mailer {
-      writing-mode: horizontal-tb;
-      transform: scale(1);
-      border-bottom: var(--color1) solid 4px;
-      padding: 10px 0;
-  }
+    .mailer {
+        writing-mode: horizontal-tb;
+        transform: scale(1);
+        border-bottom: var(--color1) solid 4px;
+        padding: 10px 0;
+    }
 
-  .form_box_top {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_top {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_right {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_right {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_bot {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_bot {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_bot_right {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 0px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_bot_right {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 0px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_last_right {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_last_right {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_last_right1 {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 0px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_last_right1 {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 0px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_last_mid {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_last_mid {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 
-  .form_box_last1 {
-      border-top: var(--color1) solid 0px;
-      border-bottom: solid var(--color1) 2px;
-      border-right: 0px;
-      border-left: var(--color1) solid 0px;
-  }
+    .form_box_last1 {
+        border-top: var(--color1) solid 0px;
+        border-bottom: solid var(--color1) 2px;
+        border-right: 0px;
+        border-left: var(--color1) solid 0px;
+    }
 }
 
 /* For AGM */
 .form_box_agm_top {
-  border-top: var(--color1) solid 0px;
-  border-bottom: solid var(--color1) 2px;
-  border-right: 0px;
-  border-left: var(--color1) solid 0px;
+    border-top: var(--color1) solid 0px;
+    border-bottom: solid var(--color1) 2px;
+    border-right: 0px;
+    border-left: var(--color1) solid 0px;
 }
 
 /* More */
 .bg_gard {
-  background: -webkit-linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
-  background: -moz-linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
-  background: linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
+    background: -webkit-linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
+    background: -moz-linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
+    background: linear-gradient(90deg, rgb(0, 46, 91), rgb(0, 102, 170));
 }
+
 .welcome {
-  height: 100px;
-  line-height: 100px;
-  color: white;
+    height: 100px;
+    line-height: 100px;
+    color: white;
 }
+
 .card_wrapper {
-  border-radius: 15px;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
-  transition: 0.4s;
-  line-height: 100px;
-  color: #0066AA;
-  width: 300px;
+    border-radius: 15px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    line-height: 100px;
+    color: #0066AA;
+    width: 300px;
 }
+
 .card_wrapper:hover {
-  background-color: #f0f0f0;
-  color: #0066AA;
-  border-color: transparent;
+    background-color: #f0f0f0;
+    color: #0066AA;
+    border-color: transparent;
 }
+
 .card_size {
-  min-width: 400px;
+    min-width: 400px;
 }
 
 /* Распределения */
 table {
-  border-collapse: collapse;
+    border-collapse: collapse;
 }
+
 td, th {
-  padding: 3px; /* Поля вокруг содержимого таблицы */
-  border: 1px solid black; /* Параметры рамки */
- }
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+}
 
 /*Страница входа*/
 .signIn_link {
-  text-decoration: none;
-  font-size: 26px;
-  font-weight: 500;
-  color: #0066AA;
-}
-/* Страница регистрации */
-.card_wrapper_signin {
-  border-radius: 15px;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
-  transition: 0.4s;
-  line-height: 100px;
-  color: #0066AA;
-  width: 100%;
-}
-.card_wrapper_signin:hover {
-  background-color: #f0f0f0;
-  color: #0066AA;
-  border-color: transparent;
-}
-#regChoice {
-  display: flex;
-}
-#ind {
-  display: flex;
-}
-#legal {
-  display: flex;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    color: #0066AA;
 }
 
+/* Страница регистрации */
+.card_wrapper_signin {
+    border-radius: 15px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    line-height: 100px;
+    color: #0066AA;
+    width: 100%;
+}
+
+.card_wrapper_signin:hover {
+    background-color: #f0f0f0;
+    color: #0066AA;
+    border-color: transparent;
+}
+
+#regChoice {
+    display: flex;
+}
+
+#ind {
+    display: flex;
+}
+
+#legal {
+    display: flex;
+}
 
 
 /* Услуги */
 /* Главная услуги */
 .card_wrapper_services {
-  background-color: #0066AA;
-  border-radius: 15px;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
-  transition: 0.4s;
-  height: 100px;
-  width: 250px;
-  line-height: 100px;
+    background-color: #0066AA;
+    border-radius: 15px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    height: 100px;
+    width: 250px;
+    line-height: 100px;
 }
+
 .card_wrapper_services:hover {
-  background-color: #002e5b;
+    background-color: #002e5b;
 }
+
 .card_wrapper_services h3 {
-  color: white
+    color: white
 }
+
 .card_wrapper_services p {
-  color: white
+    color: white
 }
+
 .text_black {
-  color: black;
+    color: black;
 }
+
 .text_bold {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .line {
-  width: 80%;
-  height: 3px;
-  background-color: #b54a25;
+    width: 80%;
+    height: 3px;
+    background-color: #b54a25;
 }
