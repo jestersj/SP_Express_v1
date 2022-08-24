@@ -32,7 +32,8 @@ await Html.RenderPartialAsync("_Footer");
             <div class="col-lg-6 col-md-9 col-11 all_border m-5" style="border-radius: 15px;">
                 <form asp-action="Login" asp-controller="Account" method="post" asp-antiforgery="true">
                     <div class="row text-center">
-                        <div class="col-12 mt-3"><h2 class="text-uppercase">Вход</h2></div>
+                        <div class="col-12 mt-3">
+                            <h2 class="text-uppercase">Вход</h2></div>
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-11">
@@ -44,12 +45,15 @@ await Html.RenderPartialAsync("_Footer");
                     </div>
                     <div class="row justify-content-center">
                         <div class="col-11">
-                                <div class="form-group vmp_form-group form_box_agm_top">
-                                    <label for="password" class="text-uppercase form-label">Пароль</label>
-                                    <input asp-for="Password" type="password" id="password" class="field no-border form-input">
-                                </div>
+                            <div class="form-group vmp_form-group form_box_agm_top">
+                                <label for="password" class="text-uppercase form-label">Пароль</label>
+                                <input asp-for="Password" type="password" id="password" class="field no-border form-input">
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="validation text-danger mt-2" asp-validation-summary="ModelOnly"></div>
+                    
                     <div class="row text-center">
                         <div class="col-12">
                             <button type="submit" class="btn btn-outline-primary btn-lg m-3">Войти</button>
