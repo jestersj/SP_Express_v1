@@ -44,8 +44,6 @@ await Html.RenderPartialAsync("_Footer");
     
             <div class="row justify-content-center" id="ind">
                 <form asp-action="SignInInd" asp-controller="Account" method="post" asp-antiforgery="true">
-                    <div class="validation" asp-validation-summary="ModelOnly"></div>
-                    
                     <div class="row text-center">
                         <div class="col-12 my-3">
                             <h2 class="text-uppercase">Физическое лицо</h2>
