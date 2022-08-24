@@ -16,7 +16,13 @@ builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServe
 // builder.Services.AddDbContext<ApplicationContext>(options =>
 //    options.UseSqlServer(connectionString));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => {
+        options.Password.RequiredLength = 8;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireUppercase = true;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequireDigit = true;
+    })
     .AddRoles<IdentityRole>()
     .AddClaimsPrincipalFactory<UserClaimsPrincipalFactory<IdentityUser, IdentityRole>>()
     .AddEntityFrameworkStores<ApplicationContext>()
