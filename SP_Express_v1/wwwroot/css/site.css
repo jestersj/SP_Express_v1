@@ -49,6 +49,13 @@ html {
 .menu_col:hover {
     color: #adadad;
 }
+.menu_col_exit {
+    color: #c90e04;
+}
+
+.menu_col_exit:hover {
+    color: #870903;
+}
 
 .blue1 {
     background-color: #002e5b;
@@ -70,6 +77,8 @@ html {
 :root {
     --color1: #264d73;
     --color2: #b54a25;
+    --color3: #c90e04;
+    --color4: #a10a03;
 }
 
 #allServices {
@@ -315,6 +324,20 @@ select {
 .card_wrapper:hover {
     background-color: #f0f0f0;
     color: #0066AA;
+    border-color: transparent;
+}
+.card_wrapper_exit {
+    border-radius: 15px;
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    line-height: 100px;
+    color: var(--color3);
+    width: 300px;
+}
+
+.card_wrapper_exit:hover {
+    background-color: #f0f0f0;
+    color: var(--color4);
     border-color: transparent;
 }
 

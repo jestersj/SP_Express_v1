@@ -23,6 +23,7 @@
     <Content Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
     <Content Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
     <Content Remove="Views\UserLkPages\AddressPage.cshtml" />
+    <Content Remove="wwwroot\js\inputmask.js" />
   </ItemGroup>
 
   <ItemGroup>

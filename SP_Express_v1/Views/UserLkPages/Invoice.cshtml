@@ -5,231 +5,248 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @section Menu_Main {
     @{
         await Html.RenderPartialAsync("_MenuUserLk");
     }
 }
+
 @section Footer {
     @{
         await Html.RenderPartialAsync("_Footer");
     }
 }
+
 <div class="bg_gard">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="text-uppercase welcome">Оформление накладной</h2>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase welcome">Оформление накладной</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="allServices">
+<form action="" class="" name="form">
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
+        <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
+    </div>
+    <div class="col-11">
+        <div class="">
+            <div class="form-group vmp_form-group form_box_top">
+                <label for="name" class="text-uppercase form-label">ФИО</label>
+                <input type="text" id="nameInvoice" class="field no-border form-input"
+                       placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="company" class="text-uppercase form-label">Компания</label>
+                <input type="text" id="companyInvoice" class="field no-border form-input"
+                       placeholder="ООО Колобки">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="address" class="text-uppercase form-label">Адрес</label>
+                <input type="text" id="addressInvoice" class="field no-border form-input"
+                       placeholder="Загородное шоссе, д1 к2">
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box">
+                        <label for="city" class="text-uppercase form-label">Город</label>
+                        <input type="text" id="Invoicecity" class="field no-border form-input"
+                               placeholder="Москва">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_right">
+                        <label for="country" class="text-uppercase form-label">Страна</label>
+                        <input type="text" id="Invoicecountry" class="field no-border form-input"
+                               placeholder="Россия">
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box_bot">
+                        <label for="index" class="text-uppercase form-label">Индекс</label>
+                        <input type="text" id="Invoiceindex" class="field no-border form-input"
+                               placeholder="108814">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_bot_right">
+                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                        <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                               placeholder="+7 (499) 678 5000">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container" id="allServices">
-        <form action="" class="" name="form">
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
-                    <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
-                </div>
-                <div class="col-11">
-                    <div class="">
-                        <div class="form-group vmp_form-group form_box_top">
-                            <label for="name" class="text-uppercase form-label">ФИО</label>
-                            <input type="text" id="name" class="field no-border form-input"
-                                placeholder="Иванов Иван Иванович">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="company" class="text-uppercase form-label">Компания</label>
-                            <input type="text" id="company" class="field no-border form-input"
-                                placeholder="ООО Колобки">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="address" class="text-uppercase form-label">Адрес</label>
-                            <input type="text" id="address" class="field no-border form-input"
-                                placeholder="Загородное шоссе, д1 к2">
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box">
-                                    <label for="city" class="text-uppercase form-label">Город</label>
-                                    <input type="text" id="city" class="field no-border form-input"
-                                        placeholder="Москва">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_right">
-                                    <label for="country" class="text-uppercase form-label">Страна</label>
-                                    <input type="text" id="country" class="field no-border form-input"
-                                        placeholder="Россия">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box_bot">
-                                    <label for="index" class="text-uppercase form-label">Индекс</label>
-                                    <input type="text" id="index" class="field no-border form-input"
-                                        placeholder="108814">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_bot_right">
-                                    <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                                    <input type="tel" id="phone_num" class="field no-border form-input tel"
-                                        placeholder="+7 (499) 678 5000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center all_border mb-3">
-                <div class="col-lg-1 col-md-12">
-                    <h4 class="mailer text_color text-uppercase text-center">Получатель</h4>
-                </div>
-                <div class="col-11">
-                    <div class="">
-                        <div class="form-group vmp_form-group form_box_top">
-                            <label for="name" class="text-uppercase form-label">ФИО</label>
-                            <input type="text" id="name" class="field no-border form-input"
-                                placeholder="Иванов Иван Иванович">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="company" class="text-uppercase form-label">Компания</label>
-                            <input type="text" id="company" class="field no-border form-input"
-                                placeholder="ООО Колобки">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="address" class="text-uppercase form-label">Адрес</label>
-                            <input type="text" id="address" class="field no-border form-input"
-                                placeholder="Загородное шоссе, д1 к2">
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box">
-                                    <label for="city" class="text-uppercase form-label">Город</label>
-                                    <input type="text" id="city" class="field no-border form-input"
-                                        placeholder="Москва">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_right">
-                                    <label for="country" class="text-uppercase form-label">Страна</label>
-                                    <input type="text" id="country" class="field no-border form-input"
-                                        placeholder="Россия">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box_bot">
-                                    <label for="index" class="text-uppercase form-label">Индекс</label>
-                                    <input type="text" id="index" class="field no-border form-input"
-                                        placeholder="108814">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_bot_right">
-                                    <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                                    <input type="tel" id="phone_num" class="field no-border form-input tel"
-                                        placeholder="+7 (499) 678 5000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="all_border">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-group vmp_form-group form_box_mid1"> <label for="note"
-                                class="text-uppercase form-label">Примечания отправителя
-                                (будут указаны в счете)</label>
-                            <input type="text" id="note" class="field no-border form-input"
-                                placeholder="Ваши примечания">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-group vmp_form-group form_box_mid">
-                            <label for="description" class="text-uppercase form-label">Описание</label>
-                            <input type="text" id="description" class="field no-border form-input"
-                                placeholder="Описание посылки">
-                            <input type="checkbox" class="form-check-input form-input" id="docs-only">
-                            <label class="form-check-label text-uppercase form-label" for="docs-only">Только
-                                документы</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row gx-0">
-                    <div class="col-lg-6">
-                        <div class="form-group vmp_form-group form_box_last">
-                            <label for="pieces" class="text-uppercase form-label">Мест</label>
-                            <input type="text" id="pieces" class="field no-border form-input"
-                                placeholder="Например, 30">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="form-group vmp_form-group form_box_last_right">
-                            <label for="weight" class="text-uppercase form-label">Вес</label>
-                            <input type="text" id="weight" class="field no-border form-input"
-                                placeholder="Например, 0.5 кг">
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-0 align-items-center">
-                    <div class="col-lg-4">
-                        <div class="form-group vmp_form-group form_box_last1">
-                            <div class="row">
-                                <div class="col-3"> <label for="service"
-                                        class="text-uppercase form-label">Услуга</label>
-                                    <br><select name="service" id="service" class="mb-1" onchange="">
-                                        <option selected>Стандарт</option>
-                                        <option>Экспресс 2</option>
-                                        <option>Экспресс 6</option>
-                                        <option>Экспресс 24</option>
-                                        <option>Посылка</option>
-                                        <option>Услуги грузчиков</option>
-                                        <option>Логистические услуги</option>
-                                        <option>Предпочтовая подготовка</option>
-                                        <option>Экспресс по России</option>
-                                        <option>Экспресс по миру</option>
-                                    </select>
-                                </div>
-                                <div id="timeOfDelivery" class="col-9">
-                                    <label for="from" class="text-uppercase form-label1">Время доставки с</label>
-                                    <input type="number" id="from" class="hours no-border form-input">
-                                    <label for="to" class="text-uppercase form-label1">До</label>
-                                    <input type="number" id="to" class="hours no-border form-input">
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group vmp_form-group form_box_last_mid">
-                            <label for="value" class="text-uppercase form-label">Объявленная ценность</label>
-                            <input type="text" id="value" class="field no-border form-input"
-                                placeholder="Указывайте в рублях">
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="form-group vmp_form-group form_box_last_right1">
-                            <label for="price" class="text-uppercase form-label">Фактическая стоимость</label>
-                            <input type="text" id="price" class="field no-border form-input"
-                                placeholder="Указывайте в рублях">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-primary btn-lg m-5">Отправить</button>
-                </div>
-            </div>
-        </form>
-
+</div>
+<div class="row align-items-center justify-content-center all_border mb-3">
+    <div class="col-lg-1 col-md-12">
+        <h4 class="mailer text_color text-uppercase text-center">Получатель</h4>
     </div>
+    <div class="col-11">
+        <div class="">
+            <div class="form-group vmp_form-group form_box_top">
+                <label for="name" class="text-uppercase form-label">ФИО</label>
+                <input type="text" id="name" class="field no-border form-input"
+                       placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="company" class="text-uppercase form-label">Компания</label>
+                <input type="text" id="company" class="field no-border form-input"
+                       placeholder="ООО Колобки">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="address" class="text-uppercase form-label">Адрес</label>
+                <input type="text" id="address" class="field no-border form-input"
+                       placeholder="Загородное шоссе, д1 к2">
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box">
+                        <label for="city" class="text-uppercase form-label">Город</label>
+                        <input type="text" id="city" class="field no-border form-input"
+                               placeholder="Москва">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_right">
+                        <label for="country" class="text-uppercase form-label">Страна</label>
+                        <input type="text" id="country" class="field no-border form-input"
+                               placeholder="Россия">
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box_bot">
+                        <label for="index" class="text-uppercase form-label">Индекс</label>
+                        <input type="text" id="index" class="field no-border form-input"
+                               placeholder="108814">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_bot_right">
+                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                        <input type="tel" id="phone_num" class="field no-border form-input tel"
+                               placeholder="+7 (499) 678 5000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="all_border">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <label for="note"
+                       class="text-uppercase form-label">
+                    Примечания отправителя
+                    (будут указаны в счете)
+                </label>
+                <input type="text" id="note" class="field no-border form-input"
+                       placeholder="Ваши примечания">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group vmp_form-group">
+                <label for="description" class="text-uppercase form-label">Описание</label>
+                <input type="text" id="description" class="field no-border form-input"
+                       placeholder="Описание посылки">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group form_box_last">
+                <input class="form-check-input" type="checkbox" value="" id="docOnly">
+                <label class="form-check-label" for="docOnly">
+                    Только документы
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row gx-0">
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last">
+                <label for="pieces" class="text-uppercase form-label">Мест</label>
+                <input type="text" id="pieces" class="field no-border form-input"
+                       placeholder="Например, 30">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last_right">
+                <label for="weight" class="text-uppercase form-label">Вес</label>
+                <input type="text" id="weight" class="field no-border form-input"
+                       placeholder="Например, 0.5 кг">
+            </div>
+        </div>
+    </div>
+    <div class="row gx-0 align-items-center">
+        <div class="col-lg-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="service"
+                               class="text-uppercase form-label">
+                            Услуга
+                        </label>
+                        <br>
+                        <select name="service" id="service" class="mb-1" onchange="">
+                            <option selected>Стандарт</option>
+                            <option>Экспресс 2</option>
+                            <option>Экспресс 6</option>
+                            <option>Экспресс 24</option>
+                            <option>Посылка</option>
+                            <option>Услуги грузчиков</option>
+                            <option>Логистические услуги</option>
+                            <option>Предпочтовая подготовка</option>
+                            <option>Экспресс по России</option>
+                            <option>Экспресс по миру</option>
+                        </select>
+                    </div>
+                    <div id="timeOfDelivery" class="col-9">
+                        <label for="from" class="text-uppercase form-label1">Время доставки с</label>
+                        <input type="number" id="from" class="hours no-border form-input">
+                        <label for="to" class="text-uppercase form-label1">До</label>
+                        <input type="number" id="to" class="hours no-border form-input">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group">
+                <label for="value" class="text-uppercase form-label">Объявленная ценность</label>
+                <input type="text" id="value" class="field no-border form-input"
+                       placeholder="Указывайте в рублях">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last_right1">
+                <label for="price" class="text-uppercase form-label">Фактическая стоимость</label>
+                <input type="text" id="price" class="field no-border form-input"
+                       placeholder="Указывайте в рублях">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-12">
+        <button type="submit" class="btn btn-outline-primary btn-lg m-5">Отправить</button>
+    </div>
+</div>
+
+</form>
+</div>

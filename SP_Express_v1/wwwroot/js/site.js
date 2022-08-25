@@ -1,8 +1,7 @@
 ﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 // for details on configuring this project to bundle and minify static web assets.
 
-// Write your JavaScript code.
-//Маска ввода
+/////Input mask for phone numbers
 window.addEventListener("DOMContentLoaded", function() {
     [].forEach.call( document.querySelectorAll('.tel'), function(input) {
     var keyCode;
@@ -39,7 +38,6 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 
 });
-
 
 
 
