@@ -52,7 +52,9 @@
                         <a class="nav-link menu_col" asp-action="Settings" asp-controller="UserLkPages">Настройки</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu_col_exit" asp-action="" asp-controller="">Выход</a>
+                        <form method="post" asp-controller="Account" asp-action="Logout">
+                            <input class="dropdown-item menu_col_exit logout" type="submit" value="Выход"/>
+                        </form>
                     </li>
                 </ul>
             </div>

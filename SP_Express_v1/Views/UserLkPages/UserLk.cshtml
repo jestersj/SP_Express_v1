@@ -143,7 +143,8 @@
             </a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-10 card_size">
-            <a asp-action="" asp-controller="" class="btn p-4 card_wrapper_exit">
+            <form method="post" asp-controller="Account" asp-action="Logout">
+            <button class="btn p-4 card_wrapper_exit">
                 <div class="row justify-content-center align-items-center">
                     <div class="col-3">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -155,7 +156,8 @@
                         <h3>Выход</h3>
                     </div>
                 </div>
-            </a>
+            </button>
+            </form>
         </div>
     </div>
 </div>

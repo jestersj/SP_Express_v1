@@ -44,6 +44,7 @@ namespace SP_Express_v1.Controllers
             
         }
 
+        
         public IActionResult Register()
         {
             return View();
@@ -108,7 +109,15 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
-
+        
+        
+        [HttpPost] 
+        public async Task<IActionResult> Logout() {
+            await _signInManager.SignOutAsync(); 
+            return RedirectToAction("Index", "Home"); 
+        }
+        
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

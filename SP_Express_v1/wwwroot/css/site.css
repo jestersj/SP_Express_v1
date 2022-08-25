@@ -132,7 +132,16 @@ select {
 .no-border {
     border: transparent;
 }
-
+.logout {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+.logout:hover {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
 .text_color {
     color: var(--color2);
 }
