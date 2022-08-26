@@ -1,4 +1,4 @@
-@model AdrNew
+@model Address
 @{
     ViewData["Title"] = "Оформление накладной";
 }
@@ -73,16 +73,21 @@
 
 
 
-<input id="Lat" asp-for="Lat" type="hidden" />
+            <input id="Lat" asp-for="Lat" type="hidden" />
             <input id="Lon" asp-for="Lon" type="hidden" />
-            <input asp-for="Gc" type="hidden" id="Gc" />
             <input asp-for="Region" type="hidden" id="Region" />
-            <input asp-for="RegionFull" type="hidden" id="RegionFull" />
+            <input asp-for="RegionWithType" type="hidden" id="RegionWithType" />
+            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode" />
             <input asp-for="Country" type="hidden" id="Country" />
-            <input asp-for="PostIndex" type="hidden" id="PostIndex" />
-            <input asp-for="Town" type="hidden" id="Town" />
+            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode" />
+            <input asp-for="PostalCode" type="hidden" id="PostalCode" />
+            <input asp-for="City" type="hidden" id="City" />
+            <input asp-for="CityWithType" type="hidden" id="CityWithType" />
+            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker" />
             <input asp-for="Street" type="hidden" id="Street" />
+            <input asp-for="StreetWithType" type="hidden" id="StreetWithType" />
             <input asp-for="House" type="hidden" id="House" />
+            <input asp-for="Block" type="hidden" id="Block" />
             
             
             <div class="row align-items-center justify-content-center all_border mb-3">
@@ -129,14 +134,19 @@
 
             <input id="Lat2" asp-for="Lat" type="hidden" />
             <input id="Lon2" asp-for="Lon" type="hidden" />
-            <input asp-for="Gc" type="hidden" id="Gc2" />
             <input asp-for="Region" type="hidden" id="Region2" />
-            <input asp-for="RegionFull" type="hidden" id="RegionFull2" />
+            <input asp-for="RegionWithType" type="hidden" id="RegionWithType2" />
+            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2" />
             <input asp-for="Country" type="hidden" id="Country2" />
-            <input asp-for="PostIndex" type="hidden" id="PostIndex2" />
-            <input asp-for="Town" type="hidden" id="Town2" />
+            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2" />
+            <input asp-for="PostalCode" type="hidden" id="PostalCode2" />
+            <input asp-for="City" type="hidden" id="City2" />
+            <input asp-for="CityWithType" type="hidden" id="CityWithType2" />
+            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2" />
             <input asp-for="Street" type="hidden" id="Street2" />
-<input asp-for="House" type="hidden" id="House2" />
+            <input asp-for="StreetWithType" type="hidden" id="StreetWithType2" />
+            <input asp-for="House" type="hidden" id="House2" />
+            <input asp-for="Block" type="hidden" id="Block2" />
 
 
 

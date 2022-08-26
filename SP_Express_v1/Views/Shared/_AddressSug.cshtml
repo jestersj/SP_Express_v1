@@ -2,120 +2,57 @@
 <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
 <script>
-// function join(arr) {
-//     var separator = arguments.length > 1 ? arguments[1] : ", ";
-//     return arr.filter(function (n) { return n }).join(separator);
-//   }
-//
-//   function geoQuality(qc_geo) {
-//     var localization = {
-//       "0": "точные",
-//       "1": "ближайший дом",
-//       "2": "улица",
-//       "3": "населенный пункт",
-//       "4": "город"
-//     };
-//     return localization[qc_geo] || qc_geo;
-//   }
-//
-//   function fillPostalCode(address) {
-//     var postKode = address.postal_code;
-//     if (address.postal_code) $("#PostIndex").val(postKode);
-//     else $("#PostIndex").val(0);
-//   }
-//
-//   function fillCountry(address) {
-//     var cntry = address.country;
-//     $("#Country").val(cntry);
-//   }
-//
-//   function fillRegionFull(address) {
-//     $("#RegionFull").val(join([
-//       join([address.region, address.region_type], ". "),
-//       join([address.area, address.area_type], " ")
-//     ]));
-//   }
-//
-//   function fillRegion(address) {
-//     $("#Region").val(address.region);
-//   }
-//
-//   function fillCity(address) {
-//     $("#Town").val(join([
-//       join([address.city, address.city_type], ". "),
-//       join([address.settlement_type, address.settlement], " ")
-//     ]));
-//   }
-//
-//   function fillStreet(address) {
-//     $("#Street").val(
-//       join([address.street, address.street_type], ". ")
-//     );
-//   }
-//
-//   function fillHouse(address) {
-//     $("#House").val(join([
-//       join([address.house_type, address.house], ". "),
-//       join([address.block_type, address.block], " ")
-//     ]));
-//   }
-//
-//   function fillFlat(address) {
-//     $("#Flat").val(
-//       join([address.flat_type, address.flat], " ")
-//     );
-//   }
-//
-//   function fillGeo(address) {
-//     if (address.qc_geo !== "5") {
-//       $("#Lat").val(address.geo_lat);
-//       $("#Lon").val(address.geo_lon);
-//       $("#Gc").val(geoQuality(address.qc_geo));
-//     }
-//     else {
-//       $("#Lat").val(0);
-//       $("#Lon").val(0);
-//     }
-//   }
 
   function fillSelected(suggestion) {
-    let address = suggestion.data;
-    
-    if (address.postal_code) $("#PostIndex").val(address.postal_code);
-    else $("#PostIndex").val(0);
-    
-    $("#Country").val(address.country);
-    
-    $("#Region").val(address.region);
-    
-    $("#RegionFull").val(join([
-          join([address.region, address.region_type], ". "),
-          join([address.area, address.area_type], " ")
-    ]));
-    
-    $("#Town").val(join([
-          join([address.city, address.city_type], ". "),
-          join([address.settlement_type, address.settlement], " ")
-        ]));
-    
-    $("#Street").val(
-          join([address.street, address.street_type], ". ")
-        );
-    
-    $("#House").val(join([
-          join([address.house_type, address.house], ". "),
-          join([address.block_type, address.block], " ")
-        ]));
-    
-    if (address.qc_geo !== "5") {
-          $("#Lat").val(address.geo_lat);
-          $("#Lon").val(address.geo_lon);
-          $("#Gc").val(geoQuality(address.qc_geo));
-        }
-        else {
-          $("#Lat").val(0);
-          $("#Lon").val(0);
-        }
+      let address = suggestion.data;
+      
+      if (address.postal_code) $("#PostIndex").val(address.postal_code);
+      else $("#PostIndex").val(0);
+      
+      $("#Country").val(address.country);
+      
+      $("#CountryISOCode").val(address.country_iso_code); 
+      
+      $("#Region").val(address.region);
+      
+      $("#RegionISOCode").val(address.region_iso_code);
+      
+      $("#RegionWithType").val(join([
+            join([address.region, address.region_type], ". "),
+            join([address.area, address.area_type], " ")
+      ]));
+      
+      $("#City").val(join([
+            join([address.city, address.city_type], ". "),
+            join([address.settlement_type, address.settlement], " ")
+          ]));
+      
+      $("#CityWithType").val(address.city_with_type);
+      
+      $("#CapitalMarker").val(address.capital_marker);
+      
+      $("#Street").val(
+            join([address.street, address.street_type], ". ")
+          );
+      
+      $("#StreetWithType").val(address.street_with_type);
+      
+      $("#Block").val(address.block);
+      
+      $("#House").val(join([
+            join([address.house_type, address.house], ". "),
+            join([address.block_type, address.block], " ")
+          ]));
+      
+      if (address.qc_geo !== "5") {
+            $("#Lat").val(address.geo_lat);
+            $("#Lon").val(address.geo_lon);
+            $("#Gc").val(geoQuality(address.qc_geo));
+          }
+          else {
+            $("#Lat").val(0);
+            $("#Lon").val(0);
+          }
   }
   
   
@@ -128,21 +65,33 @@
       
       $("#Country2").val(address.country);
       
+      $("#CountryISOCode2").val(address.country_iso_code); 
+      
       $("#Region2").val(address.region);
       
-      $("#RegionFull2").val(join([
+      $("#RegionISOCode2").val(address.region_iso_code);
+      
+      $("#RegionWithType2").val(join([
             join([address.region, address.region_type], ". "),
             join([address.area, address.area_type], " ")
       ]));
       
-      $("#Town2").val(join([
+      $("#City2").val(join([
             join([address.city, address.city_type], ". "),
             join([address.settlement_type, address.settlement], " ")
           ]));
       
+      $("#CityWithType2").val(address.city_with_type);
+      
+      $("#CapitalMarker2").val(address.capital_marker);
+      
       $("#Street2").val(
             join([address.street, address.street_type], ". ")
           );
+      
+      $("#StreetWithType2").val(address.street_with_type);
+      
+      $("#Block2").val(address.block);
       
       $("#House2").val(join([
             join([address.house_type, address.house], ". "),
@@ -158,6 +107,7 @@
             $("#Lat2").val(0);
             $("#Lon2").val(0);
           }
+         
     }
   
   

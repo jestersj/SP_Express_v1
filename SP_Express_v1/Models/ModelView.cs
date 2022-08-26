@@ -5,8 +5,8 @@ namespace SP_Express_v1.Models
     public class Address
     {
         [Required]
-        [Display(Name = "Адрес")]
-        public string Adress { get; set; }
+        [Display(Name = "Адрес")] 
+        public string AdrName { get; set; }
 
         [Display(Name = "ISO  код страны")]
         public string CountryISOCode { get; set; }
@@ -27,16 +27,16 @@ namespace SP_Express_v1.Models
         public string City { get; set; }
         
         [Display(Name = "Город с типом")]
-        public string CitoWithType { get; set; }
+        public string CityWithType { get; set; }
         
         [Display(Name = "Маркер столицы")]
         public int CapitalMarker { get; set; }
         
         [Display(Name = "Улица")]
-        public string Streat { get; set; }
+        public string Street { get; set; }
         
         [Display(Name = "Улица с типом")]
-        public string StreatWithType { get; set; }
+        public string StreetWithType { get; set; }
         
         [Display(Name = "Дом")]
         public string House { get; set; }
