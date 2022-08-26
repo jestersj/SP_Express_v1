@@ -5,118 +5,133 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
 @section Menu_Main {
     @{
         await Html.RenderPartialAsync("_MenuUserLk");
     }
 }
+
 @section Footer {
     @{
         await Html.RenderPartialAsync("_Footer");
     }
 }
+
 <div class="bg_gard">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="text-uppercase welcome">Настройки</h2>
-                </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase welcome">Настройки</h2>
             </div>
         </div>
     </div>
-    <div class="container">
-        <form action="" class="" name="form">
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <h3>Изменить данные по умолчанию</h3>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
-                    <h4 class="mailer text_color text-uppercase text-center">Данные <br>по умолчанию</h4>
-                </div>
-                <div class="col-11">
-                    <div class="">
-                        <div class="form-group vmp_form-group form_box_top">
-                            <label for="name" class="text-uppercase form-label">ФИО</label>
-                            <input type="text" id="name" class="field no-border form-input"
-                                placeholder="Иванов Иван Иванович">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="company" class="text-uppercase form-label">Компания</label>
-                            <input type="text" id="company" class="field no-border form-input"
-                                placeholder="ООО Колобки">
-                        </div>
-                        <div class="form-group vmp_form-group form_box">
-                            <label for="address" class="text-uppercase form-label">Адрес</label>
-                            <input type="text" id="address" class="field no-border form-input"
-                                placeholder="Загородное шоссе, д1 к2">
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box">
-                                    <label for="city" class="text-uppercase form-label">Город</label>
-                                    <input type="text" id="city" class="field no-border form-input"
-                                        placeholder="Москва">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_right">
-                                    <label for="country" class="text-uppercase form-label">Страна</label>
-                                    <input type="text" id="country" class="field no-border form-input"
-                                        placeholder="Россия">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row gx-0">
-                            <div class="col-lg-7">
-                                <div class="form-group vmp_form-group form_box_bot">
-                                    <label for="index" class="text-uppercase form-label">Индекс</label>
-                                    <input type="text" id="index" class="field no-border form-input"
-                                        placeholder="108814">
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="form-group vmp_form-group form_box_bot_right">
-                                    <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                                    <input type="tel" id="phone_num" class="field no-border form-input tel"
-                                        placeholder="+7 (499) 678 5000">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-primary btn-lg m-5">Сохранить</button>
-                </div>
-            </div>
-        </form>
+</div>
+<div class="container">
+    <form action="" class="" name="form">
         <div class="row mt-4">
             <div class="col-12 text-center">
-                <h3>Изменить пароль</h3>
+                <h3>Изменить данные по умолчанию</h3>
             </div>
         </div>
-        <form action="">
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="col-6 my-3">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="oldPass" class="text-uppercase form-label">Новый пароль</label>
-                        <input type="password" minlength="6" maxlength="20" id="oldPass" class="field no-border form-input">
+        <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+            <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
+                <h4 class="mailer text_color text-uppercase text-center">Данные <br>по умолчанию</h4>
+            </div>
+            <div class="col-11">
+                <div class="">
+                    <div class="form-group vmp_form-group form_box_top">
+                        <label for="name" class="text-uppercase form-label">ФИО</label>
+                        <input type="text" id="name" class="field no-border form-input"
+                               placeholder="Иванов Иван Иванович">
                     </div>
-                </div>
-                <div class="col-6 my-3">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="newPas" class="text-uppercase form-label">Старый пароль</label>
-                        <input type="password" minlength="6" maxlength="20" id="newPas" class="field no-border form-input">
+                    <div class="form-group vmp_form-group form_box">
+                        <label for="company" class="text-uppercase form-label">Компания</label>
+                        <input type="text" id="company" class="field no-border form-input"
+                               placeholder="ООО Колобки">
+                    </div>
+                    <div class="form-group vmp_form-group form_box">
+                        <label for="address" class="text-uppercase form-label">Адрес</label>
+                        <input type="text" id="address" class="field no-border form-input"
+                               placeholder="Загородное шоссе, д1 к2">
+                    </div>
+                    <div class="row gx-0">
+                        <div class="col-lg-7">
+                            <div class="form-group vmp_form-group form_box">
+                                <label for="city" class="text-uppercase form-label">Город</label>
+                                <input type="text" id="city" class="field no-border form-input"
+                                       placeholder="Москва">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group vmp_form-group form_box_right">
+                                <label for="country" class="text-uppercase form-label">Страна</label>
+                                <input type="text" id="country" class="field no-border form-input"
+                                       placeholder="Россия">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-0">
+                        <div class="col-lg-7">
+                            <div class="form-group vmp_form-group form_box_bot">
+                                <label for="index" class="text-uppercase form-label">Индекс</label>
+                                <input type="text" id="index" class="field no-border form-input"
+                                       placeholder="108814">
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="form-group vmp_form-group form_box_bot_right">
+                                <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                                <input type="tel" id="phone_num" class="field no-border form-input tel"
+                                       placeholder="+7 (499) 678 5000">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-12">
-                    <button type="submit" class="btn btn-outline-primary btn-lg m-5">Сохранить</button>
-                </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-primary btn-lg m-5">Сохранить</button>
             </div>
-        </form>
+        </div>
+    </form>
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <h3>Изменить пароль</h3>
+        </div>
     </div>
+    <form action="">
+        <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+            <div class="col-6 my-3">
+                <div class="form-group vmp_form-group form_box_agm_top">
+                    <label for="newPas" class="text-uppercase form-label">Новый пароль</label>
+                    <input type="password" minlength="6" maxlength="20" id="newPas" class="field_pas no-border form-input">
+                    <a href="#" class="password-control mb-1" onclick="return show_hide_password(this, 'newPas');" style="color: #264d73">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-6 my-3">
+                <div class="form-group vmp_form-group form_box_agm_top">
+                    <label for="oldPas" class="text-uppercase form-label">Старый пароль</label>
+                    <input type="password" minlength="6" maxlength="20" id="oldPas" class="field_pas no-border form-input">
+                    <a href="#" class="password-control mb-1" onclick="return show_hide_password(this, 'oldPas');" style="color: #264d73">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                            <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                            <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+                <button type="submit" class="btn btn-outline-primary btn-lg m-5">Сохранить</button>
+            </div>
+        </div>
+    </form>
+</div>

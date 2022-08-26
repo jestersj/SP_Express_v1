@@ -26,7 +26,7 @@
                 <p>Таков наш девиз. Наша цель - сделать процесс логистики максимально удобным,простым, прозрачным и как можно менее затратным для вас. <br>Ваш комфорт - наш абсолютный приоритет.</p>
             </div>
             <div class="col-lg-6 col-sm-12 col-10 justify-content-end img_shown">
-                <img src="../img/woman.png" alt="" class="img_fluid">
+                <img src="~/img/woman.png" alt="" class="img_fluid">
             </div>
         </div>
         <div class="row text-center mt-3">
@@ -36,10 +36,10 @@
         </div>
         <div class="row justify-content-around align-items-center mt-3">
             <div class="col-lg-2 col-6">
-                <img src="../img/Yandex_logo_2021_Russian.svg.png" alt="Яндекс" class=" img-fluid cl_card">
+                <img src="~/img/Yandex_logo_2021_Russian.svg.png" alt="Яндекс" class=" img-fluid cl_card">
             </div>
             <div class="col-lg-2 col-6">
-                <img src="../img/KPMG_logo.svg.png" alt="KPMG" class=" img-fluid cl_card">
+                <img src="~/img/KPMG_logo.svg.png" alt="KPMG" class=" img-fluid cl_card">
             </div>
             <div class="col-lg-2 col-6">
                 <img src="~/img/РусГидро.png" alt="РусГидро" class=" img-fluid cl_card">
@@ -58,44 +58,45 @@
         </div>
     </div>
 </div>
-<section class="sec" id="calc">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-12">
-                <h2 class="text-uppercase">Экспресс-расчет</h2>
-            </div>
-        </div>
-        <form action="">
-            <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-8 col-sm-12">
-                    <p class="">Расчитайте стоимость доставки посылки до пункта назначения</p>
-
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="adressEx" class="text-uppercase form-label">Адрес доставки</label>
-                        <input type="text" id="adressEx" class="field no-border form-input">
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center justify-content-center">
-                <div class="col-lg-4 col-md-8 col-sm-12">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="weightEx" class="text-uppercase form-label">Вес</label>
-                        <input type="number" id="weightEx" class="field no-border form-input">
-                    </div>
-
-                </div>
-            </div>
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-4 col-md-6 col-sm-12 m-3">
-                    <button href="" class="btn btn-outline-primary btn-lg">
-                        Расчитать
-                        >
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-</section>
+@* <section class="sec" id="calc"> *@
+@*     <div class="container"> *@
+@*         <div class="row text-center"> *@
+@*             <div class="col-12"> *@
+@*                 <h2 class="text-uppercase">Экспресс-расчет</h2> *@
+@*             </div> *@
+@*         </div> *@
+@*         <form action=""> *@
+@*             <div class="row text-center justify-content-center"> *@
+@*                 <div class="col-lg-4 col-md-8 col-sm-12"> *@
+@*                     <p class="">Расчитайте стоимость доставки посылки до пункта назначения</p> *@
+@* *@
+@*                     <div class="form-group vmp_form-group form_box_agm_top"> *@
+@*                         <label for="adressEx" class="text-uppercase form-label">Адрес доставки</label> *@
+@*                         <input type="text" id="adressEx" class="field no-border form-input"> *@
+@*                     </div> *@
+@*                 </div> *@
+@*             </div> *@
+@*             <div class="row text-center justify-content-center"> *@
+@*                 <div class="col-lg-4 col-md-8 col-sm-12"> *@
+@*                     <div class="form-group vmp_form-group form_box_agm_top"> *@
+@*                         <label for="weightEx" class="text-uppercase form-label">Вес</label> *@
+@*                         <input type="number" id="weightEx" class="field no-border form-input"> *@
+@*                     </div> *@
+@* *@
+@*                 </div> *@
+@*             </div> *@
+@*             <div class="row justify-content-center text-center"> *@
+@*                 <div class="col-lg-4 col-md-6 col-sm-12 m-3"> *@
+@*                     <button href="" class="btn btn-outline-primary btn-lg"> *@
+@*                         Расчитать *@
+@*                         > *@
+@*                     </button> *@
+@*                 </div> *@
+@*             </div> *@
+@*         </form> *@
+@*     </div> *@
+@* </section> *@
+<partial name="_ExpressCalc"/>
 <div class="blue1 mx-auto">
     <div class="row text-center">
         <div class="col-12">
@@ -129,12 +130,12 @@
                 </p>
             </div>
             <div class="col-sm-1 col-3">
-                <img src="../img/expr24.png" alt="" class="img-fluid">
+                <img src="~/img/expr24.png" alt="" class="img-fluid">
             </div>
         </div>
         <div class="row justify-content-center align-items-center m-4">
             <div class="col-sm-1 col-3">
-                <img src="../img/expr24.png" alt="" class="img-fluid">
+                <img src="~/img/expr24.png" alt="" class="img-fluid">
             </div>
             <div class="col-lg-5 col-md-9 col-sm-9 col-8">
                 <h3>АГМ</h3>
@@ -154,7 +155,7 @@
                 </p>
             </div>
             <div class="col-sm-1 col-3">
-                <img src="../img/expr24.png" alt="" class="img-fluid">
+                <img src="~/img/expr24.png" alt="" class="img-fluid">
             </div>
         </div>
         <div class="row">
@@ -167,7 +168,7 @@
 <div class="orange1 mx-auto">
     <div class="row text-center">
         <div class="col-12">
-            <img class="img-fluid no" src="../img/train1 1920X1080.png" alt=""/>
+            <img class="img-fluid no" src="~/img/train1 1920X1080.png" alt=""/>
         </div>
     </div>
 </div>
@@ -210,7 +211,7 @@
 <div class="blue1">
     <div class="row text-center">
         <div class="col-12">
-            <img class="img-fluid no" src="../img/ship 1920X1080.png" alt=""/>
+            <img class="img-fluid no" src="~/img/ship 1920X1080.png" alt=""/>
         </div>
     </div>
 </div>
