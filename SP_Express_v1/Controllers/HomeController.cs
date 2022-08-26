@@ -46,7 +46,7 @@ namespace SP_Express_v1.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult ExpressCalc(AdrNew model)
+        public IActionResult ExpressCalc(Address model)
         {
             return PartialView(model);
             // if (ModelState.IsValid)
@@ -55,16 +55,16 @@ namespace SP_Express_v1.Controllers
             //     {
             //         if (model.Region == "Москва")
             //         {
-            //             model.AdrName = model.PostIndex + " " + model.Town + " " + model.Street + " " + model.House;
+            //             model.Adress = model.PostIndex + " " + model.Town + " " + model.Street + " " + model.House;
             //         }
             //         else
             //         {
-            //             model.AdrName = model.PostIndex + " " + model.RegionFull + " " + model.Town + " " + model.Street + " " + model.House;
+            //             model.Adress = model.PostIndex + " " + model.RegionFull + " " + model.Town + " " + model.Street + " " + model.House;
             //         }
             //     }
             //     else
             //     {
-            //         model.AdrName = model.Country + " " + model.Town + " " + model.Street + " " + model.House;
+            //         model.Adress = model.Country + " " + model.Town + " " + model.Street + " " + model.House;
             //     }
             //
             //     if (!string.IsNullOrEmpty(model.Telefon))
