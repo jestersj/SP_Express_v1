@@ -46,7 +46,7 @@ namespace SP_Express_v1.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateAdr(AdrNew model)
+        public IActionResult ExpressCalc(AdrNew model)
         {
             return PartialView(model);
             // if (ModelState.IsValid)
