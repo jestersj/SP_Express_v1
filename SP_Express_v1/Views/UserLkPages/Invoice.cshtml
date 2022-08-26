@@ -1,3 +1,4 @@
+@model AdrNew
 @{
     ViewData["Title"] = "Оформление накладной";
 }
@@ -29,63 +30,62 @@
 </div>
 <div class="container" id="allServices">
 <form action="" class="" name="form">
-<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-    <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
-        <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
-    </div>
-    <div class="col-11">
-        <div class="">
-            <div class="form-group vmp_form-group form_box_top">
-                <label for="name" class="text-uppercase form-label">ФИО</label>
-                <input type="text" id="nameInvoice" class="field no-border form-input"
-                       placeholder="Иванов Иван Иванович">
-            </div>
-            <div class="form-group vmp_form-group form_box">
-                <label for="company" class="text-uppercase form-label">Компания</label>
-                <input type="text" id="companyInvoice" class="field no-border form-input"
-                       placeholder="ООО Колобки">
-            </div>
-            <div class="form-group vmp_form-group form_box">
-                <label for="address" class="text-uppercase form-label">Адрес</label>
-                <input type="text" id="addressInvoice" class="field no-border form-input"
-                       placeholder="Загородное шоссе, д1 к2">
-            </div>
-            <div class="row gx-0">
-                <div class="col-lg-7">
-                    <div class="form-group vmp_form-group form_box">
-                        <label for="city" class="text-uppercase form-label">Город</label>
-                        <input type="text" id="Invoicecity" class="field no-border form-input"
-                               placeholder="Москва">
-                    </div>
+    <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+        <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
+            <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
+        </div>
+        <div class="col-11">
+            <div class="">
+                <div class="form-group vmp_form-group form_box_top">
+                    <label for="name" class="text-uppercase form-label">ФИО</label>
+                    <input type="text" id="nameInvoice" class="field no-border form-input"
+                           placeholder="Иванов Иван Иванович">
                 </div>
-                <div class="col-lg-5">
-                    <div class="form-group vmp_form-group form_box_right">
-                        <label for="country" class="text-uppercase form-label">Страна</label>
-                        <input type="text" id="Invoicecountry" class="field no-border form-input"
-                               placeholder="Россия">
-                    </div>
+                <div class="form-group vmp_form-group form_box">
+                    <label for="company" class="text-uppercase form-label">Компания</label>
+                    <input type="text" id="companyInvoice" class="field no-border form-input"
+                           placeholder="ООО Колобки">
                 </div>
-            </div>
-            <div class="row gx-0">
-                <div class="col-lg-7">
-                    <div class="form-group vmp_form-group form_box_bot">
-                        <label for="index" class="text-uppercase form-label">Индекс</label>
-                        <input type="text" id="Invoiceindex" class="field no-border form-input"
-                               placeholder="108814">
-                    </div>
+                <div class="form-group vmp_form-group form_box">
+                    <label for="address" class="text-uppercase form-label">Адрес</label>
+                    <input type="text" id="AdrName" class="field no-border form-input"
+                           placeholder="Введите адрес до дома">
                 </div>
-                <div class="col-lg-5">
-                    <div class="form-group vmp_form-group form_box_bot_right">
-                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                        <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
-                               placeholder="+7 (499) 678 5000">
+                <div class="row gx-0">
+                    <div class="col-lg-7">
+                        <div class="form-group vmp_form-group form_box_bot">
+                            <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                            <input readonly="readonly" type="text" id="offNum" class="field no-border form-input"
+                                   placeholder="96">
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="form-group vmp_form-group form_box_bot_right">
+                            <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                            <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                                   placeholder="+7 (499) 678 5000">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="row align-items-center justify-content-center all_border mb-3">
+
+
+
+<input id="Lat" asp-for="Lat" type="hidden" />
+            <input id="Lon" asp-for="Lon" type="hidden" />
+            <input asp-for="Gc" type="hidden" id="Gc" />
+            <input asp-for="Region" type="hidden" id="Region" />
+            <input asp-for="RegionFull" type="hidden" id="RegionFull" />
+            <input asp-for="Country" type="hidden" id="Country" />
+            <input asp-for="PostIndex" type="hidden" id="PostIndex" />
+            <input asp-for="Town" type="hidden" id="Town" />
+            <input asp-for="Street" type="hidden" id="Street" />
+            <input asp-for="House" type="hidden" id="House" />
+            
+            
+            <div class="row align-items-center justify-content-center all_border mb-3">
     <div class="col-lg-1 col-md-12">
         <h4 class="mailer text_color text-uppercase text-center">Получатель</h4>
     </div>
@@ -102,32 +102,16 @@
                        placeholder="ООО Колобки">
             </div>
             <div class="form-group vmp_form-group form_box">
-                <label for="address" class="text-uppercase form-label">Адрес</label>
-                <input type="text" id="address" class="field no-border form-input"
-                       placeholder="Загородное шоссе, д1 к2">
-            </div>
-            <div class="row gx-0">
-                <div class="col-lg-7">
-                    <div class="form-group vmp_form-group form_box">
-                        <label for="city" class="text-uppercase form-label">Город</label>
-                        <input type="text" id="city" class="field no-border form-input"
-                               placeholder="Москва">
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="form-group vmp_form-group form_box_right">
-                        <label for="country" class="text-uppercase form-label">Страна</label>
-                        <input type="text" id="country" class="field no-border form-input"
-                               placeholder="Россия">
-                    </div>
-                </div>
+                <label for="AdrName2" class="text-uppercase form-label">Адрес</label>
+                <input type="text" id="AdrName2" class="field no-border form-input"
+                       placeholder="Введите адрес до дома">
             </div>
             <div class="row gx-0">
                 <div class="col-lg-7">
                     <div class="form-group vmp_form-group form_box_bot">
-                        <label for="index" class="text-uppercase form-label">Индекс</label>
-                        <input type="text" id="index" class="field no-border form-input"
-                               placeholder="108814">
+                        <label for="officeNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                        <input type="number" id="officeNum" class="field no-border form-input"
+                               placeholder="41">
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -141,6 +125,20 @@
         </div>
     </div>
 </div>
+
+
+            <input id="Lat2" asp-for="Lat" type="hidden" />
+            <input id="Lon2" asp-for="Lon" type="hidden" />
+            <input asp-for="Gc" type="hidden" id="Gc2" />
+            <input asp-for="Region" type="hidden" id="Region2" />
+            <input asp-for="RegionFull" type="hidden" id="RegionFull2" />
+            <input asp-for="Country" type="hidden" id="Country2" />
+            <input asp-for="PostIndex" type="hidden" id="PostIndex2" />
+            <input asp-for="Town" type="hidden" id="Town2" />
+            <input asp-for="Street" type="hidden" id="Street2" />
+<input asp-for="House" type="hidden" id="House2" />
+
+
 
 
 <div class="all_border">
@@ -247,6 +245,6 @@
         <button type="submit" class="btn btn-outline-primary btn-lg m-5">Отправить</button>
     </div>
 </div>
-
+<partial name="_AddressSug"/>
 </form>
 </div>
