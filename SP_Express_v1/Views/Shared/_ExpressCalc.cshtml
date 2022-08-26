@@ -1,4 +1,6 @@
-﻿<section class="sec" id="calc">
+﻿@model AdrNew
+
+<section class="sec" id="calc">
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
@@ -6,13 +8,24 @@
             </div>
         </div>
         <form action="">
+            <input id="Lat" asp-for="Lat" type="hidden" />
+            <input id="Lon" asp-for="Lon" type="hidden" />
+            <input asp-for="Gc" type="hidden" id="Gc" />
+            <input asp-for="Region" type="hidden" id="Region" />
+            <input asp-for="RegionFull" type="hidden" id="RegionFull" />
+            <input asp-for="Country" type="hidden" id="Country" />
+            <input asp-for="PostIndex" type="hidden" id="PostIndex" />
+            <input asp-for="Town" type="hidden" id="Town" />
+            <input asp-for="Street" type="hidden" id="Street" />
+            <input asp-for="House" type="hidden" id="House" />
+            
             <div class="row text-center justify-content-center">
                 <div class="col-lg-4 col-md-8 col-sm-12">
                     <p class="">Расчитайте стоимость доставки посылки до пункта назначения</p>
 
                     <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="adressEx" class="text-uppercase form-label">Адрес доставки</label>
-                        <input type="text" id="adressEx" class="field no-border form-input">
+                        <label for="AdrName" class="text-uppercase form-label">Адрес доставки</label>
+                        <input type="text" asp-for="AdrName" placeholder="Введите адрес" id="AdrName" class="field no-border form-input">
                     </div>
                 </div>
             </div>
