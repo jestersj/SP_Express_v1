@@ -43,5 +43,38 @@ namespace SP_Express_v1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult CreateAdr(AdrNew model)
+        {
+            return PartialView(model);
+            // if (ModelState.IsValid)
+            // {
+            //     if (model.Country == "Россия")
+            //     {
+            //         if (model.Region == "Москва")
+            //         {
+            //             model.AdrName = model.PostIndex + " " + model.Town + " " + model.Street + " " + model.House;
+            //         }
+            //         else
+            //         {
+            //             model.AdrName = model.PostIndex + " " + model.RegionFull + " " + model.Town + " " + model.Street + " " + model.House;
+            //         }
+            //     }
+            //     else
+            //     {
+            //         model.AdrName = model.Country + " " + model.Town + " " + model.Street + " " + model.House;
+            //     }
+            //
+            //     if (!string.IsNullOrEmpty(model.Telefon))
+            //     {
+            //         model.Telefon = RemoveSpaces(model.Telefon);
+            //     }
+            //     _repo.InsertArdNew(model);
+            //     return RedirectToAction("ListAdr");
+            // }
+            // return PartialView(model);
+        }
     }
 }
