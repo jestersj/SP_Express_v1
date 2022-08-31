@@ -118,11 +118,27 @@
                     </div>
 
                     <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="loadAdress" class="text-uppercase form-label">Адрес загрузки</label>
-                        <input type="text" id="loadAdress" class="field no-border form-input AdrName"
+                        <label for="AdrName" class="text-uppercase form-label">Адрес загрузки</label>
+                        <input type="text" id="AdrName" class="field no-border form-input AdrName"
                                placeholder="Ломоносовский пр-кт, д15">
                     </div>
-
+                    <form method="post">
+                                        <input id="Lat" asp-for="Lat" type="hidden"/>
+                                        <input id="Lon" asp-for="Lon" type="hidden"/>
+                                        <input asp-for="Region" type="hidden" id="Region"/>
+                                        <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
+                                        <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
+                                        <input asp-for="Country" type="hidden" id="Country"/>
+                                        <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
+                                        <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
+                                        <input asp-for="City" type="hidden" id="City"/>
+                                        <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
+                                        <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
+                                        <input asp-for="Street" type="hidden" id="Street"/>
+                                        <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
+                                        <input asp-for="House" type="hidden" id="House"/>
+                                        <input asp-for="Block" type="hidden" id="Block"/>
+                                    </form>
                     <div class="row align-items-center mt-4">
                         <div class="col-6">
                             <div class="form-group vmp_form-group form_box_agm_top">
@@ -167,11 +183,27 @@
                     </div>
 
                     <div class="form-group vmp_form-group form_box_agm_top mb-4">
-                        <label for="unloadAdress" class="text-uppercase form-label">Адрес разгрузки</label>
-                        <input type="text" id="unloadAdress" class="field no-border form-input AdrName"
+                        <label for="AdrName2" class="text-uppercase form-label">Адрес разгрузки</label>
+                        <input type="text" id="AdrName2" class="field no-border form-input AdrName"
                                placeholder="Ломоносовский пр-кт, д16">
                     </div>
-
+                <form method="post">
+                    <input id="Lat2" asp-for="Lat" type="hidden"/>
+                    <input id="Lon2" asp-for="Lon" type="hidden"/>
+                    <input asp-for="Region" type="hidden" id="Region2"/>
+                    <input asp-for="RegionWithType" type="hidden" id="RegionWithType2"/>
+                    <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2"/>
+                    <input asp-for="Country"  type="hidden" id="Country2"/>
+                    <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2"/>
+                    <input asp-for="PostalCode" type="hidden" id="PostalCode2"/>
+                    <input asp-for="City" type="hidden" id="City2"/>
+                    <input asp-for="CityWithType" type="hidden" id="CityWithType2"/>
+                    <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2"/>
+                    <input asp-for="Street" type="hidden" id="Street2"/>
+                    <input asp-for="StreetWithType" type="hidden" id="StreetWithType2"/>
+                    <input asp-for="House" type="hidden" id="House2"/>
+                    <input asp-for="Block" type="hidden" id="Block2"/>
+                </form>
                     <div class="form-group vmp_form-group form_box_agm_top">
                         <label for="instructions" class="text-uppercase form-label">
                             Указания
