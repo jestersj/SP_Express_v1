@@ -3,6 +3,22 @@
 <script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
 <script>
 
+function join(arr /*, separator */) {
+    var separator = arguments.length > 1 ? arguments[1] : ", ";
+    return arr.filter(function (n) { return n }).join(separator);
+  }
+  
+  function geoQuality(qc_geo) {
+      var localization = {
+        "0": "точные",
+        "1": "ближайший дом",
+        "2": "улица",
+        "3": "населенный пункт",
+        "4": "город"
+      };
+      return localization[qc_geo] || qc_geo;
+    }
+    
   function fillSelected(suggestion) {
       let address = suggestion.data;
       
@@ -10,6 +26,9 @@
       else $("#PostIndex").val(0);
       
       $("#Country").val(address.country);
+      console.log(1)
+      console.log(address);
+      console.log(address.country);
       
       $("#CountryISOCode").val(address.country_iso_code); 
       
@@ -53,7 +72,13 @@
             $("#Lat").val(0);
             $("#Lon").val(0);
           }
+       
   }
+ 
+  
+  
+  
+  function nu() {}
   
   
   
@@ -115,13 +140,13 @@
   $("#AdrName").suggestions({
     token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
     type: "ADDRESS",
-    oninput: fillSelected
+    onSelect: fillSelected
   });
 
   $("#AdrName2").suggestions({
     token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
     type: "ADDRESS",
-    oninput: fillSelected2
+    onSelect: fillSelected2
   });
 
 
