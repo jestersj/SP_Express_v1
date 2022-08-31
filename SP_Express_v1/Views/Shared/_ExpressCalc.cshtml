@@ -7,23 +7,25 @@
                 <h2 class="text-uppercase">Экспресс-расчет</h2>
             </div>
         </div>
-        <form action="">
-            <input id="Lat" asp-for="Lat" type="hidden" />
-            <input id="Lon" asp-for="Lon" type="hidden" />
-            <input asp-for="Region" type="hidden" id="Region" />
-            <input asp-for="RegionWithType" type="hidden" id="RegionWithType" />
-            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode" />
-            <input asp-for="Country" type="hidden" id="Country" />
-            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode" />
-            <input asp-for="PostalCode" type="hidden" id="PostalCode" />
-            <input asp-for="City" type="hidden" id="City" />
-            <input asp-for="CityWithType" type="hidden" id="CityWithType" />
-            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker" />
-            <input asp-for="Street" type="hidden" id="Street" />
-            <input asp-for="StreetWithType" type="hidden" id="StreetWithType" />
-            <input asp-for="House" type="hidden" id="House" />
-            <input asp-for="Block" type="hidden" id="Block" />
-            
+        <form method="post">
+            <input id="Lat" asp-for="Lat" type="hidden"/>
+            <input id="Lon" asp-for="Lon" type="hidden"/>
+            <input asp-for="Region" type="hidden" id="Region"/>
+            <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
+            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
+            <input asp-for="Country" type="hidden" id="Country"/>
+            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
+            <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
+            <input asp-for="City" type="hidden" id="City"/>
+            <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
+            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
+            <input asp-for="Street" type="hidden" id="Street"/>
+            <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
+            <input asp-for="House" type="hidden" id="House"/>
+            <input asp-for="Block" type="hidden" id="Block"/>
+            <input type="hidden" id="AddrCorrect"/>
+
+
             <div class="row text-center justify-content-center">
                 <div class="col-lg-4 col-md-8 col-sm-12">
                     <p class="">Расчитайте стоимость доставки посылки до пункта назначения</p>

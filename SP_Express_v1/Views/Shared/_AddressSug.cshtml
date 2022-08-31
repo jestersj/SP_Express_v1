@@ -26,9 +26,6 @@ function join(arr /*, separator */) {
       else $("#PostIndex").val(0);
       
       $("#Country").val(address.country);
-      console.log(1)
-      console.log(address);
-      console.log(address.country);
       
       $("#CountryISOCode").val(address.country_iso_code); 
       
@@ -72,15 +69,9 @@ function join(arr /*, separator */) {
             $("#Lat").val(0);
             $("#Lon").val(0);
           }
-       
+      $("#AddrCorrect").val($("#AdrName").val())
   }
  
-  
-  
-  
-  function nu() {}
-  
-  
   
   function fillSelected2(suggestion) {
       let address = suggestion.data;
@@ -132,21 +123,29 @@ function join(arr /*, separator */) {
             $("#Lat2").val(0);
             $("#Lon2").val(0);
           }
-         
+      $("#AddrCorrect2").val($("#AdrName2").val())
     }
   
+    function corr() {
+      $("#AdrName").val($("#AddrCorrect").val())
+    }
+        function corr2() {
+          $("#AdrName2").val($("#AddrCorrect2").val())
+        }
   
   
   $("#AdrName").suggestions({
     token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
     type: "ADDRESS",
-    onSelect: fillSelected
+    onSelect: fillSelected,
+    onSelectNothing: corr
   });
 
   $("#AdrName2").suggestions({
     token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
     type: "ADDRESS",
-    onSelect: fillSelected2
+    onSelect: fillSelected2,
+    onSelectNothing: corr2
   });
 
 

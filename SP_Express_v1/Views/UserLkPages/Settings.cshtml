@@ -1,3 +1,5 @@
+@model Address
+
 @{
     ViewData["Title"] = "Настройки";
 }
@@ -71,6 +73,7 @@
                                                             <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
                                                             <input asp-for="House" type="hidden" id="House"/>
                                                             <input asp-for="Block" type="hidden" id="Block"/>
+                                                            <input type="hidden" id="AddrCorrect"/>
                                                         </form>
                     <div class="row gx-0">
                         <div class="col-lg-7">
