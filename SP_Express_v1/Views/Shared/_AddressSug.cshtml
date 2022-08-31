@@ -26,9 +26,6 @@ function join(arr /*, separator */) {
       else $("#PostIndex").val(0);
       
       $("#Country").val(address.country);
-      console.log(1)
-      console.log(address);
-      console.log(address.country);
       
       $("#CountryISOCode").val(address.country_iso_code); 
       
@@ -146,7 +143,8 @@ function join(arr /*, separator */) {
   $("#AdrName2").suggestions({
     token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
     type: "ADDRESS",
-    onSelect: fillSelected2
+    onSelect: fillSelected2,
+    
   });
 
 
