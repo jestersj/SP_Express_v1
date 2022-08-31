@@ -30,67 +30,69 @@
 </div>
 <div class="container" id="allServices">
 <form action="" class="" name="form">
-    <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-        <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
-            <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
-        </div>
-        <div class="col-11">
-            <div class="">
-                <div class="form-group vmp_form-group form_box_top">
-                    <label for="name" class="text-uppercase form-label">ФИО</label>
-                    <input type="text" id="nameInvoice" class="field no-border form-input"
-                           placeholder="Иванов Иван Иванович">
-                </div>
-                <div class="form-group vmp_form-group form_box">
-                    <label for="company" class="text-uppercase form-label">Компания</label>
-                    <input type="text" id="companyInvoice" class="field no-border form-input"
-                           placeholder="ООО Колобки">
-                </div>
-                <div class="form-group vmp_form-group form_box">
-                    <label for="address" class="text-uppercase form-label">Адрес</label>
-                    <input type="text" id="AdrName" class="field no-border form-input"
-                           placeholder="Введите адрес до дома">
-                </div>
-                <div class="row gx-0">
-                    <div class="col-lg-7">
-                        <div class="form-group vmp_form-group form_box_bot">
-                            <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
-                            <input readonly="readonly" type="text" id="offNum" class="field no-border form-input"
-                                   placeholder="96">
-                        </div>
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
+        <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
+    </div>
+    <div class="col-11">
+        <div class="">
+            <div class="form-group vmp_form-group form_box_top">
+                <label for="name" class="text-uppercase form-label">ФИО</label>
+                <input type="text" id="nameInvoice" class="field no-border form-input"
+                       placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="company" class="text-uppercase form-label">Компания</label>
+                <input type="text" id="companyInvoice" class="field no-border form-input"
+                       placeholder="ООО Колобки">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="AdrName" class="text-uppercase form-label">Адрес</label>
+                <input type="text" id="AdrName" class="field no-border form-input"
+                       placeholder="Введите адрес до дома">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="Country" class="text-uppercase form-label">Страна</label>
+                <form method="post">
+                    <input id="Lat" asp-for="Lat" type="hidden"/>
+                    <input id="Lon" asp-for="Lon" type="hidden"/>
+                    <input asp-for="Region" type="hidden" id="Region"/>
+                    <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
+                    <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
+                    <input asp-for="Country" type="hidden" class="field no-border form-input" id="Country"/>
+                    <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
+                    <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
+                    <input asp-for="City" type="hidden" id="City"/>
+                    <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
+                    <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
+                    <input asp-for="Street" type="hidden"  id="Street"/>
+                    <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
+                    <input asp-for="House" type="hidden" id="House"/>
+                    <input asp-for="Block" type="hidden" id="Block"/>
+                </form>
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box_bot">
+                        <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                        <input type="text" id="offNum" class="field no-border form-input"
+                               placeholder="96">
                     </div>
-                    <div class="col-lg-5">
-                        <div class="form-group vmp_form-group form_box_bot_right">
-                            <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                            <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
-                                   placeholder="+7 (499) 678 5000">
-                        </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_bot_right">
+                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                        <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                               placeholder="+7 (499) 678 5000">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
-
-            <input id="Lat" asp-for="Lat" type="hidden" />
-            <input id="Lon" asp-for="Lon" type="hidden" />
-            <input asp-for="Region" type="hidden" id="Region" />
-            <input asp-for="RegionWithType" type="hidden" id="RegionWithType" />
-            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode" />
-            <input asp-for="Country" type="hidden" id="Country" />
-            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode" />
-            <input asp-for="PostalCode" type="hidden" id="PostalCode" />
-            <input asp-for="City" type="hidden" id="City" />
-            <input asp-for="CityWithType" type="hidden" id="CityWithType" />
-            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker" />
-            <input asp-for="Street" type="hidden" id="Street" />
-            <input asp-for="StreetWithType" type="hidden" id="StreetWithType" />
-            <input asp-for="House" type="hidden" id="House" />
-            <input asp-for="Block" type="hidden" id="Block" />
-            
-            
-            <div class="row align-items-center justify-content-center all_border mb-3">
+<div class="row align-items-center justify-content-center all_border mb-3">
     <div class="col-lg-1 col-md-12">
         <h4 class="mailer text_color text-uppercase text-center">Получатель</h4>
     </div>
@@ -131,24 +133,23 @@
     </div>
 </div>
 
-
-            <input id="Lat2" asp-for="Lat" type="hidden" />
-            <input id="Lon2" asp-for="Lon" type="hidden" />
-            <input asp-for="Region" type="hidden" id="Region2" />
-            <input asp-for="RegionWithType" type="hidden" id="RegionWithType2" />
-            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2" />
-            <input asp-for="Country" type="hidden" id="Country2" />
-            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2" />
-            <input asp-for="PostalCode" type="hidden" id="PostalCode2" />
-            <input asp-for="City" type="hidden" id="City2" />
-            <input asp-for="CityWithType" type="hidden" id="CityWithType2" />
-            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2" />
-            <input asp-for="Street" type="hidden" id="Street2" />
-            <input asp-for="StreetWithType" type="hidden" id="StreetWithType2" />
-            <input asp-for="House" type="hidden" id="House2" />
-            <input asp-for="Block" type="hidden" id="Block2" />
-
-
+<form method="post">
+    <input id="Lat2" asp-for="Lat" type="hidden"/>
+    <input id="Lon2" asp-for="Lon" type="hidden"/>
+    <input asp-for="Region" type="hidden" id="Region2"/>
+    <input asp-for="RegionWithType" type="hidden" id="RegionWithType2"/>
+    <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2"/>
+    <input asp-for="Country" type="hidden" id="Country2"/>
+    <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2"/>
+    <input asp-for="PostalCode" type="hidden" id="PostalCode2"/>
+    <input asp-for="City" type="hidden" id="City2"/>
+    <input asp-for="CityWithType" type="hidden" id="CityWithType2"/>
+    <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2"/>
+    <input asp-for="Street" type="hidden" id="Street2"/>
+    <input asp-for="StreetWithType" type="hidden" id="StreetWithType2"/>
+    <input asp-for="House" type="hidden" id="House2"/>
+    <input asp-for="Block" type="hidden" id="Block2"/>
+</form>
 
 
 <div class="all_border">
