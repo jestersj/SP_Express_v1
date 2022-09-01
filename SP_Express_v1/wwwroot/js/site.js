@@ -150,18 +150,9 @@ function show_hide_password(target, id){
     } else {
         target.classList.remove('view');
         input.setAttribute('type', 'password');
-    }
+    } 
     return false;
 }
 
 
 
-/////DADATA 
-$("#adressEx").suggestions({
-    token: "6aaaba01d2581d13f80a158aa03154cc7d0e470d",
-    type: "ADDRESS",
-    /* Вызывается, когда пользователь выбирает одну из подсказок */
-    onSelect: function(suggestion) {
-        console.log(suggestion);
-    }
-});

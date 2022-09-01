@@ -1,0 +1,26 @@
+﻿<script src="~/lib/gsap/gsap.min.js"></script>
+<script src="~/lib/gsap/ScrollTrigger.min.js"></script>
+
+
+<script>
+const tl = gsap.timeline();
+
+tl.fromTo('.truck', {xPercent: 150}, {xPercent:-50})
+tl.fromTo('.plane', {xPercent: -50}, {xPercent: 150, yPercent: 100})
+ScrollTrigger.create({
+    animation: tl,
+    trigger: '.pic_train',
+    scrub: true,
+    pin: false,
+    start: 'top top',
+    end: 'bottom top'
+})
+ScrollTrigger.create({
+    animation: tl,
+    trigger: '.pic_plane',
+    scrub: true,
+    pin: false,
+    start: 'top top',
+    end: 'bottom top'
+})
+</script>

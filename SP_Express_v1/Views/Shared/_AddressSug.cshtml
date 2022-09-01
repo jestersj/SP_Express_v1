@@ -8,7 +8,7 @@ function join(arr /*, separator */) {
     return arr.filter(function (n) { return n }).join(separator);
   }
   
-  function geoQuality(qc_geo) {
+ function geoQuality(qc_geo) {
       var localization = {
         "0": "точные",
         "1": "ближайший дом",
@@ -19,7 +19,7 @@ function join(arr /*, separator */) {
       return localization[qc_geo] || qc_geo;
     }
     
-  function fillSelected(suggestion) {
+ function fillSelected(suggestion) {
       let address = suggestion.data;
       
       if (address.postal_code) $("#PostIndex").val(address.postal_code);
@@ -147,7 +147,6 @@ function join(arr /*, separator */) {
     onSelect: fillSelected2,
     onSelectNothing: corr2
   });
-
 
 ////COPYPASTE
 
