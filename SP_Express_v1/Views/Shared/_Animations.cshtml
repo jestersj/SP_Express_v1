@@ -4,11 +4,34 @@
 
 <script>
 const tl = gsap.timeline();
+const pl = gsap.timeline();
+const train = gsap.timeline();
+const ship = gsap.timeline();
 
 tl.fromTo('.truck', {xPercent: 150}, {xPercent:-50})
-tl.fromTo('.plane', {xPercent: -50}, {xPercent: 150, yPercent: 100})
+pl.fromTo('.plane', {xPercent: -50}, {xPercent: 150, yPercent: -300})
+train.fromTo('.train', {xPercent: 100}, {xPercent:-50})
+ship.fromTo('.ship', {xPercent: -90}, {xPercent: 100})
+
 ScrollTrigger.create({
     animation: tl,
+    trigger: '.pic_truck',
+    scrub: true,
+    pin: false,
+    start: 'top top',
+    end: 'bottom top',
+})
+
+ScrollTrigger.create({
+    animation: pl,
+    trigger: '.pic_plane',
+    scrub: true,
+    pin: false,
+    start: 'top top',
+    end: 'bottom top'
+})
+ScrollTrigger.create({
+    animation: train,
     trigger: '.pic_train',
     scrub: true,
     pin: false,
@@ -16,8 +39,8 @@ ScrollTrigger.create({
     end: 'bottom top'
 })
 ScrollTrigger.create({
-    animation: tl,
-    trigger: '.pic_plane',
+    animation: ship,
+    trigger: '.pic_ship',
     scrub: true,
     pin: false,
     start: 'top top',

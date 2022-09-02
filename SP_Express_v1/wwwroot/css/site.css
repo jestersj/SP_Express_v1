@@ -83,7 +83,7 @@ html {
     display: flex;
     align-items: end;
 }
-.pic_train {
+.pic_truck {
     background-image: url('../img/truck-bg.png');
 }
 .truck {
@@ -91,6 +91,18 @@ html {
 }
 .pic_plane {
     background-image: url('../img/brg_air.png');
+}
+.train {
+    padding-bottom: 35px;
+}
+.pic_train {
+    background-image: url('../img/train-bgr.png');
+}
+.ship {
+    padding-bottom: 20px;
+}
+.pic_ship {
+    background-image: url('../img/ship_bgr.png');
 }
 @media (max-width: 1200px) {
     .parallax{
