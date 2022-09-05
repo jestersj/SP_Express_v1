@@ -43,7 +43,7 @@ namespace SP_Express_v1.Controllers
         public IActionResult Invoice(Address model)
         {
             _insert.InsertConsignment(model);
-            return View(model);
+            return View();
         }
         
         public IActionResult Settings()
