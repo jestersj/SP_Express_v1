@@ -1,16 +1,26 @@
 using Microsoft.AspNetCore.Mvc;
 using SP_Express_v1.Models;
 using System.Diagnostics;
+using SP_Express_v1.DB.Concrete;
+using SP_Express_v1.DB.Contract;
 
 namespace SP_Express_v1.Controllers
 {
-    public class UserLkPages : Controller
-    {
-        private readonly ILogger<UserLkPages> _logger;
+    public class UserLkPages : Controller {
+    
+        private readonly IDbSelect _select;
+        private readonly IDbInsert _insert;
+        private readonly IDbUpdate _update;
 
-        public UserLkPages(ILogger<UserLkPages> logger)
+        public UserLkPages(
+            IDbSelect select,
+            IDbInsert insert,
+            IDbUpdate update
+        )
         {
-            _logger = logger;
+            _select = select;
+            _insert = insert;
+            _update = update;
         }
         
         public IActionResult UserLk()
@@ -22,10 +32,20 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
+        
+        [HttpGet]
         public IActionResult Invoice()
         {
             return View();
         }
+        
+        [HttpPost]
+        public IActionResult Invoice(Address model)
+        {
+            _insert.InsertConsignment(model);
+            return View(model);
+        }
+        
         public IActionResult Settings()
         {
             return View();
