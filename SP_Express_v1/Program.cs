@@ -3,6 +3,8 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using SP_Express_v1.DB.Concrete;
+using SP_Express_v1.DB.Contract;
 using SP_Express_v1.Models;
 
 // using Microsoft.AspNetCore.Authentication.Cookies;
@@ -34,6 +36,10 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
 });
 
+
+builder.Services.AddTransient<IDbSelect, RepoDbSelect>(provider => new RepoDbSelect(connectionString));
+builder.Services.AddTransient<IDbInsert, RepoDbInsert>(provider => new RepoDbInsert(connectionString));
+builder.Services.AddTransient<IDbUpdate, RepoDbUpdate>(provider => new RepoDbUpdate(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

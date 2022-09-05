@@ -6,4 +6,9 @@ namespace SP_Express_v1.DB.Concrete;
 public class RepoDbInsert : IDbInsert
 {
     private readonly string conn;
+    
+    public RepoDbInsert(string connectionString)
+    {
+        conn = connectionString;
+    }
 }

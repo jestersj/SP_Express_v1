@@ -1,14 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SP_Express_v1.Models;
 using System.Diagnostics;
+using SP_Express_v1.DB.Contract;
 
 namespace SP_Express_v1.Controllers
 {
     public class HomeController : Controller
     {
+        private IDbSelect _repo;
 
-        public HomeController()
+        public HomeController(IDbSelect repo)
         {
+            _repo = repo;
         }
 
         public IActionResult Index()
