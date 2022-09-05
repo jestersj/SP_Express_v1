@@ -7,6 +7,9 @@ namespace SP_Express_v1.Models
         [Required]
         [Display(Name = "Адрес")] 
         public string AdrName { get; set; }
+        
+        [Display(Name = "Полный адрес")] 
+        public string AdrFull { get; set; }
 
         [Display(Name = "ISO  код страны")]
         public string CountryISOCode { get; set; }
