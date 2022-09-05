@@ -93,13 +93,16 @@ html {
     background-image: url('../img/brg_air.png');
 }
 .train {
-    padding-bottom: 35px;
+    padding-bottom: 40px;
 }
 .pic_train {
     background-image: url('../img/train-bgr.png');
 }
 .ship {
     padding-bottom: 20px;
+}
+.small_ship {
+    padding-bottom: 350px;
 }
 .pic_ship {
     background-image: url('../img/ship_bgr.png');
