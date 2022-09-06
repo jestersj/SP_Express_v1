@@ -1,10 +1,67 @@
 using System.ComponentModel.DataAnnotations;
 
+
 namespace SP_Express_v1.Models
 {
+    public class Consignment
+    {
+        public Address Adr1 { get; set; }
+
+        public Address Adr2 { get; set; }
+        
+        public ConsignmentInfo Info { get; set; }
+    }
+        
+    public class ConsignmentInfo
+    {
+        [Display(Name = "ФИО 1")] 
+        public string FIO1 { get; set; }
+        
+        [Display(Name = "ФИО 2")] 
+        public string FIO2 { get; set; }
+        
+        [Display(Name = "Название компании 1")] 
+        public string CompName1 { get; set; }
+        
+        [Display(Name = "Название компании 2")] 
+        public string CompName2 { get; set; }
+        
+        [Display(Name = "Примечание")] 
+        public string Note { get; set; }
+        
+        [Display(Name = "Доп. информация по доставке")] 
+        public string DeliveryExtraInfo { get; set; }
+        
+        [Display(Name = "Доп. информация по доставке")] 
+        public string Decription { get; set; }
+        
+        [Display(Name = "Только документы")] 
+        public int DocsOnly { get; set; }
+        
+        [Display(Name = "Места")] 
+        public int Places { get; set; }
+        
+        [Display(Name = "Вес")] 
+        public float Weight { get; set; }
+        
+        [Display(Name = "Услуга")] 
+        public string Service { get; set; }
+        
+        [Display(Name = "Время доставки с")] 
+        public int FromTime { get; set; }
+        
+        [Display(Name = "Время доставки до")] 
+        public int ToTime { get; set; }
+        
+        [Display(Name = "Объявленная стоимость")] 
+        public int DeclaredCost { get; set; }
+        
+        [Display(Name = "Фактическая стоимость")] 
+        public int ActualCost { get; set; }
+    }
+    
     public class Address
     {
-        [Required]
         [Display(Name = "Адрес")] 
         public string AdrName { get; set; }
         

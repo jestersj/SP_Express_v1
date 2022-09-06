@@ -40,9 +40,10 @@ namespace SP_Express_v1.Controllers
         }
         
         [HttpPost]
-        public IActionResult Invoice(Address model)
+        public IActionResult Invoice(Consignment model)
         {
-            _insert.InsertConsignment(model);
+            _insert.InsertConsignment(model.Adr1);
+            _insert.InsertConsignment(model.Adr2);
             return View();
         }
         
