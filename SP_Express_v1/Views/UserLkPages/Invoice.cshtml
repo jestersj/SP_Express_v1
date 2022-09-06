@@ -38,39 +38,39 @@
         <div class="">
             <div class="form-group vmp_form-group form_box_top">
                 <label for="name" class="text-uppercase form-label">ФИО</label>
-                <input type="text" id="nameInvoice" class="field no-border form-input"
+                <input required type="text" id="nameInvoice" class="field no-border form-input"
                        placeholder="Иванов Иван Иванович">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="company" class="text-uppercase form-label">Компания</label>
-                <input type="text" id="companyInvoice" class="field no-border form-input"
+                <input required type="text" id="companyInvoice" class="field no-border form-input"
                        placeholder="ООО Колобки">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="AdrName" class="text-uppercase form-label">Адрес</label>
-                <input type="text" id="AdrName" class="field no-border form-input"
+                <input required type="text" id="AdrName" class="field no-border form-input"
                        placeholder="Введите адрес до дома">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="Country" class="text-uppercase form-label">Страна</label>
-                
-                    <input id="Lat" asp-for="Lat" type="hidden"/>
-                    <input id="Lon" asp-for="Lon" type="hidden"/>
-                    <input asp-for="Region" type="hidden" id="Region"/>
-                    <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
-                    <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
-                    <input asp-for="Country" readonly="readonly" class="field no-border form-input" id="Country"/>
-                    <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
-                    <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
-                    <input asp-for="City" type="hidden" id="City"/>
-                    <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
-                    <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
-                    <input asp-for="Street" type="hidden" id="Street"/>
-                    <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
-                    <input asp-for="House" type="hidden" id="House"/>
-                    <input asp-for="Block" type="hidden" id="Block"/>
-                    <input asp-for="AdrFull" type="hidden" id="AddrCorrect"/>
-                
+
+                <input id="Lat" asp-for="Lat" type="hidden"/>
+                <input id="Lon" asp-for="Lon" type="hidden"/>
+                <input asp-for="Region" type="hidden" id="Region"/>
+                <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
+                <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
+                <input asp-for="Country" readonly="readonly" class="field no-border form-input" id="Country"/>
+                <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
+                <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
+                <input asp-for="City" type="hidden" id="City"/>
+                <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
+                <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
+                <input asp-for="Street" type="hidden" id="Street"/>
+                <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
+                <input asp-for="House" type="hidden" id="House"/>
+                <input asp-for="Block" type="hidden" id="Block"/>
+                <input asp-for="AdrFull" type="hidden" id="AddrCorrect"/>
+
             </div>
             <div class="row gx-0">
                 <div class="col-lg-7">
@@ -83,7 +83,7 @@
                 <div class="col-lg-5">
                     <div class="form-group vmp_form-group form_box_bot_right">
                         <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                        <input type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                        <input required type="tel" id="Invoicephone_num" class="field no-border form-input tel"
                                placeholder="+7 (499) 678 5000">
                     </div>
                 </div>
@@ -101,39 +101,39 @@
         <div class="">
             <div class="form-group vmp_form-group form_box_top">
                 <label for="name" class="text-uppercase form-label">ФИО</label>
-                <input type="text" id="name" class="field no-border form-input"
+                <input required type="text" id="name" class="field no-border form-input"
                        placeholder="Иванов Иван Иванович">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="company" class="text-uppercase form-label">Компания</label>
-                <input type="text" id="company" class="field no-border form-input"
+                <input required type="text" id="company" class="field no-border form-input"
                        placeholder="ООО Колобки">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="AdrName2" class="text-uppercase form-label">Адрес</label>
-                <input type="text" id="AdrName2" class="field no-border form-input"
+                <input required type="text" id="AdrName2" class="field no-border form-input"
                        placeholder="Введите адрес до дома">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="Country2" class="text-uppercase form-label">Страна</label>
-                
-                    <input id="Lat2" asp-for="Lat" type="hidden"/>
-                    <input id="Lon2" asp-for="Lon" type="hidden"/>
-                    <input asp-for="Region" type="hidden" id="Region2"/>
-                    <input asp-for="RegionWithType" type="hidden" id="RegionWithType2"/>
-                    <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2"/>
-                    <input asp-for="Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
-                    <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2"/>
-                    <input asp-for="PostalCode" type="hidden" id="PostalCode2"/>
-                    <input asp-for="City" type="hidden" id="City2"/>
-                    <input asp-for="CityWithType" type="hidden" id="CityWithType2"/>
-                    <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2"/>
-                    <input asp-for="Street" type="hidden" id="Street2"/>
-                    <input asp-for="StreetWithType" type="hidden" id="StreetWithType2"/>
-                    <input asp-for="House" type="hidden" id="House2"/>
-                    <input asp-for="Block" type="hidden" id="Block2"/>
-                    <input asp-for="AdrFull" type="hidden" id="AddrCorrect2"/>
-                
+
+                <input id="Lat2" asp-for="Lat" type="hidden"/>
+                <input id="Lon2" asp-for="Lon" type="hidden"/>
+                <input asp-for="Region" type="hidden" id="Region2"/>
+                <input asp-for="RegionWithType" type="hidden" id="RegionWithType2"/>
+                <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2"/>
+                <input asp-for="Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
+                <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2"/>
+                <input asp-for="PostalCode" type="hidden" id="PostalCode2"/>
+                <input asp-for="City" type="hidden" id="City2"/>
+                <input asp-for="CityWithType" type="hidden" id="CityWithType2"/>
+                <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2"/>
+                <input asp-for="Street" type="hidden" id="Street2"/>
+                <input asp-for="StreetWithType" type="hidden" id="StreetWithType2"/>
+                <input asp-for="House" type="hidden" id="House2"/>
+                <input asp-for="Block" type="hidden" id="Block2"/>
+                <input asp-for="AdrFull" type="hidden" id="AddrCorrect2"/>
+
             </div>
             <div class="row gx-0">
                 <div class="col-lg-7">
@@ -146,7 +146,7 @@
                 <div class="col-lg-5">
                     <div class="form-group vmp_form-group form_box_bot_right">
                         <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                        <input type="tel" id="phone_num" class="field no-border form-input tel"
+                        <input required type="tel" id="phone_num" class="field no-border form-input tel"
                                placeholder="+7 (499) 678 5000">
                     </div>
                 </div>
@@ -165,7 +165,14 @@
                     (будут указаны в счете)
                 </label>
                 <input type="text" id="note" class="field no-border form-input"
-                       placeholder="Ваши примечания">
+                       placeholder="Первые 10 символов будут указаны в счете">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <label for="additionalInform2" class="text-uppercase form-label">Дополнительная информация по доставке</label>
+                <input type="text" id="additionalInform2" class="field no-border form-input"
+                       placeholder="Например, дополнительные номера">
             </div>
         </div>
     </div>
@@ -173,10 +180,11 @@
         <div class="col-12">
             <div class="form-group vmp_form-group">
                 <label for="description" class="text-uppercase form-label">Описание</label>
-                <input type="text" id="description" class="field no-border form-input"
+                <input required type="text" id="description" class="field no-border form-input"
                        placeholder="Описание посылки">
             </div>
         </div>
+
         <div class="col-12">
             <div class="form-group form_box_last">
                 <input class="form-check-input" type="checkbox" value="" id="docOnly">
@@ -193,14 +201,14 @@
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last">
                 <label for="pieces" class="text-uppercase form-label">Мест</label>
-                <input type="text" id="pieces" class="field no-border form-input"
+                <input required type="text" id="pieces" class="field no-border form-input"
                        placeholder="Например, 30">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last_right">
                 <label for="weight" class="text-uppercase form-label">Вес</label>
-                <input type="text" id="weight" class="field no-border form-input"
+                <input required type="text" id="weight" class="field no-border form-input"
                        placeholder="Например, 0.5 кг">
             </div>
         </div>
@@ -215,7 +223,7 @@
                             Услуга
                         </label>
                         <br>
-                        <select name="service" id="service" class="mb-1" onchange="">
+                        <select required name="service" id="service" class="mb-1" onchange="">
                             <option selected>Стандарт</option>
                             <option>Экспресс 2</option>
                             <option>Экспресс 6</option>
@@ -241,14 +249,14 @@
         <div class="col-lg-6">
             <div class="form-group vmp_form-group">
                 <label for="value" class="text-uppercase form-label">Объявленная ценность</label>
-                <input type="text" id="value" class="field no-border form-input"
+                <input required type="text" id="value" class="field no-border form-input"
                        placeholder="Указывайте в рублях">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last_right1">
                 <label for="price" class="text-uppercase form-label">Фактическая стоимость</label>
-                <input type="text" id="price" class="field no-border form-input"
+                <input required type="text" id="price" class="field no-border form-input"
                        placeholder="Указывайте в рублях">
             </div>
         </div>
