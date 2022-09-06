@@ -48,7 +48,7 @@ namespace SP_Express_v1.Models
         public string Decription { get; set; }
         
         [Display(Name = "Только документы")] 
-        public int DocsOnly { get; set; }
+        public bool DocsOnly { get; set; }
         
         [Display(Name = "Места")] 
         public int Places { get; set; }
