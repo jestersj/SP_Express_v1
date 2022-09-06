@@ -45,7 +45,7 @@ namespace SP_Express_v1.Models
         public string DeliveryExtraInfo { get; set; }
         
         [Display(Name = "Описание")] 
-        public string Decription { get; set; }
+        public string Description { get; set; }
         
         [Display(Name = "Только документы")] 
         public bool DocsOnly { get; set; }
