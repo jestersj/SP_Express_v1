@@ -1,4 +1,4 @@
-@model Address
+@model Consignment
 @{
     ViewData["Title"] = "Оформление накладной";
 }
@@ -54,22 +54,22 @@
             <div class="form-group vmp_form-group form_box">
                 <label for="Country" class="text-uppercase form-label">Страна</label>
 
-                <input id="Lat" asp-for="Lat" type="hidden"/>
-                <input id="Lon" asp-for="Lon" type="hidden"/>
-                <input asp-for="Region" type="hidden" id="Region"/>
-                <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
-                <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
-                <input asp-for="Country" readonly="readonly" class="field no-border form-input" id="Country"/>
-                <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
-                <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
-                <input asp-for="City" type="hidden" id="City"/>
-                <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
-                <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
-                <input asp-for="Street" type="hidden" id="Street"/>
-                <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
-                <input asp-for="House" type="hidden" id="House"/>
-                <input asp-for="Block" type="hidden" id="Block"/>
-                <input asp-for="AdrFull" type="hidden" id="AddrCorrect"/>
+                <input id="Lat" asp-for="Adr1.Lat" type="hidden"/>
+                <input id="Lon" asp-for="Adr1.Lon" type="hidden"/>
+                <input asp-for="Adr1.Region" type="hidden" id="Region"/>
+                <input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType"/>
+                <input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode"/>
+                <input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country"/>
+                <input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode"/>
+                <input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode"/>
+                <input asp-for="Adr1.City" type="hidden" id="City"/>
+                <input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType"/>
+                <input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker"/>
+                <input asp-for="Adr1.Street" type="hidden" id="Street"/>
+                <input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType"/>
+                <input asp-for="Adr1.House" type="hidden" id="House"/>
+                <input asp-for="Adr1.Block" type="hidden" id="Block"/>
+                <input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect"/>
 
             </div>
             <div class="row gx-0">
@@ -117,22 +117,22 @@
             <div class="form-group vmp_form-group form_box">
                 <label for="Country2" class="text-uppercase form-label">Страна</label>
 
-                <input id="Lat2" asp-for="Lat" type="hidden"/>
-                <input id="Lon2" asp-for="Lon" type="hidden"/>
-                <input asp-for="Region" type="hidden" id="Region2"/>
-                <input asp-for="RegionWithType" type="hidden" id="RegionWithType2"/>
-                <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode2"/>
-                <input asp-for="Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
-                <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode2"/>
-                <input asp-for="PostalCode" type="hidden" id="PostalCode2"/>
-                <input asp-for="City" type="hidden" id="City2"/>
-                <input asp-for="CityWithType" type="hidden" id="CityWithType2"/>
-                <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker2"/>
-                <input asp-for="Street" type="hidden" id="Street2"/>
-                <input asp-for="StreetWithType" type="hidden" id="StreetWithType2"/>
-                <input asp-for="House" type="hidden" id="House2"/>
-                <input asp-for="Block" type="hidden" id="Block2"/>
-                <input asp-for="AdrFull" type="hidden" id="AddrCorrect2"/>
+                <input id="Lat2" asp-for="Adr2.Lat" type="hidden"/>
+                <input id="Lon2" asp-for="Adr2.Lon" type="hidden"/>
+                <input asp-for="Adr2.Region" type="hidden" id="Region2"/>
+                <input asp-for="Adr2.RegionWithType" type="hidden" id="RegionWithType2"/>
+                <input asp-for="Adr2.RegionISOCode" type="hidden" id="RegionISOCode2"/>
+                <input asp-for="Adr2.Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
+                <input asp-for="Adr2.CountryISOCode" type="hidden" id="CountryISOCode2"/>
+                <input asp-for="Adr2.PostalCode" type="hidden" id="PostalCode2"/>
+                <input asp-for="Adr2.City" type="hidden" id="City2"/>
+                <input asp-for="Adr2.CityWithType" type="hidden" id="CityWithType2"/>
+                <input asp-for="Adr2.CapitalMarker" type="hidden" id="CapitalMarker2"/>
+                <input asp-for="Adr2.Street" type="hidden" id="Street2"/>
+                <input asp-for="Adr2.StreetWithType" type="hidden" id="StreetWithType2"/>
+                <input asp-for="Adr2.House" type="hidden" id="House2"/>
+                <input asp-for="Adr2.Block" type="hidden" id="Block2"/>
+                <input asp-for="Adr2.AdrFull" type="hidden" id="AddrCorrect2"/>
 
             </div>
             <div class="row gx-0">
