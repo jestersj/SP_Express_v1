@@ -38,17 +38,17 @@
         <div class="">
             <div class="form-group vmp_form-group form_box_top">
                 <label for="name" class="text-uppercase form-label">ФИО</label>
-                <input required type="text" id="nameInvoice" class="field no-border form-input"
+                <input asp-for="Info.FIO1" type="text" id="nameInvoice" class="field no-border form-input"
                        placeholder="Иванов Иван Иванович">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="company" class="text-uppercase form-label">Компания</label>
-                <input required type="text" id="companyInvoice" class="field no-border form-input"
+                <input asp-for="Info.CompName1" type="text" id="companyInvoice" class="field no-border form-input"
                        placeholder="ООО Колобки">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="AdrName" class="text-uppercase form-label">Адрес</label>
-                <input required type="text" id="AdrName" class="field no-border form-input"
+                <input type="text" id="AdrName" class="field no-border form-input"
                        placeholder="Введите адрес до дома">
             </div>
             <div class="form-group vmp_form-group form_box">
@@ -76,14 +76,14 @@
                 <div class="col-lg-7">
                     <div class="form-group vmp_form-group form_box_bot">
                         <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
-                        <input type="text" id="offNum" class="field no-border form-input"
+                        <input asp-for="Info.Office1" type="text" id="offNum" class="field no-border form-input"
                                placeholder="96">
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="form-group vmp_form-group form_box_bot_right">
                         <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                        <input required type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                        <input asp-for="Info.Tel1" type="tel" id="Invoicephone_num" class="field no-border form-input tel"
                                placeholder="+7 (499) 678 5000">
                     </div>
                 </div>
@@ -101,17 +101,17 @@
         <div class="">
             <div class="form-group vmp_form-group form_box_top">
                 <label for="name" class="text-uppercase form-label">ФИО</label>
-                <input type="text" id="name" class="field no-border form-input"
+                <input asp-for="Info.FIO2" type="text" id="name" class="field no-border form-input"
                        placeholder="Иванов Иван Иванович">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="company" class="text-uppercase form-label">Компания</label>
-                <input type="text" id="company" class="field no-border form-input"
+                <input asp-for="Info.CompName2" type="text" id="company" class="field no-border form-input"
                        placeholder="ООО Колобки">
             </div>
             <div class="form-group vmp_form-group form_box">
                 <label for="AdrName2" class="text-uppercase form-label">Адрес</label>
-                <input required type="text" id="AdrName2" class="field no-border form-input"
+                <input type="text" id="AdrName2" class="field no-border form-input"
                        placeholder="Введите адрес до дома">
             </div>
             <div class="form-group vmp_form-group form_box">
@@ -139,14 +139,14 @@
                 <div class="col-lg-7">
                     <div class="form-group vmp_form-group form_box_bot">
                         <label for="officeNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
-                        <input type="number" id="officeNum" class="field no-border form-input"
+                        <input asp-for="Info.Office2" type="number" id="officeNum" class="field no-border form-input"
                                placeholder="41">
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="form-group vmp_form-group form_box_bot_right">
                         <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                        <input required type="tel" id="phone_num" class="field no-border form-input tel"
+                        <input asp-for="Info.Tel2" type="tel" id="phone_num" class="field no-border form-input tel"
                                placeholder="+7 (499) 678 5000">
                     </div>
                 </div>
@@ -164,14 +164,14 @@
                     Примечания отправителя
                     (будут указаны в счете)
                 </label>
-                <input type="text" id="note" class="field no-border form-input"
+                <input asp-for="Info.Note" type="text" id="note" class="field no-border form-input"
                        placeholder="Первые 10 символов будут указаны в счете">
             </div>
         </div>
         <div class="col-12">
             <div class="form-group vmp_form-group form_box_mid1">
                 <label for="additionalInform2" class="text-uppercase form-label">Дополнительная информация по доставке</label>
-                <input type="text" id="additionalInform2" class="field no-border form-input"
+                <input asp-for="Info.DeliveryExtraInfo" type="text" id="additionalInform2" class="field no-border form-input"
                        placeholder="Например, дополнительные номера">
             </div>
         </div>
@@ -180,14 +180,14 @@
         <div class="col-12">
             <div class="form-group vmp_form-group">
                 <label for="description" class="text-uppercase form-label">Описание</label>
-                <input required type="text" id="description" class="field no-border form-input"
+                <input asp-for="Info.Decription" type="text" id="description" class="field no-border form-input"
                        placeholder="Описание посылки">
             </div>
         </div>
 
         <div class="col-12">
             <div class="form-group form_box_last">
-                <input class="form-check-input" type="checkbox" value="" id="docOnly">
+                <input asp-for="Info.DocsOnly" class="form-check-input" type="checkbox" value="" id="docOnly">
                 <label class="form-check-label" for="docOnly">
                     Только документы
                 </label>
@@ -201,14 +201,14 @@
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last">
                 <label for="pieces" class="text-uppercase form-label">Мест</label>
-                <input required type="text" id="pieces" class="field no-border form-input"
+                <input asp-for="Info.Places" type="text" id="pieces" class="field no-border form-input"
                        placeholder="Например, 30">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last_right">
                 <label for="weight" class="text-uppercase form-label">Вес</label>
-                <input required type="text" id="weight" class="field no-border form-input"
+                <input asp-for="Info.Weight" type="text" id="weight" class="field no-border form-input"
                        placeholder="Например, 0.5 кг">
             </div>
         </div>
@@ -223,7 +223,7 @@
                             Услуга
                         </label>
                         <br>
-                        <select required name="service" id="service" class="mb-1" onchange="">
+                        <select asp-for="Info.Service" name="service" id="service" class="mb-1" onchange="">
                             <option selected>Стандарт</option>
                             <option>Экспресс 2</option>
                             <option>Экспресс 6</option>
@@ -238,9 +238,9 @@
                     </div>
                     <div id="timeOfDelivery" class="col-9">
                         <label for="from" class="text-uppercase form-label1">Время доставки с</label>
-                        <input type="number" id="from" class="hours no-border form-input">
+                        <input asp-for="Info.FromTime" type="number" id="from" class="hours no-border form-input">
                         <label for="to" class="text-uppercase form-label1">До</label>
-                        <input type="number" id="to" class="hours no-border form-input">
+                        <input asp-for="Info.ToTime" type="number" id="to" class="hours no-border form-input">
                     </div>
                 </div>
             </div>
@@ -249,14 +249,14 @@
         <div class="col-lg-6">
             <div class="form-group vmp_form-group">
                 <label for="value" class="text-uppercase form-label">Объявленная ценность</label>
-                <input required type="text" id="value" class="field no-border form-input"
+                <input asp-for="Info.DeclaredCost" type="text" id="value" class="field no-border form-input"
                        placeholder="Указывайте в рублях">
             </div>
         </div>
         <div class="col-lg-6">
             <div class="form-group vmp_form-group form_box_last_right1">
                 <label for="price" class="text-uppercase form-label">Фактическая стоимость</label>
-                <input required type="text" id="price" class="field no-border form-input"
+                <input asp-for="Info.ActualCost" type="text" id="price" class="field no-border form-input"
                        placeholder="Указывайте в рублях">
             </div>
         </div>

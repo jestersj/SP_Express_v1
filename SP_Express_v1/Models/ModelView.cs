@@ -20,6 +20,18 @@ namespace SP_Express_v1.Models
         [Display(Name = "ФИО 2")] 
         public string FIO2 { get; set; }
         
+        [Display(Name = "Телефон 1")] 
+        public string Tel1 { get; set; }
+        
+        [Display(Name = "Телефон 2")] 
+        public string Tel2 { get; set; }
+        
+        [Display(Name = "Офис 1")] 
+        public string Office1 { get; set; }
+        
+        [Display(Name = "Офис 2")] 
+        public string Office2 { get; set; }
+        
         [Display(Name = "Название компании 1")] 
         public string CompName1 { get; set; }
         
@@ -32,7 +44,7 @@ namespace SP_Express_v1.Models
         [Display(Name = "Доп. информация по доставке")] 
         public string DeliveryExtraInfo { get; set; }
         
-        [Display(Name = "Доп. информация по доставке")] 
+        [Display(Name = "Описание")] 
         public string Decription { get; set; }
         
         [Display(Name = "Только документы")] 
