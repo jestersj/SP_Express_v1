@@ -20,21 +20,8 @@ public class RepoDbInsert : IDbInsert
     /// вставка запроса на договор
     /// </summary>
     /// <param name="instance"></param>
-    public async Task<int> InsertConsignment(Consignment instance)
+    public async Task<int> InsertInvoice(Consignment instance)
     {
-        //dbo.up_ConclusDog_Insert
-        //@OrgName VARCHAR(100),@OrgEmail VARCHAR(50),@OrgAdres VARCHAR(255),
-        //@OrgINN VARCHAR(20),@OrgNote VARCHAR(255),@id INT OUTPUT
-
-        
-
-        // @AdrFull varchar(150), @CountryISOCode varchar(100), @Country varchar(100),
-        // @RegionISOCode varchar(100), @Region varchar(100), @CapitalMarker int,
-        // @Lat varchar(100), @Lon varchar(100), @RegionWithType varchar(100), @PostalCode int,
-        // @City varchar(100), @CityWithType varchar(100), @Street varchar(100),
-        // @StreetWithType varchar(100), @House varchar(100),
-        // @Block varchar(100), @Id INT OUTPUT)
-        
         var p = new DynamicParameters();
         p.Add("@AdrFull1", instance.Adr1.AdrFull, DbType.String, ParameterDirection.Input);
         p.Add("@CountryISOCode1", instance.Adr1.CountryISOCode, DbType.String, ParameterDirection.Input);
@@ -44,7 +31,7 @@ public class RepoDbInsert : IDbInsert
         p.Add("@CapitalMarker1", instance.Adr1.CapitalMarker, DbType.Int16, ParameterDirection.Input);
         p.Add("@Lat1", instance.Adr1.Lat, DbType.String, ParameterDirection.Input);
         p.Add("@Lon1", instance.Adr1.Lon, DbType.String, ParameterDirection.Input);
-        p.Add("@QC1", instance.Adr1.Qc, DbType.String, ParameterDirection.Input);
+        p.Add("@QC1", instance.Adr1.Qc, DbType.Int32, ParameterDirection.Input);
         p.Add("@Settlement1", instance.Adr1.Settlement, DbType.String, ParameterDirection.Input);
         p.Add("@SettlementWithType1", instance.Adr1.SettlementWithType, DbType.String, ParameterDirection.Input);
         p.Add("@RegionWithType1", instance.Adr1.RegionWithType, DbType.String, ParameterDirection.Input);
@@ -56,7 +43,7 @@ public class RepoDbInsert : IDbInsert
         p.Add("@House1", instance.Adr1.House, DbType.String, ParameterDirection.Input);
         p.Add("@Block1", instance.Adr1.Block, DbType.String, ParameterDirection.Input);
 
-        p.Add("@AdrFull2", instance.Adr1.AdrFull, DbType.String, ParameterDirection.Input);
+        p.Add("@AdrFull2", instance.Adr2.AdrFull, DbType.String, ParameterDirection.Input);
         p.Add("@CountryISOCode2", instance.Adr2.CountryISOCode, DbType.String, ParameterDirection.Input);
         p.Add("@Country2", instance.Adr2.Country, DbType.String, ParameterDirection.Input);
         p.Add("@RegionISOCode2", instance.Adr2.RegionISOCode, DbType.String, ParameterDirection.Input);
@@ -64,7 +51,7 @@ public class RepoDbInsert : IDbInsert
         p.Add("@CapitalMarker2", instance.Adr2.CapitalMarker, DbType.Int16, ParameterDirection.Input);
         p.Add("@Lat2", instance.Adr2.Lat, DbType.String, ParameterDirection.Input);
         p.Add("@Lon2", instance.Adr2.Lon, DbType.String, ParameterDirection.Input);
-        p.Add("@QC2", instance.Adr2.Qc, DbType.String, ParameterDirection.Input);
+        p.Add("@QC2", instance.Adr2.Qc, DbType.Int32, ParameterDirection.Input);
         p.Add("@Settlement2", instance.Adr2.Settlement, DbType.String, ParameterDirection.Input);
         p.Add("@SettlementWithType2", instance.Adr2.SettlementWithType, DbType.String, ParameterDirection.Input);
         p.Add("@RegionWithType2", instance.Adr2.RegionWithType, DbType.String, ParameterDirection.Input);
@@ -99,7 +86,7 @@ public class RepoDbInsert : IDbInsert
         p.Add("@id", null, DbType.Int32, ParameterDirection.Output);
 
         using IDbConnection db = new SqlConnection(conn);
-        await db.ExecuteAsync("insert_consignment", p, commandType: CommandType.StoredProcedure);
+        await db.ExecuteAsync("insert_invoice", p, commandType: CommandType.StoredProcedure);
         var res = p.Get<int>("@id");
         return res;
     }
