@@ -1,13 +1,23 @@
-<div class="bg_gard">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="text-uppercase welcome">Договор</h2>
-                </div>
-            </div>
+@{
+    ViewData["Title"] = "Создание договора";
+}
 
-        </div>
-    </div>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuManagerLk");
+    }
+}
+
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+ю..
     <div class="container" id="agmOnly">
         <form action="" class="justify-content-center col-12 mx-auto">
             <div class="row">

@@ -1,3 +1,22 @@
+@{
+    ViewData["Title"] = "Распределение пакетовАдреса компаний";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuManagerLk");
+    }
+}
+
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
 <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-6 col-12">

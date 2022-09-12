@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Адреса компаний";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuManagerLk");
+    }
+}
+
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+
+<div class="container mt-3">
+    <div class="row mb-3">
+        <div class="col-12">
+            <label for="company" style="font-weight: 700;">Компания</label>
+            <input type="text" id="company">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4" style="height: 83vh; overflow: scroll;">
+            <table style="width: 100%;">
+                <tr>
+                    <th>Клиент</th>
+                </tr>
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <div class="col-8">
+            <div class="table__wrapper" style="height: 30vh; overflow-y: scroll;">
+                <table>
+                    <tr>
+                        <th width="3%">N.</th>
+                        <th width="40%">Адрес</th>
+                        <th width="7%">Маршр.</th>
+                        <th width="20%">Телефон</th>
+                        <th width="30%">Примечание</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="checkbox">
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="row justify-content-between mt-3">
+                <div class="col-5">
+                    <label for="address" style="font-weight: 700;">Адрес</label>
+                    <input type="text" id="address">
+                </div>
+                <div class="col-5">
+                    <button style="width: 100%;" class="btn btn-outline-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                             class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12" style="height: 40vh; overflow-y: scroll;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-3">
+            <button class="btn btn-outline-primary">Добавить нового клиента</button>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-outline-secondary">Редактировать название</button>
+        </div>
+    </div>
+</div>
