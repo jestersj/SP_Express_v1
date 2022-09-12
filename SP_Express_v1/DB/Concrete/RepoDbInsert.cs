@@ -44,6 +44,9 @@ public class RepoDbInsert : IDbInsert
         p.Add("@CapitalMarker1", instance.Adr1.CapitalMarker, DbType.Int16, ParameterDirection.Input);
         p.Add("@Lat1", instance.Adr1.Lat, DbType.String, ParameterDirection.Input);
         p.Add("@Lon1", instance.Adr1.Lon, DbType.String, ParameterDirection.Input);
+        p.Add("@QC1", instance.Adr1.Qc, DbType.String, ParameterDirection.Input);
+        p.Add("@Settlement1", instance.Adr1.Settlement, DbType.String, ParameterDirection.Input);
+        p.Add("@SettlementWithType1", instance.Adr1.SettlementWithType, DbType.String, ParameterDirection.Input);
         p.Add("@RegionWithType1", instance.Adr1.RegionWithType, DbType.String, ParameterDirection.Input);
         p.Add("@PostalCode1", instance.Adr1.PostalCode, DbType.Int64, ParameterDirection.Input);
         p.Add("@City1", instance.Adr1.City, DbType.String, ParameterDirection.Input);
@@ -61,6 +64,9 @@ public class RepoDbInsert : IDbInsert
         p.Add("@CapitalMarker2", instance.Adr2.CapitalMarker, DbType.Int16, ParameterDirection.Input);
         p.Add("@Lat2", instance.Adr2.Lat, DbType.String, ParameterDirection.Input);
         p.Add("@Lon2", instance.Adr2.Lon, DbType.String, ParameterDirection.Input);
+        p.Add("@QC2", instance.Adr2.Qc, DbType.String, ParameterDirection.Input);
+        p.Add("@Settlement2", instance.Adr2.Settlement, DbType.String, ParameterDirection.Input);
+        p.Add("@SettlementWithType2", instance.Adr2.SettlementWithType, DbType.String, ParameterDirection.Input);
         p.Add("@RegionWithType2", instance.Adr2.RegionWithType, DbType.String, ParameterDirection.Input);
         p.Add("@PostalCode2", instance.Adr2.PostalCode, DbType.Int64, ParameterDirection.Input);
         p.Add("@City2", instance.Adr2.City, DbType.String, ParameterDirection.Input);

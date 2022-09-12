@@ -118,9 +118,18 @@ namespace SP_Express_v1.Models
         
         [Display(Name = "Широта")]
         public string Lat { get; set; }
-        
+
         [Display(Name = "Долгота")]
         public string Lon { get; set; }
+        
+        [Display(Name = "Качество данных")]
+        public string Qc { get; set; }
+        
+        [Display(Name = "Поселение")]
+        public string Settlement { get; set; }
+        
+        [Display(Name = "Поселение с типом")]
+        public string SettlementWithType { get; set; }
         
         [Display(Name = "Почтовый индекс")]
         public string PostalCode { get; set; }

@@ -30,7 +30,7 @@
     </div>
 </div>
 <div class="container" id="agmOnly">
-    <form action="" class="justify-content-center col-12 mx-auto">
+    <form action="" class="justify-content-center col-12 mx-auto" method="post">
         <div class="col-12">
             <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
                 <div class="col-12">
@@ -124,9 +124,10 @@
                         <input type="text" id="AdrName" class="field no-border form-input AdrName"
                                placeholder="Ломоносовский пр-кт, д15">
                     </div>
-                    <form method="post">
+
                                         <input id="Lat" asp-for="Lat" type="hidden"/>
                                         <input id="Lon" asp-for="Lon" type="hidden"/>
+                                        
                                         <input asp-for="Region" type="hidden" id="Region"/>
                                         <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
                                         <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
@@ -141,7 +142,7 @@
                                         <input asp-for="House" type="hidden" id="House"/>
                                         <input asp-for="Block" type="hidden" id="Block"/>
                                         <input type="hidden" id="AddrCorrect"/>
-                                    </form>
+
                     <div class="row align-items-center mt-4">
                         <div class="col-6">
                             <div class="form-group vmp_form-group form_box_agm_top">

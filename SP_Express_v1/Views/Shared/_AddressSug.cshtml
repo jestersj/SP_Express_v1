@@ -69,6 +69,9 @@ function join(arr /*, separator */) {
             $("#Lat").val(0);
             $("#Lon").val(0);
           }
+      $("#Qc").val(address.qc_geo);
+      $("#Settlement").val(address.settlement);
+      $("#SettlementWithType").val(address.settlement_with_type);
       $("#AddrCorrect").val($("#AdrName").val())
   }
  
@@ -123,6 +126,9 @@ function join(arr /*, separator */) {
             $("#Lat2").val(0);
             $("#Lon2").val(0);
           }
+      $("#Qc2").val(address.qc_geo);
+      $("#Settlement2").val(address.settlement);
+      $("#SettlementWithType2").val(address.settlement_with_type);
       $("#AddrCorrect2").val($("#AdrName2").val())
     }
   
