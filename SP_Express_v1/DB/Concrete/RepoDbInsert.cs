@@ -29,8 +29,8 @@ public class RepoDbInsert : IDbInsert
         p.Add("@RegionISOCode1", instance.Adr1.RegionISOCode, DbType.String, ParameterDirection.Input);
         p.Add("@Region1", instance.Adr1.Region, DbType.String, ParameterDirection.Input);
         p.Add("@CapitalMarker1", instance.Adr1.CapitalMarker, DbType.Int16, ParameterDirection.Input);
-        p.Add("@Lat1", instance.Adr1.Lat, DbType.Decimal, ParameterDirection.Input);
-        p.Add("@Lon1", instance.Adr1.Lon, DbType.Decimal, ParameterDirection.Input);
+        p.Add("@Lat1", instance.Adr1.Lat, DbType.String, ParameterDirection.Input);
+        p.Add("@Lon1", instance.Adr1.Lon, DbType.String, ParameterDirection.Input);
         p.Add("@QC1", instance.Adr1.Qc, DbType.Int32, ParameterDirection.Input);
         p.Add("@Settlement1", instance.Adr1.Settlement, DbType.String, ParameterDirection.Input);
         p.Add("@SettlementWithType1", instance.Adr1.SettlementWithType, DbType.String, ParameterDirection.Input);
@@ -49,8 +49,8 @@ public class RepoDbInsert : IDbInsert
         p.Add("@RegionISOCode2", instance.Adr2.RegionISOCode, DbType.String, ParameterDirection.Input);
         p.Add("@Region2", instance.Adr2.Region, DbType.String, ParameterDirection.Input);
         p.Add("@CapitalMarker2", instance.Adr2.CapitalMarker, DbType.Int16, ParameterDirection.Input);
-        p.Add("@Lat2", instance.Adr2.Lat, DbType.Decimal, ParameterDirection.Input);
-        p.Add("@Lon2", instance.Adr2.Lon, DbType.Decimal, ParameterDirection.Input);
+        p.Add("@Lat2", instance.Adr2.Lat, DbType.String, ParameterDirection.Input);
+        p.Add("@Lon2", instance.Adr2.Lon, DbType.String, ParameterDirection.Input);
         p.Add("@QC2", instance.Adr2.Qc, DbType.Int32, ParameterDirection.Input);
         p.Add("@Settlement2", instance.Adr2.Settlement, DbType.String, ParameterDirection.Input);
         p.Add("@SettlementWithType2", instance.Adr2.SettlementWithType, DbType.String, ParameterDirection.Input);
