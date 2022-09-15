@@ -12,12 +12,20 @@ namespace SP_Express_v1.Controllers
         {
             _logger = logger;
         }
+        public IActionResult ManagerLk()
+        {
+            return View();
+        }
 
         public IActionResult Assignment()
         {
             return View();
         }
         public IActionResult Contract()
+        {
+            return View();
+        }
+        public IActionResult CompaniesAddresses()
         {
             return View();
         }

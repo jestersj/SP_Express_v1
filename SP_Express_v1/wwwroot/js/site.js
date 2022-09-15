@@ -58,7 +58,7 @@ passwordInput.oninput = ()=> {
     //Presence of uppercase letter
     let upp = 0;
     passwordInput.value.split('').map(el => {
-        if (el === el.toUpperCase()) {
+        if (el.match(/\D/) && el === el.toUpperCase()) {
             upp++
         }
     })
@@ -75,7 +75,7 @@ passwordInput.oninput = ()=> {
     //Presence of lowercase letter
     let low = 0;
     passwordInput.value.split('').map(el => {
-        if (el === el.toLowerCase() && /\D/.test(el)) {
+        if (el.match(/\D/) && el === el.toLowerCase()) {
             low++;
         }
     })
@@ -114,7 +114,7 @@ passwordInput.oninput = ()=> {
     //Presence of latin letter
     let letters = 0;
     passwordInput.value.split('').map(el => {
-        if (/\w/.test(el)) {
+        if (el.match(/\D/) && /\w/.test(el)) {
             letters++;
         }
     })
