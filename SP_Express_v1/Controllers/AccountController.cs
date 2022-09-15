@@ -103,11 +103,7 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
-
-        public IActionResult ManagerLk()
-        {
-            return View();
-        }
+        
         
         
         [HttpPost] 
