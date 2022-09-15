@@ -25,14 +25,24 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                     <li class="nav-item">
+                        <a class="nav-link menu_col" asp-action="Contract" asp-controller="ManagerLkPages">
+                            Заключить договор
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link menu_col" asp-action="Assignment" asp-controller="ManagerLkPages">
                             Распределение пакетов
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu_col" asp-action="Contract" asp-controller="ManagerLkPages">
-                            Заключить договор
+                        <a class="nav-link menu_col" asp-action="CompaniesAddresses" asp-controller="ManagerLkPages">
+                            Адреса компаний
                         </a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post" asp-controller="Account" asp-action="Logout">
+                            <input class="dropdown-item menu_col_exit logout" type="submit" value="Выход"/>
+                        </form>
                     </li>
                 </ul>
             </div>
