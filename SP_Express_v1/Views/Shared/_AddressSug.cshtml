@@ -22,8 +22,8 @@ function join(arr /*, separator */) {
  function fillSelected(suggestion) {
       let address = suggestion.data;
       
-      if (address.postal_code) $("#PostIndex").val(address.postal_code);
-      else $("#PostIndex").val(0);
+      if (address.postal_code) $("#PostalCode").val(address.postal_code);
+      else $("#PostalCode").val(0);
       
       $("#Country").val(address.country);
       
@@ -79,8 +79,8 @@ function join(arr /*, separator */) {
   function fillSelected2(suggestion) {
       let address = suggestion.data;
       
-      if (address.postal_code) $("#PostIndex2").val(address.postal_code);
-      else $("#PostIndex2").val(0);
+      if (address.postal_code) $("#PostalCode2").val(address.postal_code);
+      else $("#PostalCode2").val(0);
       
       $("#Country2").val(address.country);
       

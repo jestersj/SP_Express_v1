@@ -46,6 +46,7 @@ html {
 
 .menu_col:hover {
     color: #adadad;
+    cursor: pointer;
 }
 .menu_col_exit {
     color: #c90e04;
@@ -53,6 +54,7 @@ html {
 
 .menu_col_exit:hover {
     color: #870903;
+    cursor: pointer;
 }
 
 .blue1 {
@@ -180,6 +182,7 @@ select {
     border: none;
     padding: 0;
     background-color: transparent;
+    cursor: pointer;
 }
 .text_color {
     color: var(--color2);
@@ -373,6 +376,7 @@ select {
     background-color: #f0f0f0;
     color: #0066AA;
     border-color: transparent;
+    cursor: pointer;
 }
 .card_wrapper_exit {
     border-radius: 15px;
@@ -387,6 +391,7 @@ select {
     background-color: #f0f0f0;
     color: var(--color4);
     border-color: transparent;
+    cursor: pointer;
 }
 
 .card_size {
@@ -425,6 +430,7 @@ td, th {
     background-color: #f0f0f0;
     color: #0066AA;
     border-color: transparent;
+    cursor: pointer;
 }
 
 #regChoice {
@@ -454,6 +460,7 @@ td, th {
 
 .card_wrapper_services:hover {
     background-color: #002e5b;
+    cursor: pointer;
 }
 
 .card_wrapper_services h3 {

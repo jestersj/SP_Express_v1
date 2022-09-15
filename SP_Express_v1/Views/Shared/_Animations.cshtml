@@ -11,13 +11,13 @@ const ship = gsap.timeline();
 const smallShip = gsap.timeline();
 
 
-tl.fromTo('.truck', {xPercent: 150}, {xPercent:-50})
+tl.fromTo('.truck', {xPercent: 180}, {xPercent:-50})
 
 pl.fromTo('.plane', {xPercent: -50}, {xPercent: 150, yPercent: -300})
 
 train.fromTo('.train', {xPercent: 100}, {xPercent:-50})
 
-ship.fromTo('.ship', {xPercent: -90}, {xPercent: 100})
+ship.fromTo('.ship', {xPercent: -80}, {xPercent: 20})
 smallShip.fromTo('.small_ship', {xPercent: 100}, {xPercent: -90})
 
 ScrollTrigger.create({
