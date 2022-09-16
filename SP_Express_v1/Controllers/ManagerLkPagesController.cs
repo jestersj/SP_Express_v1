@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using SP_Express_v1.Models;
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SP_Express_v1.Controllers
 {
+    [Authorize(Roles = "adm")]
     public class ManagerLkPages : Controller
     {
         private readonly ILogger<ManagerLkPages> _logger;

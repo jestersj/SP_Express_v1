@@ -46,6 +46,24 @@ namespace SP_Express_v1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult LKRedirection()
+        {
+            Console.WriteLine("123");
+            if (User.IsInRole("adm"))
+            {
+                Console.WriteLine("456");
+                return RedirectToAction("ManagerLk", "ManagerLkPages");
+            }
+            
+            if (User.IsInRole("usr"))
+            {
+                Console.WriteLine("789");
+                return RedirectToAction("UserLk", "UserLkPages");
+            }
+
+            return RedirectToAction("Login", "Account");
+        }
         
         [HttpPost]
         [ValidateAntiForgeryToken]

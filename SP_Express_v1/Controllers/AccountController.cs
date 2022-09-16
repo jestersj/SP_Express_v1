@@ -3,6 +3,7 @@ using SP_Express_v1.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using NuGet.Protocol;
 using SP_Express_v1.ModelViews;
 using SP_Express_v1.Models;
 
@@ -32,19 +33,37 @@ namespace SP_Express_v1.Controllers
         public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (!ModelState.IsValid) return View(model);
-            
+
             var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);
+
             
-            if (result.Succeeded) {
-                return RedirectToAction("UserLk", "UserLKPages");
-            } else {
+            if (result.Succeeded)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                var roles = await _userManager.GetRolesAsync(user);
+                var role = roles.Single();
+                
+                if (role == "usr")
+                {
+                    return RedirectToAction("UserLk", "UserLKPages");
+                }
+
+                if (role == "adm")
+                {
+                    return RedirectToAction("ManagerLk", "ManagerLkPages");
+                }
+
+                ModelState.AddModelError("", "Ошибка при попытке войти :(");
+                return View(model);
+            }
+            else
+            {
                 ModelState.AddModelError("", "Неверный логин/пароль");
                 return View(model);
             }
-            
         }
 
-        
+
         public IActionResult Register()
         {
             return View();
@@ -103,16 +122,16 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
-        
-        
-        
-        [HttpPost] 
-        public async Task<IActionResult> Logout() {
-            await _signInManager.SignOutAsync(); 
-            return RedirectToAction("Index", "Home"); 
+
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
-        
-        
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
