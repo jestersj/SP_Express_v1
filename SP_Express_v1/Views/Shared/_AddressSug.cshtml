@@ -23,7 +23,7 @@ function join(arr /*, separator */) {
       let address = suggestion.data;
       
       if (address.postal_code) $("#PostalCode").val(address.postal_code);
-      else $("#PostalCode").val(0);
+      else $("#PostalCode ").val(0);
       
       $("#Country").val(address.country);
       

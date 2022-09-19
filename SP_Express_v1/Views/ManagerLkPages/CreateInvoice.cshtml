@@ -1,0 +1,279 @@
+@model Consignment
+
+@{
+    ViewData["Title"] = "Создание накладной";
+}
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Menu_Main {
+    @{
+        await Html.RenderPartialAsync("_MenuManagerLk");
+    }
+}
+
+@section Footer {
+    @{
+        await Html.RenderPartialAsync("_Footer");
+    }
+}
+
+<div class="bg_gard">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="text-uppercase welcome">Создание накладной</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="allServices">
+<form action="" class="" name="form" method="post">
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="col-lg-1 col-md-12 justify-content-center align-items-center">
+        <h4 class="mailer text_color text-uppercase text-center">Отправитель</h4>
+    </div>
+    <div class="col-11">
+        <div class="">
+            <div class="form-group vmp_form-group form_box_top">
+                <label for="name" class="text-uppercase form-label">ФИО</label>
+                <input asp-for="Info.FIO1" type="text" id="nameInvoice" class="field no-border form-input"
+                       placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="company" class="text-uppercase form-label">Компания</label>
+                <input asp-for="Info.CompName1" type="text" id="companyInvoice" class="field no-border form-input"
+                       placeholder="ООО Колобки">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="AdrName" class="text-uppercase form-label">Адрес</label>
+                <input asp-for="Adr1.AdrName" type="text" id="AdrName" class="field no-border form-input"
+                       placeholder="Введите адрес до дома">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="Country" class="text-uppercase form-label">Страна</label>
+
+                <input id="Lat" asp-for="Adr1.Lat" type="hidden"/>
+                <input id="Lon" asp-for="Adr1.Lon" type="hidden"/>
+                <input id="Qc" asp-for="Adr1.Qc" type="hidden"/>
+                <input id="Settlement" asp-for="Adr1.Settlement" type="hidden"/>
+                <input id="SettlementWithType" asp-for="Adr1.SettlementWithType" type="hidden"/>
+                <input asp-for="Adr1.Region" type="hidden" id="Region"/>
+                <input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType"/>
+                <input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode"/>
+                <input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country"/>
+                <input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode"/>
+                <input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode"/>
+                <input asp-for="Adr1.City" type="hidden" id="City"/>
+                <input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType"/>
+                <input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker"/>
+                <input asp-for="Adr1.Street" type="hidden" id="Street"/>
+                <input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType"/>
+                <input asp-for="Adr1.House" type="hidden" id="House"/>
+                <input asp-for="Adr1.Block" type="hidden" id="Block"/>
+                <input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect"/>
+
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box_bot">
+                        <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                        <input asp-for="Info.Office1" type="text" id="offNum" class="field no-border form-input"
+                               placeholder="96">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_bot_right">
+                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                        <input asp-for="Info.Tel1" type="tel" id="Invoicephone_num" class="field no-border form-input tel"
+                               placeholder="+7 (499) 678 5000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row align-items-center justify-content-center all_border mb-3">
+    <div class="col-lg-1 col-md-12">
+        <h4 class="mailer text_color text-uppercase text-center">Получатель</h4>
+    </div>
+    <div class="col-11">
+        <div class="">
+            <div class="form-group vmp_form-group form_box_top">
+                <label for="name" class="text-uppercase form-label">ФИО</label>
+                <input asp-for="Info.FIO2" type="text" id="name" class="field no-border form-input"
+                       placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="company" class="text-uppercase form-label">Компания</label>
+                <input asp-for="Info.CompName2" type="text" id="company" class="field no-border form-input"
+                       placeholder="ООО Колобки">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="AdrName2" class="text-uppercase form-label">Адрес</label>
+                <input asp-for="Adr2.AdrName" type="text" id="AdrName2" class="field no-border form-input"
+                       placeholder="Введите адрес до дома">
+            </div>
+            <div class="form-group vmp_form-group form_box">
+                <label for="Country2" class="text-uppercase form-label">Страна</label>
+
+                <input id="Lat2" asp-for="Adr2.Lat" type="hidden"/>
+                <input id="Lon2" asp-for="Adr2.Lon" type="hidden"/>
+                <input id="Qc2" asp-for="Adr2.Qc" type="hidden"/>
+                <input id="Settlement2" asp-for="Adr2.Settlement" type="hidden"/>
+                <input id="SettlementWithType2" asp-for="Adr2.SettlementWithType" type="hidden"/>
+                <input asp-for="Adr2.Region" type="hidden" id="Region2"/>
+                <input asp-for="Adr2.RegionWithType" type="hidden" id="RegionWithType2"/>
+                <input asp-for="Adr2.RegionISOCode" type="hidden" id="RegionISOCode2"/>
+                <input asp-for="Adr2.Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
+                <input asp-for="Adr2.CountryISOCode" type="hidden" id="CountryISOCode2"/>
+                <input asp-for="Adr2.PostalCode" type="hidden" id="PostalCode2"/>
+                <input asp-for="Adr2.City" type="hidden" id="City2"/>
+                <input asp-for="Adr2.CityWithType" type="hidden" id="CityWithType2"/>
+                <input asp-for="Adr2.CapitalMarker" type="hidden" id="CapitalMarker2"/>
+                <input asp-for="Adr2.Street" type="hidden" id="Street2"/>
+                <input asp-for="Adr2.StreetWithType" type="hidden" id="StreetWithType2"/>
+                <input asp-for="Adr2.House" type="hidden" id="House2"/>
+                <input asp-for="Adr2.Block" type="hidden" id="Block2"/>
+                <input asp-for="Adr2.AdrFull" type="hidden" id="AddrCorrect2"/>
+
+            </div>
+            <div class="row gx-0">
+                <div class="col-lg-7">
+                    <div class="form-group vmp_form-group form_box_bot">
+                        <label for="officeNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                        <input asp-for="Info.Office2" type="number" id="officeNum" class="field no-border form-input"
+                               placeholder="41">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="form-group vmp_form-group form_box_bot_right">
+                        <label for="phone_num" class="text-uppercase form-label">Телефон</label>
+                        <input asp-for="Info.Tel2" type="tel" id="phone_num" class="field no-border form-input tel"
+                               placeholder="+7 (499) 678 5000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="all_border">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <label for="note"
+                       class="text-uppercase form-label">
+                    Примечания отправителя
+                    (будут указаны в счете)
+                </label>
+                <input asp-for="Info.Note" type="text" id="note" class="field no-border form-input"
+                       placeholder="Первые 10 символов будут указаны в счете">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <label for="additionalInform2" class="text-uppercase form-label">Дополнительная информация по доставке</label>
+                <input asp-for="Info.DeliveryExtraInfo" type="text" id="additionalInform2" class="field no-border form-input"
+                       placeholder="Например, дополнительные номера">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group vmp_form-group">
+                <label for="description" class="text-uppercase form-label">Описание</label>
+                <input asp-for="Info.Description" type="text" id="description" class="field no-border form-input"
+                       placeholder="Описание посылки">
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="form-group form_box_last">
+                <input asp-for="Info.DocsOnly" class="form-check-input" type="checkbox" value="" id="docOnly">
+                <label class="form-check-label" for="docOnly">
+                    Только документы
+                </label>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row gx-0">
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last">
+                <label for="pieces" class="text-uppercase form-label">Мест</label>
+                <input asp-for="Info.Places" type="text" id="pieces" class="field no-border form-input"
+                       placeholder="Например, 30">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last_right">
+                <label for="weight" class="text-uppercase form-label">Вес</label>
+                <input asp-for="Info.Weight" type="text" id="weight" class="field no-border form-input"
+                       placeholder="Например, 0.5 кг">
+            </div>
+        </div>
+    </div>
+    <div class="row gx-0 align-items-center">
+        <div class="col-lg-12">
+            <div class="form-group vmp_form-group form_box_mid1">
+                <div class="row">
+                    <div class="col-3">
+                        <label for="service"
+                               class="text-uppercase form-label">
+                            Услуга
+                        </label>
+                        <br>
+                        <select asp-for="Info.Service" name="service" id="service" class="mb-1" onchange="">
+                            <option selected>Стандарт</option>
+                            <option>Экспресс 2</option>
+                            <option>Экспресс 6</option>
+                            <option>Экспресс 24</option>
+                            <option>Посылка</option>
+                            <option>Услуги грузчиков</option>
+                            <option>Логистические услуги</option>
+                            <option>Предпочтовая подготовка</option>
+                            <option>Экспресс по России</option>
+                            <option>Экспресс по миру</option>
+                        </select>
+                    </div>
+                    <div id="timeOfDelivery" class="col-9">
+                        <label for="from" class="text-uppercase form-label1">Время доставки с</label>
+                        <input asp-for="Info.FromTime" type="number" id="from" class="hours no-border form-input">
+                        <label for="to" class="text-uppercase form-label1">До</label>
+                        <input asp-for="Info.ToTime" type="number" id="to" class="hours no-border form-input">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group">
+                <label for="value" class="text-uppercase form-label">Объявленная ценность</label>
+                <input asp-for="Info.DeclaredCost" type="text" id="value" class="field no-border form-input"
+                       placeholder="Указывайте в рублях">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="form-group vmp_form-group form_box_last_right1">
+                <label for="price" class="text-uppercase form-label">Фактическая стоимость</label>
+                <input asp-for="Info.ActualCost" type="text" id="price" class="field no-border form-input"
+                       placeholder="Указывайте в рублях">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-12">
+        <button type="submit" class="btn btn-outline-primary btn-lg m-5">Отправить</button>
+    </div>
+</div>
+<partial name="_AddressSug"/>
+</form>
+</div>
