@@ -3,6 +3,99 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SP_Express_v1.Models
 {
+    public class Agreement
+    {
+        [Display(Name = "Информация о компании")] 
+        public CompanyInfo CompanyInfo { get; set; }
+        
+        [Display(Name = "Адреса")] 
+        public Addresses Addresses { get; set; }
+        
+        [Display(Name = "Реквизиты")] 
+        public Requisites Requisites { get; set; }
+    }
+
+    public class Addresses
+    {
+        [Display(Name = "Фактический")] 
+        public Address FactAdr { get; set; }
+        
+        [Display(Name = "Юридический")] 
+        public Address LegalAdr { get; set; }
+        
+        [Display(Name = "Дост. счета")] 
+        public string BillDelibAdr { get; set; }
+        
+        [Display(Name = "Почтовый")] 
+        public string PostAdr { get; set; }
+    }
+
+    public class CompanyInfo
+    {
+        [Display(Name = "Наша компания")] 
+        public string OurCompName { get; set; }
+        
+        [Display(Name = "Номер договора")] 
+        public string AgreementNumber { get; set; }
+        
+        [Display(Name = "Имя компании")] 
+        public string CompName { get; set; }
+        
+        [Display(Name = "Официальное название")] 
+        public string OfficialCompName { get; set; }
+        
+        [Display(Name = "Телефон")] 
+        public string Tel { get; set; }
+    }
+
+    public class Requisites
+    {
+        [Display(Name = "ИНН")] 
+        public string INN{ get; set; }
+        
+        [Display(Name = "КПП")] 
+        public string KPP{ get; set; }
+        
+        [Display(Name = "ОКВЭД")] 
+        public string OKVED{ get; set; }
+        
+        [Display(Name = "ОКАТО")] 
+        public string OKATO{ get; set; }
+        
+        [Display(Name = "ОКПО")] 
+        public string OKPO{ get; set; }
+        
+        [Display(Name  = "ОГРН")] 
+        public string OGRN{ get; set; }
+        
+        [Display(Name = "БАНК")] 
+        public string Bank{ get; set; }
+        
+        [Display(Name = "БИК")] 
+        public string BIK{ get; set; }
+        
+        [Display(Name = "Р/С")] 
+        public string  RS { get; set; }
+        
+        [Display(Name = "К/С")] 
+        public string  KS { get; set; }
+        
+        [Display(Name = "НА ОСНОВАНИИ")] 
+        public string Based { get; set; }
+        
+        [Display(Name = "Номер доверенности")] 
+        public string  ProxyNumber { get; set; }
+        
+        [Display(Name = "Дата от")] 
+        public string ProxyDate { get; set; }
+
+        [Display(Name = "ГЕН. ДИРЕКТОР")] 
+        public string CEO { get; set; }
+        
+        [Display(Name = "БУХГАЛТЕР")] 
+        public string Accountant { get; set; }
+    }
+    
     public class Consignment
     {
         public Address Adr1 { get; set; }
