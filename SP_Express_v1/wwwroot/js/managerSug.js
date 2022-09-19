@@ -353,7 +353,9 @@ function fillBankInfo(suggestion) {
     let info = suggestion.data;
     $('#bankName').val(suggestion.value)
     $('#AdrName5').val(info.address.value)
-    $('#bik').
+    $('#AddrCorrect5').val(info.address.value)
+    $('#bik').val(info.bic)
+    $('#ks').val(info.correspondent_account)
 }
 
 $("#bankInfo").suggestions({
