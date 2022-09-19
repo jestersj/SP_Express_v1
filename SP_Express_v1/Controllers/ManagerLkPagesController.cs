@@ -2,18 +2,28 @@ using Microsoft.AspNetCore.Mvc;
 using SP_Express_v1.Models;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Authorization;
+using SP_Express_v1.DB.Contract;
 
 namespace SP_Express_v1.Controllers
 {
     [Authorize(Roles = "adm")]
     public class ManagerLkPages : Controller
     {
-        private readonly ILogger<ManagerLkPages> _logger;
+        private readonly IDbSelect _select;
+        private readonly IDbInsert _insert;
+        private readonly IDbUpdate _update;
 
-        public ManagerLkPages(ILogger<ManagerLkPages> logger)
+        public ManagerLkPages(
+            IDbSelect select,
+            IDbInsert insert,
+            IDbUpdate update
+        )
         {
-            _logger = logger;
+            _select = select;
+            _insert = insert;
+            _update = update;
         }
+        
         public IActionResult ManagerLk()
         {
             return View();
@@ -31,11 +41,20 @@ namespace SP_Express_v1.Controllers
         {
             return View();
         }
+        
+        [HttpGet]
         public IActionResult CreateInvoice()
         {
+            
             return View();
         }
         
+        [HttpPost]
+        public IActionResult CreateInvoice(Consignment model)
+        {
+            _insert.InsertInvoice(model);
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
