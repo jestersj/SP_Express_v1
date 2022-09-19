@@ -1,3 +1,4 @@
+@model Consignment
 @{
     ViewData["Title"] = "Создание договора";
 }
@@ -21,188 +22,230 @@
 <div class="container" id="agmOnly">
 <form action="" class="justify-content-center col-12 mx-auto">
 <div class="row">
-    <div class="col-lg-5 col-12">
+<div class="col-lg-5 col-12">
+<div class="col-12">
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="col-12">
+        <h3 class="text-center">Компания</h3>
+    </div>
+
+    <div class="col-6">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="ourCompany" class="text-uppercase form-label">Наша компания</label>
+            <input type="text" id="ourCompany" class="field no-border form-input">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="contractNum" class="text-uppercase form-label">Номер договора</label>
+            <input type="text" id="contractNum" class="field no-border form-input">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="companyName" class="text-uppercase form-label">Название компании</label>
+            <input type="text" id="companyName" class="field no-border form-input">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="officialName" class="text-uppercase form-label">
+                Официальное
+                Название
+            </label>
+            <input type="text" id="officialName" class="field no-border form-input">
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="loadTime" class="text-uppercase form-label">Телефон</label>
+            <input type="tel" id="loadTime" class="field no-border form-input tel"
+                   placeholder="+7 (964) 550 6472">
+        </div>
+    </div>
+</div>
+
+
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="col-12">
+        <h3 class="text-center">Адреса</h3>
+    </div>
+
+    <div class="col-12">
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="AdrName" class="text-uppercase form-label">Фактический</label>
+            <input type="text" id="AdrName" class="field no-border form-input"
+                   placeholder="Ломоносовский пр-кт, д15">
+        </div>
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="AdrName2" class="text-uppercase form-label">Юридический</label>
+            <input type="text" id="AdrName2" class="field no-border form-input"
+                   placeholder="Ломоносовский пр-кт, д15">
+        </div>
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="AdrName3" class="text-uppercase form-label">Дост. счета</label>
+            <input type="text" id="AdrName3" class="field no-border form-input"
+                   placeholder="Ломоносовский пр-кт, д15">
+        </div>
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="AdrName4" class="text-uppercase form-label">Почтовый</label>
+            <input type="text" id="AdrName4" class="field no-border form-input"
+                   placeholder="Ломоносовский пр-кт, д15">
+        </div>
+    </div>
+</div>
+
+<div class="row align-items-center justify-content-center all_border mt-5 mb-3">
+    <div class="row align-items-center mt-4">
         <div class="col-12">
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="col-12">
-                    <h3 class="text-center">Компания</h3>
-                </div>
-
-                <div class="col-6">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="ourCompany" class="text-uppercase form-label">Наша компания</label>
-                        <input type="text" id="ourCompany" class="field no-border form-input">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="contractNum" class="text-uppercase form-label">Номер договора</label>
-                        <input type="text" id="contractNum" class="field no-border form-input">
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="companyName" class="text-uppercase form-label">Название компании</label>
-                        <input type="text" id="companyName" class="field no-border form-input">
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="officialName" class="text-uppercase form-label">
-                            Официальное
-                            Название
-                        </label>
-                        <input type="text" id="officialName" class="field no-border form-input">
-                    </div>
-                </div>
-
-                <div class="col-6">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="loadTime" class="text-uppercase form-label">Телефон</label>
-                        <input type="tel" id="loadTime" class="field no-border form-input tel"
-                               placeholder="+7 (964) 550 6472">
-                    </div>
-                </div>
+            <h3 class="text-center">Реквизиты</h3>
+        </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="inn" class="text-uppercase form-label">ИНН</label>
+                <input type="number" id="inn" class="field no-border form-input">
             </div>
-
-
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="col-12">
-                    <h3 class="text-center">Адреса</h3>
-                </div>
-
-                <div class="col-12">
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="fact" class="text-uppercase form-label">Фактический</label>
-                        <input type="text" id="fact" class="field no-border form-input"
-                               placeholder="Ломоносовский пр-кт, д15">
-                    </div>
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="jur" class="text-uppercase form-label">Юридический</label>
-                        <input type="text" id="jur" class="field no-border form-input"
-                               placeholder="Ломоносовский пр-кт, д15">
-                    </div>
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="bill" class="text-uppercase form-label">Дост. счета</label>
-                        <input type="text" id="bill" class="field no-border form-input"
-                               placeholder="Ломоносовский пр-кт, д15">
-                    </div>
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="postAddress" class="text-uppercase form-label">Почтовый</label>
-                        <input type="text" id="postAddress" class="field no-border form-input"
-                               placeholder="Ломоносовский пр-кт, д15">
-                    </div>
-                </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="kpp" class="text-uppercase form-label">КПП</label>
+                <input type="number" id="kpp" class="field no-border form-input">
             </div>
+        </div>
 
-            <div class="row align-items-center justify-content-center all_border mt-5 mb-3">
-                <div class="row align-items-center mt-4">
-                    <div class="col-12">
-                        <h3 class="text-center">Реквизиты</h3>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="inn" class="text-uppercase form-label">ИНН</label>
-                            <input type="number" id="inn" class="field no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="kpp" class="text-uppercase form-label">КПП</label>
-                            <input type="number" id="kpp" class="field no-border form-input">
-                        </div>
-                    </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="okved" class="text-uppercase form-label">ОКВЭД</label>
+                <input type="number" id="okved" class="field no-border form-input">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="okato" class="text-uppercase form-label">ОКАТО</label>
+                <input type="number" id="okato" class="field no-border form-input">
+            </div>
+        </div>
 
-                    <div class="col-6">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="okved" class="text-uppercase form-label">ОКВЭД</label>
-                            <input type="number" id="okved" class="field no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="okato" class="text-uppercase form-label">ОКАТО</label>
-                            <input type="number" id="okato" class="field no-border form-input">
-                        </div>
-                    </div>
-
-                    <div class="col-6 mb-5">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="okpo" class="text-uppercase form-label">ОКПО</label>
-                            <input type="number" id="okpo" class="field no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-6 mb-5">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="ogrn" class="text-uppercase form-label">ОГРН</label>
-                            <input type="number" id="ogrn" class="field no-border form-input">
-                        </div>
-                    </div>
+        <div class="col-6 mb-5">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="okpo" class="text-uppercase form-label">ОКПО</label>
+                <input type="number" id="okpo" class="field no-border form-input">
+            </div>
+        </div>
+        <div class="col-6 mb-5">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="ogrn" class="text-uppercase form-label">ОГРН</label>
+                <input type="number" id="ogrn" class="field no-border form-input">
+            </div>
+        </div>
 
 
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="bankName" class="text-uppercase form-label">Банк</label>
-                        <input type="text" id="bankName" class="field no-border form-input">
+        @* Modal *@
+        <a class="btn btn-large btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Выбрать банк
+        </a>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Банк</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="bankAddress" class="text-uppercase form-label">Адрес банка</label>
-                        <input type="text" id="bankAddress" class="field no-border form-input">
-                    </div>
-                    <div class="form-group vmp_form-group form_box_agm_top">
-                        <label for="bik" class="text-uppercase form-label">Бик</label>
-                        <input type="number" id="bik" class="field no-border form-input">
-                    </div>
-                    <div class="col-6">
+                    <div class="modal-body">
                         <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="ps" class="text-uppercase form-label">р/с</label>
-                            <input type="number" id="ps" class="field no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="ks" class="text-uppercase form-label">к/с</label>
-                            <input type="number" id="ks" class="field no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group vmp_form-group">
-                            <label for="base" class="text-uppercase form-label">На основании:</label>
-                            <br>
-                            <select name="service" id="base" class="mb-1">
-                                <option selected>Устава</option>
-                                <option>Доверенности</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div id="timeOfDelivery" class="col-12">
-                            <label for="numOfDoc" class="text-uppercase form-label1">
-                                Если доверенности, то
-                                ее
-                                №
-                            </label>
-                            <input type="number" id="numOfDoc" class="no-border form-input">
-                            <label for="from" class="text-uppercase form-label1">От</label>
-                            <input type="date" id="from" class="no-border form-input">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="chief" class="text-uppercase form-label">Ген. директор</label>
-                            <input type="text" id="chief" class="field no-border form-input">
-                        </div>
-                        <div class="form-group vmp_form-group form_box_agm_top">
-                            <label for="accountant" class="text-uppercase form-label">Бухгалтер</label>
-                            <input type="text" id="accountant" class="field no-border form-input">
+                            <label for="bankInfo" class="text-uppercase form-label">Введите название,БИК, ИНН или адрес</label>
+                            <input type="text" id="bankInfo" class="field no-border form-input">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="bankName" class="text-uppercase form-label">Банк</label>
+            <input type="text" id="bankName" class="field no-border form-input">
+        </div>
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="AdrName5" class="text-uppercase form-label">Адрес банка</label>
+            <input type="text" id="AdrName5" class="field no-border form-input">
+        </div>
+        <div class="form-group vmp_form-group form_box_agm_top">
+            <label for="bik" class="text-uppercase form-label">Бик</label>
+            <input type="number" id="bik" class="field no-border form-input">
+        </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="ps" class="text-uppercase form-label">р/с</label>
+                <input type="number" id="ps" class="field no-border form-input">
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="ks" class="text-uppercase form-label">к/с</label>
+                <input type="number" id="ks" class="field no-border form-input">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group vmp_form-group">
+                <label for="base" class="text-uppercase form-label">На основании:</label>
+                <br>
+                <select name="service" id="base" class="mb-1">
+                    <option selected>Устава</option>
+                    <option>Доверенности</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="timeOfDelivery" class="col-12">
+                <label for="numOfDoc" class="text-uppercase form-label1">
+                    Если доверенности, то
+                    ее
+                    №
+                </label>
+                <input type="number" id="numOfDoc" class="no-border form-input">
+                <label for="from" class="text-uppercase form-label1">От</label>
+                <input type="date" id="from" class="no-border form-input">
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="executive" class="text-uppercase form-label">Должностное лицо</label>
+                <input type="text" id="executive" class="field no-border form-input">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="signSurname" class="text-uppercase form-label">Фамилия подписанта</label>
+                <input type="text" id="signSurname" class="field no-border form-input">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="dogTel1" class="text-uppercase form-label">Телефон договора 1</label>
+                <input type="tel" id="dogTel1" class="field no-border form-input tel">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="dogTel2" class="text-uppercase form-label">Телефон договора 2</label>
+                <input type="tel" id="dogTel2" class="field no-border form-input tel">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="accountant" class="text-uppercase form-label">Бухгалтер</label>
+                <input type="text" id="accountant" class="field no-border form-input">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="email" class="text-uppercase form-label">Email</label>
+                <input type="email" id="email" class="field no-border form-input tel">
+            </div>
+            <div class="form-group vmp_form-group form_box_agm_top">
+                <label for="website" class="text-uppercase form-label">Вебсайт</label>
+                <input type="text" id="website" class="field no-border form-input tel">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
 
 <div class="col-lg-7 col-12">
@@ -287,8 +330,8 @@
                     </div>
                     <div class="col-7">
                         <div class="col-12">
-                            <label for="unpresentFrom" class="text-uppercase form-label">Причина звонка</label>
-                            <input type="text" id="unpresentFrom" class="no-border form-input">
+                            <label for="callReason" class="text-uppercase form-label">Причина звонка</label>
+                            <input type="text" id="callReason" class="no-border form-input">
                         </div>
                     </div>
                 </div>
@@ -304,6 +347,109 @@
         <button type="submit" class="btn btn-outline-primary btn-lg m-5">Сохранить</button>
     </div>
 </div>
-</form>
 
+<input id="Lat" asp-for="Adr1.Lat" type="hidden"/>
+<input id="Lon" asp-for="Adr1.Lon" type="hidden"/>
+<input id="Qc" asp-for="Adr1.Qc" type="hidden"/>
+<input id="Settlement" asp-for="Adr1.Settlement" type="hidden"/>
+<input id="SettlementWithType" asp-for="Adr1.SettlementWithType" type="hidden"/>
+<input asp-for="Adr1.Region" type="hidden" id="Region"/>
+<input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType"/>
+<input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode"/>
+<input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country"/>
+<input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode"/>
+<input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode"/>
+<input asp-for="Adr1.City" type="hidden" id="City"/>
+<input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType"/>
+<input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker"/>
+<input asp-for="Adr1.Street" type="hidden" id="Street"/>
+<input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType"/>
+<input asp-for="Adr1.House" type="hidden" id="House"/>
+<input asp-for="Adr1.Block" type="hidden" id="Block"/>
+<input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect"/>
+
+<input id="Lat2" asp-for="Adr2.Lat" type="hidden"/>
+<input id="Lon2" asp-for="Adr2.Lon" type="hidden"/>
+<input id="Qc2" asp-for="Adr2.Qc" type="hidden"/>
+<input id="Settlement2" asp-for="Adr2.Settlement" type="hidden"/>
+<input id="SettlementWithType2" asp-for="Adr2.SettlementWithType" type="hidden"/>
+<input asp-for="Adr2.Region" type="hidden" id="Region2"/>
+<input asp-for="Adr2.RegionWithType" type="hidden" id="RegionWithType2"/>
+<input asp-for="Adr2.RegionISOCode" type="hidden" id="RegionISOCode2"/>
+<input asp-for="Adr2.Country" readonly="readonly" id="Country2" class="field no-border form-input"/>
+<input asp-for="Adr2.CountryISOCode" type="hidden" id="CountryISOCode2"/>
+<input asp-for="Adr2.PostalCode" type="hidden" id="PostalCode2"/>
+<input asp-for="Adr2.City" type="hidden" id="City2"/>
+<input asp-for="Adr2.CityWithType" type="hidden" id="CityWithType2"/>
+<input asp-for="Adr2.CapitalMarker" type="hidden" id="CapitalMarker2"/>
+<input asp-for="Adr2.Street" type="hidden" id="Street2"/>
+<input asp-for="Adr2.StreetWithType" type="hidden" id="StreetWithType2"/>
+<input asp-for="Adr2.House" type="hidden" id="House2"/>
+<input asp-for="Adr2.Block" type="hidden" id="Block2"/>
+<input asp-for="Adr2.AdrFull" type="hidden" id="AddrCorrect2"/>
+
+<input id="Lat3" asp-for="Adr1.Lat" type="hidden"/>
+<input id="Lon3" asp-for="Adr1.Lon" type="hidden"/>
+<input id="Qc3" asp-for="Adr1.Qc" type="hidden"/>
+<input id="Settlement3" asp-for="Adr1.Settlement" type="hidden"/>
+<input id="SettlementWithType3" asp-for="Adr1.SettlementWithType" type="hidden"/>
+<input asp-for="Adr1.Region" type="hidden" id="Region3"/>
+<input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType3"/>
+<input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode3"/>
+<input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country3"/>
+<input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode3"/>
+<input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode3"/>
+<input asp-for="Adr1.City" type="hidden" id="City3"/>
+<input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType3"/>
+<input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker3"/>
+<input asp-for="Adr1.Street" type="hidden" id="Street3"/>
+<input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType3"/>
+<input asp-for="Adr1.House" type="hidden" id="House3"/>
+<input asp-for="Adr1.Block" type="hidden" id="Block3"/>
+<input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect3"/>
+
+<input id="Lat4" asp-for="Adr1.Lat" type="hidden"/>
+<input id="Lon4" asp-for="Adr1.Lon" type="hidden"/>
+<input id="Qc4" asp-for="Adr1.Qc" type="hidden"/>
+<input id="Settlement4" asp-for="Adr1.Settlement" type="hidden"/>
+<input id="SettlementWithType4" asp-for="Adr1.SettlementWithType" type="hidden"/>
+<input asp-for="Adr1.Region" type="hidden" id="Region4"/>
+<input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType4"/>
+<input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode4"/>
+<input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country4"/>
+<input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode4"/>
+<input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode4"/>
+<input asp-for="Adr1.City" type="hidden" id="City4"/>
+<input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType4"/>
+<input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker4"/>
+<input asp-for="Adr1.Street" type="hidden" id="Street4"/>
+<input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType4"/>
+<input asp-for="Adr1.House" type="hidden" id="House4"/>
+<input asp-for="Adr1.Block" type="hidden" id="Block4"/>
+<input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect4"/>
+
+<input id="Lat5" asp-for="Adr1.Lat" type="hidden"/>
+<input id="Lon5" asp-for="Adr1.Lon" type="hidden"/>
+<input id="Qc5" asp-for="Adr1.Qc" type="hidden"/>
+<input id="Settlement5" asp-for="Adr1.Settlement" type="hidden"/>
+<input id="SettlementWithType5" asp-for="Adr1.SettlementWithType" type="hidden"/>
+<input asp-for="Adr1.Region" type="hidden" id="Region5"/>
+<input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType5"/>
+<input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode5"/>
+<input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country5"/>
+<input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode5"/>
+<input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode5"/>
+<input asp-for="Adr1.City" type="hidden" id="City5"/>
+<input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType5"/>
+<input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker5"/>
+<input asp-for="Adr1.Street" type="hidden" id="Street5"/>
+<input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType5"/>
+<input asp-for="Adr1.House" type="hidden" id="House5"/>
+<input asp-for="Adr1.Block" type="hidden" id="Block5"/>
+<input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect5"/>
+</form>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+<script src="~/js/managerSug.js"></script>
