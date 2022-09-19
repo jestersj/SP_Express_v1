@@ -51,16 +51,6 @@ namespace SP_Express_v1.Controllers
         {
             if (User.IsInRole("adm"))
             {
-                Console.WriteLine("adm");
-            }
-
-            if (User.IsInRole("usr"))
-            {
-                Console.WriteLine("usr");
-            }
-            
-            if (User.IsInRole("adm"))
-            {
                 return RedirectToAction("ManagerLk", "ManagerLkPages");
             }
             
