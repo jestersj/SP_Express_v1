@@ -49,16 +49,23 @@ namespace SP_Express_v1.Controllers
 
         public IActionResult LKRedirection()
         {
-            Console.WriteLine("123");
             if (User.IsInRole("adm"))
             {
-                Console.WriteLine("456");
+                Console.WriteLine("adm");
+            }
+
+            if (User.IsInRole("usr"))
+            {
+                Console.WriteLine("usr");
+            }
+            
+            if (User.IsInRole("adm"))
+            {
                 return RedirectToAction("ManagerLk", "ManagerLkPages");
             }
             
             if (User.IsInRole("usr"))
             {
-                Console.WriteLine("789");
                 return RedirectToAction("UserLk", "UserLkPages");
             }
 
