@@ -60,7 +60,7 @@ namespace SP_Express_v1.Models
 
         [Display(Name = "К/С")] public string KS { get; set; }
 
-        [Display(Name = "НА ОСНОВАНИИ")] public string Based { get; set; }
+        [Display(Name = "НА ОСНОВАНИИ")] public string BasedOn { get; set; }
 
         [Display(Name = "Номер доверенности")] public string ProxyNumber { get; set; }
 
