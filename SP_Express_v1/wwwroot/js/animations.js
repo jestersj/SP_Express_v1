@@ -1,10 +1,4 @@
-﻿<script src="~/lib/gsap/gsap.min.js"></script>
-<script src="~/lib/gsap/ScrollTrigger.min.js"></script>
-
-
-<script>
-
-const tl = gsap.timeline();
+﻿const tl = gsap.timeline();
 const pl = gsap.timeline();
 const train = gsap.timeline();
 const ship = gsap.timeline();
@@ -61,4 +55,3 @@ ScrollTrigger.create({
     start: 'top top',
     end: 'bottom top'
 })
-</script>

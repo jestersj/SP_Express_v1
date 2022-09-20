@@ -1,4 +1,4 @@
-@model Address
+@model Consignment
 
 @{
     ViewData["Title"] = "Настройки";
@@ -43,66 +43,56 @@
             <div class="col-11">
                 <div class="">
                     <div class="form-group vmp_form-group form_box_top">
-                        <label for="name" class="text-uppercase form-label">ФИО</label>
-                        <input type="text" id="name" class="field no-border form-input"
+                        <label for="nameInvoice" class="text-uppercase form-label">ФИО</label>
+                        <input asp-for="Info.FIO1" type="text" id="nameInvoice" class="field no-border form-input"
                                placeholder="Иванов Иван Иванович">
                     </div>
                     <div class="form-group vmp_form-group form_box">
-                        <label for="company" class="text-uppercase form-label">Компания</label>
-                        <input type="text" id="company" class="field no-border form-input"
+                        <label for="companyInvoice" class="text-uppercase form-label">Компания</label>
+                        <input asp-for="Info.CompName1" type="text" id="companyInvoice" class="field no-border form-input"
                                placeholder="ООО Колобки">
                     </div>
                     <div class="form-group vmp_form-group form_box">
                         <label for="AdrName" class="text-uppercase form-label">Адрес</label>
-                        <input type="text" id="AdrName" class="field no-border form-input"
-                               placeholder="Загородное шоссе, д1 к2">
+                        <input asp-for="Adr1.AdrName" type="text" id="AdrName" class="field no-border form-input"
+                               placeholder="Введите адрес до дома">
                     </div>
-                    <form method="post">
-                                                            <input id="Lat" asp-for="Lat" type="hidden"/>
-                                                            <input id="Lon" asp-for="Lon" type="hidden"/>
-                                                            <input asp-for="Region" type="hidden" id="Region"/>
-                                                            <input asp-for="RegionWithType" type="hidden" id="RegionWithType"/>
-                                                            <input asp-for="RegionISOCode" type="hidden" id="RegionISOCode"/>
-                                                            <input asp-for="Country" type="hidden" id="Country"/>
-                                                            <input asp-for="CountryISOCode" type="hidden" id="CountryISOCode"/>
-                                                            <input asp-for="PostalCode" type="hidden" id="PostalCode"/>
-                                                            <input asp-for="City" type="hidden" id="City"/>
-                                                            <input asp-for="CityWithType" type="hidden" id="CityWithType"/>
-                                                            <input asp-for="CapitalMarker" type="hidden" id="CapitalMarker"/>
-                                                            <input asp-for="Street" type="hidden" id="Street"/>
-                                                            <input asp-for="StreetWithType" type="hidden" id="StreetWithType"/>
-                                                            <input asp-for="House" type="hidden" id="House"/>
-                                                            <input asp-for="Block" type="hidden" id="Block"/>
-                                                            <input asp-for="AdrFull" type="hidden" id="AddrCorrect"/>
-                                                        </form>
-                    <div class="row gx-0">
-                        <div class="col-lg-7">
-                            <div class="form-group vmp_form-group form_box">
-                                <label for="city" class="text-uppercase form-label">Город</label>
-                                <input type="text" id="city" class="field no-border form-input"
-                                       placeholder="Москва">
-                            </div>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="form-group vmp_form-group form_box_right">
-                                <label for="country" class="text-uppercase form-label">Страна</label>
-                                <input type="text" id="country" class="field no-border form-input"
-                                       placeholder="Россия">
-                            </div>
-                        </div>
+                    <div class="form-group vmp_form-group form_box">
+                        <label for="Country" class="text-uppercase form-label">Страна</label>
+
+                        <input id="Lat" asp-for="Adr1.Lat" type="hidden"/>
+                        <input id="Lon" asp-for="Adr1.Lon" type="hidden"/>
+                        <input id="Qc" asp-for="Adr1.Qc" type="hidden"/>
+                        <input id="Settlement" asp-for="Adr1.Settlement" type="hidden"/>
+                        <input id="SettlementWithType" asp-for="Adr1.SettlementWithType" type="hidden"/>
+                        <input asp-for="Adr1.Region" type="hidden" id="Region"/>
+                        <input asp-for="Adr1.RegionWithType" type="hidden" id="RegionWithType"/>
+                        <input asp-for="Adr1.RegionISOCode" type="hidden" id="RegionISOCode"/>
+                        <input asp-for="Adr1.Country" readonly="readonly" class="field no-border form-input" id="Country"/>
+                        <input asp-for="Adr1.CountryISOCode" type="hidden" id="CountryISOCode"/>
+                        <input asp-for="Adr1.PostalCode" type="hidden" id="PostalCode"/>
+                        <input asp-for="Adr1.City" type="hidden" id="City"/>
+                        <input asp-for="Adr1.CityWithType" type="hidden" id="CityWithType"/>
+                        <input asp-for="Adr1.CapitalMarker" type="hidden" id="CapitalMarker"/>
+                        <input asp-for="Adr1.Street" type="hidden" id="Street"/>
+                        <input asp-for="Adr1.StreetWithType" type="hidden" id="StreetWithType"/>
+                        <input asp-for="Adr1.House" type="hidden" id="House"/>
+                        <input asp-for="Adr1.Block" type="hidden" id="Block"/>
+                        <input asp-for="Adr1.AdrFull" type="hidden" id="AddrCorrect"/>
+
                     </div>
                     <div class="row gx-0">
                         <div class="col-lg-7">
                             <div class="form-group vmp_form-group form_box_bot">
-                                <label for="index" class="text-uppercase form-label">Индекс</label>
-                                <input type="text" id="index" class="field no-border form-input"
-                                       placeholder="108814">
+                                <label for="offNum" class="text-uppercase form-label">Номер офиса/квартиры</label>
+                                <input asp-for="Info.Office1" type="text" id="offNum" class="field no-border form-input"
+                                       placeholder="96">
                             </div>
                         </div>
                         <div class="col-lg-5">
                             <div class="form-group vmp_form-group form_box_bot_right">
-                                <label for="phone_num" class="text-uppercase form-label">Телефон</label>
-                                <input type="tel" id="phone_num" class="field no-border form-input tel"
+                                <label for="Invoicephone_num" class="text-uppercase form-label">Телефон</label>
+                                <input asp-for="Info.Tel1" type="tel" id="Invoicephone_num" class="field no-border form-input tel"
                                        placeholder="+7 (499) 678 5000">
                             </div>
                         </div>
@@ -116,8 +106,8 @@
             </div>
         </div>
     </form>
-    
-    
+
+
     <div class="row mt-4">
         <div class="col-12 text-center">
             <h3>Изменить пароль</h3>
@@ -157,3 +147,10 @@
         </div>
     </form>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/css/suggestions.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/suggestions-jquery@21.12.0/dist/js/jquery.suggestions.min.js"></script>
+<script src="~/js/addressSug.js"></script>
+<script src="~/js/phoneMask.js"></script>
+<script src="~/js/showHidePass.js"></script>
